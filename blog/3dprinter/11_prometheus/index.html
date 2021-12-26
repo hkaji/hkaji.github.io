@@ -1,0 +1,468 @@
+<!doctype html><html lang=ja><head>
+<meta charset=utf-8>
+<title>一歩のはまりから/ipponohamari</title>
+<meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1">
+<meta name=description content="マイコンや倒立ロボでつまずいた人は、お立ち寄りください。きっと役に立てると思います">
+<meta name=author content="hkaji">
+<meta name=generator content="Hugo 0.88.1">
+<link rel=stylesheet href=https://hkaji.github.io/plugins/bootstrap/bootstrap.min.css>
+<link rel=stylesheet href=https://hkaji.github.io/plugins/slick/slick.css>
+<link rel=stylesheet href=https://hkaji.github.io/plugins/themify-icons/themify-icons.css>
+<link rel=stylesheet href=https://hkaji.github.io/plugins/venobox/venobox.css>
+<link rel=stylesheet href=https://hkaji.github.io/scss/style.min.css media=screen>
+<link rel="shortcut icon" href=https://hkaji.github.io/images/favicon.png type=image/x-icon>
+<link rel=icon href=https://hkaji.github.io/images/favicon.png type=image/x-icon>
+<script>(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)})(window,document,'script','//www.google-analytics.com/analytics.js','ga'),ga('create','UA-2831102754','auto'),ga('send','pageview')</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-V3DKLV7482"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-V3DKLV7482')</script>
+<meta name=google-site-verification content="eNklt_-Jdl-3xVGM2Lx-ybzzPso6QpwJqVnbR38n8zM">
+</head><head>
+<script type=text/javascript src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js></script>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css>
+<script type=text/javascript src=https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js></script>
+</head>
+<body>
+<div class=preloader>
+</div>
+<header class=navigation>
+<div class=container>
+<nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
+<a class="navbar-brand mobile-view" href=https://hkaji.github.io/><img class=img-fluid src=https://hkaji.github.io/images/logo.png alt=一歩のはまりから/ipponohamari></a>
+<button class="navbar-toggler border-0" type=button data-toggle=collapse data-target=#navigation>
+<i class=ti-menu></i>
+</button>
+<div class="collapse navbar-collapse text-center" id=navigation>
+<div class=desktop-view>
+<ul class="navbar-nav mr-auto">
+<li class=nav-item>
+<a class=nav-link href=#><i class=ti-facebook></i></a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=#><i class=ti-twitter-alt></i></a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=https://github.com/hkaji><i class=ti-github></i></a>
+</li>
+</ul>
+</div>
+<a class="navbar-brand mx-auto desktop-view" href=https://hkaji.github.io/><img class=img-fluid src=https://hkaji.github.io/images/logo.png alt=一歩のはまりから/ipponohamari></a>
+<ul class=navbar-nav>
+<li class=nav-item>
+<a class=nav-link href=https://hkaji.github.io/about>About</a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=https://hkaji.github.io/blog>Blog/Post</a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=https://hkaji.github.io/contact>Contact</a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=https://hkaji.github.io/privacypolicy>Privacy Policy</a>
+</li>
+</ul>
+<div class="search pl-lg-4">
+<button id=searchOpen class=search-btn><i class=ti-search></i></button>
+<div class=search-wrapper>
+<form action=https://hkaji.github.io//search class=h-100>
+<input class="search-box px-4" id=search-query name=s type=search placeholder="Type & Hit Enter...">
+</form>
+<button id=searchClose class=search-close><i class="ti-close text-dark"></i></button>
+</div>
+</div>
+</div>
+</nav>
+</div>
+</header>
+<section class=section-sm>
+<div class=container>
+<div class=row>
+<div class="col-lg-8 mx-auto">
+<a href=/categories/3dprinter class=text-primary>3dprinter</a>
+<h2>3Dプリンターを時系列DBで派手に監視する</h2>
+<div class="mb-3 post-meta">
+<span>By hkaji</span>
+<span class="border-bottom border-primary px-2 mx-1"></span>
+<span>23 December 2021</span>
+<span>Update 23 December 2021</span>
+</div>
+<img src=https://hkaji.github.io/images/3dprinter/octoprint_grafana_custom.jpg class="img-fluid w-25 mb-4" alt=3Dプリンターを時系列DBで派手に監視する>
+<div class="content mb-5">
+<h2 id=今回は>今回は</h2>
+<p>3D プリンターの状況をoctoprint経由して時系列DBで監視します。その内容をgrafanaを使って派手なダッシュボードで可視化します。</p>
+<h2 id=準備>準備</h2>
+<p>3Dプリンターに接続されているpi3bにてnode exporterを動かします。参考リンク[1^]のpluginをoctoprintにインストールして再起動します。</p>
+<h2 id=構成と接続>構成と接続</h2>
+<p>3Dプリンター、octoprintが動いているpi3b、時系列DBと可視化するためのpi4bを使います。全体的な接続は図のようになります。</p>
+<h2 id=設定等の確認>設定等の確認</h2>
+<h3 id=pluginのexporterは動いているのか>pluginのexporterは動いているのか</h3>
+<p>octopi pluginのexporterが動いているかは、URIをたたいてみるとわかります。データが表示されるかどうか確認します。ブラウザーでこちらをたたいてみます。</p>
+<div class=highlight><div style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4>
+<table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0>
+<pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=1><a style=outline:none;text-decoration:none;color:inherit href=#1>1</a>
+</span></code></pre></td>
+<td style=vertical-align:top;padding:0;margin:0;border:0;width:100%>
+<pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>http://octopi.local/plugin/prometheus_exporter/metrics
+</code></pre></td></tr></table>
+</div>
+</div><p>このように各種値がmetricsとして表示されます。</p>
+<div class=highlight><div style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4>
+<table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0>
+<pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=1><a style=outline:none;text-decoration:none;color:inherit href=#1>  1</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=2><a style=outline:none;text-decoration:none;color:inherit href=#2>  2</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=3><a style=outline:none;text-decoration:none;color:inherit href=#3>  3</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=4><a style=outline:none;text-decoration:none;color:inherit href=#4>  4</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=5><a style=outline:none;text-decoration:none;color:inherit href=#5>  5</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=6><a style=outline:none;text-decoration:none;color:inherit href=#6>  6</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=7><a style=outline:none;text-decoration:none;color:inherit href=#7>  7</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=8><a style=outline:none;text-decoration:none;color:inherit href=#8>  8</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=9><a style=outline:none;text-decoration:none;color:inherit href=#9>  9</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=10><a style=outline:none;text-decoration:none;color:inherit href=#10> 10</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=11><a style=outline:none;text-decoration:none;color:inherit href=#11> 11</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=12><a style=outline:none;text-decoration:none;color:inherit href=#12> 12</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=13><a style=outline:none;text-decoration:none;color:inherit href=#13> 13</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=14><a style=outline:none;text-decoration:none;color:inherit href=#14> 14</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=15><a style=outline:none;text-decoration:none;color:inherit href=#15> 15</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=16><a style=outline:none;text-decoration:none;color:inherit href=#16> 16</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=17><a style=outline:none;text-decoration:none;color:inherit href=#17> 17</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=18><a style=outline:none;text-decoration:none;color:inherit href=#18> 18</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=19><a style=outline:none;text-decoration:none;color:inherit href=#19> 19</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=20><a style=outline:none;text-decoration:none;color:inherit href=#20> 20</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=21><a style=outline:none;text-decoration:none;color:inherit href=#21> 21</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=22><a style=outline:none;text-decoration:none;color:inherit href=#22> 22</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=23><a style=outline:none;text-decoration:none;color:inherit href=#23> 23</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=24><a style=outline:none;text-decoration:none;color:inherit href=#24> 24</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=25><a style=outline:none;text-decoration:none;color:inherit href=#25> 25</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=26><a style=outline:none;text-decoration:none;color:inherit href=#26> 26</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=27><a style=outline:none;text-decoration:none;color:inherit href=#27> 27</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=28><a style=outline:none;text-decoration:none;color:inherit href=#28> 28</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=29><a style=outline:none;text-decoration:none;color:inherit href=#29> 29</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=30><a style=outline:none;text-decoration:none;color:inherit href=#30> 30</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=31><a style=outline:none;text-decoration:none;color:inherit href=#31> 31</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=32><a style=outline:none;text-decoration:none;color:inherit href=#32> 32</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=33><a style=outline:none;text-decoration:none;color:inherit href=#33> 33</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=34><a style=outline:none;text-decoration:none;color:inherit href=#34> 34</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=35><a style=outline:none;text-decoration:none;color:inherit href=#35> 35</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=36><a style=outline:none;text-decoration:none;color:inherit href=#36> 36</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=37><a style=outline:none;text-decoration:none;color:inherit href=#37> 37</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=38><a style=outline:none;text-decoration:none;color:inherit href=#38> 38</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=39><a style=outline:none;text-decoration:none;color:inherit href=#39> 39</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=40><a style=outline:none;text-decoration:none;color:inherit href=#40> 40</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=41><a style=outline:none;text-decoration:none;color:inherit href=#41> 41</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=42><a style=outline:none;text-decoration:none;color:inherit href=#42> 42</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=43><a style=outline:none;text-decoration:none;color:inherit href=#43> 43</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=44><a style=outline:none;text-decoration:none;color:inherit href=#44> 44</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=45><a style=outline:none;text-decoration:none;color:inherit href=#45> 45</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=46><a style=outline:none;text-decoration:none;color:inherit href=#46> 46</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=47><a style=outline:none;text-decoration:none;color:inherit href=#47> 47</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=48><a style=outline:none;text-decoration:none;color:inherit href=#48> 48</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=49><a style=outline:none;text-decoration:none;color:inherit href=#49> 49</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=50><a style=outline:none;text-decoration:none;color:inherit href=#50> 50</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=51><a style=outline:none;text-decoration:none;color:inherit href=#51> 51</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=52><a style=outline:none;text-decoration:none;color:inherit href=#52> 52</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=53><a style=outline:none;text-decoration:none;color:inherit href=#53> 53</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=54><a style=outline:none;text-decoration:none;color:inherit href=#54> 54</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=55><a style=outline:none;text-decoration:none;color:inherit href=#55> 55</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=56><a style=outline:none;text-decoration:none;color:inherit href=#56> 56</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=57><a style=outline:none;text-decoration:none;color:inherit href=#57> 57</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=58><a style=outline:none;text-decoration:none;color:inherit href=#58> 58</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=59><a style=outline:none;text-decoration:none;color:inherit href=#59> 59</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=60><a style=outline:none;text-decoration:none;color:inherit href=#60> 60</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=61><a style=outline:none;text-decoration:none;color:inherit href=#61> 61</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=62><a style=outline:none;text-decoration:none;color:inherit href=#62> 62</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=63><a style=outline:none;text-decoration:none;color:inherit href=#63> 63</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=64><a style=outline:none;text-decoration:none;color:inherit href=#64> 64</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=65><a style=outline:none;text-decoration:none;color:inherit href=#65> 65</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=66><a style=outline:none;text-decoration:none;color:inherit href=#66> 66</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=67><a style=outline:none;text-decoration:none;color:inherit href=#67> 67</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=68><a style=outline:none;text-decoration:none;color:inherit href=#68> 68</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=69><a style=outline:none;text-decoration:none;color:inherit href=#69> 69</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=70><a style=outline:none;text-decoration:none;color:inherit href=#70> 70</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=71><a style=outline:none;text-decoration:none;color:inherit href=#71> 71</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=72><a style=outline:none;text-decoration:none;color:inherit href=#72> 72</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=73><a style=outline:none;text-decoration:none;color:inherit href=#73> 73</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=74><a style=outline:none;text-decoration:none;color:inherit href=#74> 74</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=75><a style=outline:none;text-decoration:none;color:inherit href=#75> 75</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=76><a style=outline:none;text-decoration:none;color:inherit href=#76> 76</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=77><a style=outline:none;text-decoration:none;color:inherit href=#77> 77</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=78><a style=outline:none;text-decoration:none;color:inherit href=#78> 78</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=79><a style=outline:none;text-decoration:none;color:inherit href=#79> 79</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=80><a style=outline:none;text-decoration:none;color:inherit href=#80> 80</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=81><a style=outline:none;text-decoration:none;color:inherit href=#81> 81</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=82><a style=outline:none;text-decoration:none;color:inherit href=#82> 82</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=83><a style=outline:none;text-decoration:none;color:inherit href=#83> 83</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=84><a style=outline:none;text-decoration:none;color:inherit href=#84> 84</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=85><a style=outline:none;text-decoration:none;color:inherit href=#85> 85</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=86><a style=outline:none;text-decoration:none;color:inherit href=#86> 86</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=87><a style=outline:none;text-decoration:none;color:inherit href=#87> 87</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=88><a style=outline:none;text-decoration:none;color:inherit href=#88> 88</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=89><a style=outline:none;text-decoration:none;color:inherit href=#89> 89</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=90><a style=outline:none;text-decoration:none;color:inherit href=#90> 90</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=91><a style=outline:none;text-decoration:none;color:inherit href=#91> 91</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=92><a style=outline:none;text-decoration:none;color:inherit href=#92> 92</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=93><a style=outline:none;text-decoration:none;color:inherit href=#93> 93</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=94><a style=outline:none;text-decoration:none;color:inherit href=#94> 94</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=95><a style=outline:none;text-decoration:none;color:inherit href=#95> 95</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=96><a style=outline:none;text-decoration:none;color:inherit href=#96> 96</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=97><a style=outline:none;text-decoration:none;color:inherit href=#97> 97</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=98><a style=outline:none;text-decoration:none;color:inherit href=#98> 98</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=99><a style=outline:none;text-decoration:none;color:inherit href=#99> 99</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=100><a style=outline:none;text-decoration:none;color:inherit href=#100>100</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=101><a style=outline:none;text-decoration:none;color:inherit href=#101>101</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=102><a style=outline:none;text-decoration:none;color:inherit href=#102>102</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=103><a style=outline:none;text-decoration:none;color:inherit href=#103>103</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=104><a style=outline:none;text-decoration:none;color:inherit href=#104>104</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=105><a style=outline:none;text-decoration:none;color:inherit href=#105>105</a>
+</span></code></pre></td>
+<td style=vertical-align:top;padding:0;margin:0;border:0;width:100%>
+<pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#09f;font-style:italic># HELP octoprint_temperatures_actual Reported temperatures</span>
+<span style=color:#09f;font-style:italic># TYPE octoprint_temperatures_actual gauge</span>
+octoprint_temperatures_actual<span style=color:#555>{</span><span style=color:#033>identifier</span><span style=color:#555>=</span><span style=color:#c30>&#34;B&#34;</span><span style=color:#555>}</span> 23.75
+octoprint_temperatures_actual<span style=color:#555>{</span><span style=color:#033>identifier</span><span style=color:#555>=</span><span style=color:#c30>&#34;T0&#34;</span><span style=color:#555>}</span> 23.83
+<span style=color:#09f;font-style:italic># HELP octoprint_temperatures_target Targeted temperatures</span>
+<span style=color:#09f;font-style:italic># TYPE octoprint_temperatures_target gauge</span>
+octoprint_temperatures_target<span style=color:#555>{</span><span style=color:#033>identifier</span><span style=color:#555>=</span><span style=color:#c30>&#34;B&#34;</span><span style=color:#555>}</span> 0.0
+octoprint_temperatures_target<span style=color:#555>{</span><span style=color:#033>identifier</span><span style=color:#555>=</span><span style=color:#c30>&#34;T0&#34;</span><span style=color:#555>}</span> 0.0
+<span style=color:#09f;font-style:italic># HELP octoprint_raspberry_core_temperature Core temperature of Raspberry Pi</span>
+<span style=color:#09f;font-style:italic># TYPE octoprint_raspberry_core_temperature gauge</span>
+octoprint_raspberry_core_temperature 0.0
+<span style=color:#09f;font-style:italic># HELP octoprint_infos_info Octoprint host informations</span>
+<span style=color:#09f;font-style:italic># TYPE octoprint_infos_info gauge</span>
+octoprint_infos_info<span style=color:#555>{</span><span style=color:#033>app_start</span><span style=color:#555>=</span><span style=color:#c30>&#34;1631011041&#34;</span>,host<span style=color:#555>=</span><span style=color:#c30>&#34;octopi&#34;</span>,octoprint_version<span style=color:#555>=</span><span style=color:#c30>&#34;1.6.1&#34;</span>,platform<span style=color:#555>=</span><span style=color:#c30>&#34;Linux&#34;</span><span style=color:#555>}</span> 1.0
+<span style=color:#09f;font-style:italic># HELP octoprint_client_num The number of connected clients</span>
+<span style=color:#09f;font-style:italic># TYPE octoprint_client_num gauge</span>
+octoprint_client_num 1.0
+<span style=color:#09f;font-style:italic># HELP octoprint_printer_state_info Printer connection info</span>
+<span style=color:#09f;font-style:italic># TYPE octoprint_printer_state_info gauge</span>
+octoprint_printer_state_info<span style=color:#555>{</span><span style=color:#033>state_id</span><span style=color:#555>=</span><span style=color:#c30>&#34;OPERATIONAL&#34;</span>,state_string<span style=color:#555>=</span><span style=color:#c30>&#34;Operational&#34;</span><span style=color:#555>}</span> 1.0
+<span style=color:#09f;font-style:italic># HELP octoprint_started_prints_total Started print jobs</span>
+<span style=color:#09f;font-style:italic># TYPE octoprint_started_prints_total counter</span>
+octoprint_started_prints_total 0.0
+<span style=color:#09f;font-style:italic># HELP octoprint_started_prints_created Started print jobs</span>
+<span style=color:#09f;font-style:italic># TYPE octoprint_started_prints_created gauge</span>
+octoprint_started_prints_created 1.6310110257599866e+09
+<span style=color:#09f;font-style:italic># HELP octoprint_failed_prints_total Failed print jobs</span>
+<span style=color:#09f;font-style:italic># TYPE octoprint_failed_prints_total counter</span>
+octoprint_failed_prints_total 0.0
+<span style=color:#09f;font-style:italic># HELP octoprint_failed_prints_created Failed print jobs</span>
+<span style=color:#09f;font-style:italic># TYPE octoprint_failed_prints_created gauge</span>
+octoprint_failed_prints_created 1.63101102576006e+09
+<span style=color:#09f;font-style:italic># HELP octoprint_done_prints_total Done print jobs</span>
+<span style=color:#09f;font-style:italic># TYPE octoprint_done_prints_total counter</span>
+octoprint_done_prints_total 0.0
+<span style=color:#09f;font-style:italic># HELP octoprint_done_prints_created Done print jobs</span>
+<span style=color:#09f;font-style:italic># TYPE octoprint_done_prints_created gauge</span>
+octoprint_done_prints_created 1.6310110257601268e+09
+<span style=color:#09f;font-style:italic># HELP octoprint_cancelled_prints_total Cancelled print jobs</span>
+<span style=color:#09f;font-style:italic># TYPE octoprint_cancelled_prints_total counter</span>
+octoprint_cancelled_prints_total 0.0
+<span style=color:#09f;font-style:italic># HELP octoprint_cancelled_prints_created Cancelled print jobs</span>
+<span style=color:#09f;font-style:italic># TYPE octoprint_cancelled_prints_created gauge</span>
+octoprint_cancelled_prints_created 1.6310110257601933e+09
+<span style=color:#09f;font-style:italic># HELP octoprint_captured_timelapses_total Timelapse captured</span>
+<span style=color:#09f;font-style:italic># TYPE octoprint_captured_timelapses_total counter</span>
+octoprint_captured_timelapses_total 0.0
+<span style=color:#09f;font-style:italic># HELP octoprint_captured_timelapses_created Timelapse captured</span>
+<span style=color:#09f;font-style:italic># TYPE octoprint_captured_timelapses_created gauge</span>
+octoprint_captured_timelapses_created 1.631011025760261e+09
+<span style=color:#09f;font-style:italic># HELP octoprint_print_progress Print progress</span>
+<span style=color:#09f;font-style:italic># TYPE octoprint_print_progress gauge</span>
+<span style=color:#09f;font-style:italic># HELP octoprint_print_time_elapsed Print time elapsed</span>
+<span style=color:#09f;font-style:italic># TYPE octoprint_print_time_elapsed gauge</span>
+<span style=color:#09f;font-style:italic># HELP octoprint_print_time_est Print time estimate</span>
+<span style=color:#09f;font-style:italic># TYPE octoprint_print_time_est gauge</span>
+<span style=color:#09f;font-style:italic># HELP octoprint_print_time_left_estimate Print time left estimate</span>
+<span style=color:#09f;font-style:italic># TYPE octoprint_print_time_left_estimate gauge</span>
+<span style=color:#09f;font-style:italic># HELP octoprint_slice_progress Slice progress</span>
+<span style=color:#09f;font-style:italic># TYPE octoprint_slice_progress gauge</span>
+<span style=color:#09f;font-style:italic># HELP octoprint_printing_time_total Printing time total</span>
+<span style=color:#09f;font-style:italic># TYPE octoprint_printing_time_total counter</span>
+octoprint_printing_time_total 0.0
+<span style=color:#09f;font-style:italic># HELP octoprint_printing_time_created Printing time total</span>
+<span style=color:#09f;font-style:italic># TYPE octoprint_printing_time_created gauge</span>
+octoprint_printing_time_created 1.631011025761908e+09
+<span style=color:#09f;font-style:italic># HELP octoprint_extrusion_total Filament extruded total</span>
+<span style=color:#09f;font-style:italic># TYPE octoprint_extrusion_total counter</span>
+octoprint_extrusion_total 0.0
+<span style=color:#09f;font-style:italic># HELP octoprint_extrusion_created Filament extruded total</span>
+<span style=color:#09f;font-style:italic># TYPE octoprint_extrusion_created gauge</span>
+octoprint_extrusion_created 1.6310110257619894e+09
+<span style=color:#09f;font-style:italic># HELP octoprint_extrusion_print Filament extruded this print</span>
+<span style=color:#09f;font-style:italic># TYPE octoprint_extrusion_print gauge</span>
+octoprint_extrusion_print 0.0
+<span style=color:#09f;font-style:italic># HELP octoprint_x_travel_total X axis travel total</span>
+<span style=color:#09f;font-style:italic># TYPE octoprint_x_travel_total counter</span>
+octoprint_x_travel_total 0.0
+<span style=color:#09f;font-style:italic># HELP octoprint_x_travel_created X axis travel total</span>
+<span style=color:#09f;font-style:italic># TYPE octoprint_x_travel_created gauge</span>
+octoprint_x_travel_created 1.6310110257621343e+09
+<span style=color:#09f;font-style:italic># HELP octoprint_x_travel_print X axis travel in this print</span>
+<span style=color:#09f;font-style:italic># TYPE octoprint_x_travel_print gauge</span>
+octoprint_x_travel_print 0.0
+<span style=color:#09f;font-style:italic># HELP octoprint_y_travel_total Y axis travel total</span>
+<span style=color:#09f;font-style:italic># TYPE octoprint_y_travel_total counter</span>
+octoprint_y_travel_total 0.0
+<span style=color:#09f;font-style:italic># HELP octoprint_y_travel_created Y axis travel total</span>
+<span style=color:#09f;font-style:italic># TYPE octoprint_y_travel_created gauge</span>
+octoprint_y_travel_created 1.6310110257623897e+09
+<span style=color:#09f;font-style:italic># HELP octoprint_y_travel_print Y axis travel in this print</span>
+<span style=color:#09f;font-style:italic># TYPE octoprint_y_travel_print gauge</span>
+octoprint_y_travel_print 0.0
+<span style=color:#09f;font-style:italic># HELP octoprint_z_travel_total Z axis travel total</span>
+<span style=color:#09f;font-style:italic># TYPE octoprint_z_travel_total counter</span>
+octoprint_z_travel_total 0.0
+<span style=color:#09f;font-style:italic># HELP octoprint_z_travel_created Z axis travel total</span>
+<span style=color:#09f;font-style:italic># TYPE octoprint_z_travel_created gauge</span>
+octoprint_z_travel_created 1.631011025762542e+09
+<span style=color:#09f;font-style:italic># HELP octoprint_z_travel_print Z axis travel in this print</span>
+<span style=color:#09f;font-style:italic># TYPE octoprint_z_travel_print gauge</span>
+octoprint_z_travel_print 0.0
+<span style=color:#09f;font-style:italic># HELP octoprint_print_fan_speed Fan speed</span>
+<span style=color:#09f;font-style:italic># TYPE octoprint_print_fan_speed gauge</span>
+octoprint_print_fan_speed 0.0
+</code></pre></td></tr></table>
+</div>
+</div><h2 id=時系列dbにpullする>時系列DBにpullする</h2>
+<p>exporterの値を時系列DBへ取り込むためprometheus.ymlに以下を追加します。ブラウザーからmetric読めるのでapikeyは不要と思ってましたが、この行がないと403 forbiddenで引っ張れません。これがわかるまで2h。作者のReadme.mdは隅々までよく読みましょう。ちゃんと書いてありました。</p>
+<div class=highlight><div style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4>
+<table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0>
+<pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=1><a style=outline:none;text-decoration:none;color:inherit href=#1>1</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=2><a style=outline:none;text-decoration:none;color:inherit href=#2>2</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=3><a style=outline:none;text-decoration:none;color:inherit href=#3>3</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=4><a style=outline:none;text-decoration:none;color:inherit href=#4>4</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=5><a style=outline:none;text-decoration:none;color:inherit href=#5>5</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=6><a style=outline:none;text-decoration:none;color:inherit href=#6>6</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=7><a style=outline:none;text-decoration:none;color:inherit href=#7>7</a>
+</span></code></pre></td>
+<td style=vertical-align:top;padding:0;margin:0;border:0;width:100%>
+<pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml>- <span style=color:#309;font-weight:700>job_name</span>:<span style=color:#bbb> </span><span style=color:#c30>&#34;octoprint&#34;</span><span style=color:#bbb>
+</span><span style=color:#bbb>    </span><span style=color:#309;font-weight:700>scrape_interval</span>:<span style=color:#bbb> </span>5s<span style=color:#bbb>
+</span><span style=color:#bbb>    </span><span style=color:#309;font-weight:700>metrics_path</span>:<span style=color:#bbb> </span><span style=color:#c30>&#34;/plugin/prometheus_exporter/metrics&#34;</span><span style=color:#bbb>
+</span><span style=color:#bbb>    </span><span style=color:#309;font-weight:700>params</span>:<span style=color:#bbb>
+</span><span style=color:#bbb>      </span><span style=color:#309;font-weight:700>apikey</span>:<span style=color:#bbb> </span>[<span style=color:#c30>&#39;__octprint_api key___&#39;</span>]<span style=color:#bbb>
+</span><span style=color:#bbb>    </span><span style=color:#309;font-weight:700>static_configs</span>:<span style=color:#bbb>
+</span><span style=color:#bbb>      </span>- <span style=color:#309;font-weight:700>targets</span>:<span style=color:#bbb> </span>[<span style=color:#c30>&#34;IP_address:80&#34;</span>]<span style=color:#bbb>
+</span></code></pre></td></tr></table>
+</div>
+</div><h3 id=prometheusにデータが入っているのかを確認>prometheusにデータが入っているのかを確認</h3>
+<p>prometheusの画面上タブから「Status→Target」を選択すると、prometheus.ymlに書いたscrape設定が機能しているか確認できます。
+<div class=fancybox>
+<a data-fancybox=pr href=/images/3dprinter/octopi_prometheus.jpg data-caption=prometheus><img src=/images/3dprinter/octopi_prometheus.jpg width=300px></a>
+</div>
+</p>
+<p>このようにstat欄がupになっていると問題なくデータをpullできています。downだと右端にエラーの細部が表示されます。ネットワーク的にたどり着いてないとか、403 Forbiddenとか。内部環境によってそれに応じた問題解決が必要です。</p>
+<h3 id=grafanaを設定する>grafanaを設定する</h3>
+<p>prometheusにデータが蓄えられているところまで確認できると、次はgrafanaの設定です。参考リンクにダッシュボードのサンプルjsonファイルがあったので、importしました。
+<div class=fancybox>
+<a data-fancybox=pr href=/images/3dprinter/octopi_prometheus_grafana.jpg data-caption=grafana><img src=/images/3dprinter/octopi_prometheus_grafana.jpg width=300px></a>
+</div>
+</p>
+<p>時系列DB内には、他の値も蓄積されているのでチマチマとダッシュボードをカスタマイズします。pi3b内のcore tempの値を引っ張ってきているのですが「0」のままなので原因探求。</p>
+<p>pi3bのユーザpiがsudoグループに入ってなかったのでvcgencmdでcore tempデータを引っ張ってこれなかったようです。</p>
+<h2 id=派手なダッシュボード完成>派手なダッシュボード完成</h2>
+<p>OSSの組合せでこのような監視環境ができました。
+<div class=fancybox>
+<a data-fancybox=pr href=/images/3dprinter/octoprint_grafana_custom.jpg data-caption=grafana_custom><img src=/images/3dprinter/octoprint_grafana_custom.jpg width=300px></a>
+</div>
+</p>
+<p>左上の印刷キャンセルした値がおかしいですが、追々修正します。octoprintでは、ベッドとノズル温度変化しか可視化されませんが、以下の項目を可視化する事ができました。</p>
+<ul>
+<li>プリンターの稼働状況</li>
+<li>印刷した数</li>
+<li>印刷失敗した数</li>
+<li>印刷キャンセルした数</li>
+<li>octoprintが動いているpi3bのcore temp</li>
+<li>各軸の移動距離</li>
+<li>フィラメントを出すエクストルーダーの移動距離</li>
+<li>造形物冷却ファンの稼働状況</li>
+</ul>
+<p>これらの可視化により、失敗のない印刷に繋がればと思います。</p>
+<h2 id=まとめ>まとめ</h2>
+<p>3Dプリンターに接続しているpi3bで動かしているoctoprintにpluginを追加しました。時系列DBや可視化ソフトウェアを使って、3Dプリンターの内部情報をダッシュボード上に可視化しました。印刷パラメーターを調整し、造形物の形によらず、失敗の少ない印刷環境が構築できればと思います。</p>
+<h2 id=参考リンク>参考リンク</h2>
+<p>[1^]:<a href=https://plugins.octoprint.org/plugins/prometheus_exporter/>Prometheus Exporter</a></p>
+</div>
+<div id=disqus_thread></div>
+<script type=application/javascript>var disqus_config=function(){};(function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById('disqus_thread').innerHTML='Disqus comments not available by default when the website is previewed locally.';return}var b=document,a=b.createElement('script');a.async=!0,a.src='//https-hkaji-github-io.disqus.com/embed.js',a.setAttribute('data-timestamp',+new Date),(b.head||b.body).appendChild(a)})()</script>
+<noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript>
+<a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a>
+</div>
+</div>
+</div>
+</section>
+<footer class=text-capitalize>
+<div class=container>
+<div class="row justify-content-center">
+<div class="col-12 text-center mb-5">
+<a href=https://hkaji.github.io/><img src=https://hkaji.github.io/images/logo.png alt=一歩のはまりから/ipponohamari></a>
+</div>
+<div class="col-lg-3 col-sm-6 mb-5">
+<h6 class=mb-4>Contact Me</h6>
+<ul class=list-unstyled>
+<li class=mb-3><i class="ti-location-pin mr-3 text-primary"></i>Kanagawa, Japan</li>
+<li class=mb-3><a class=text-dark href=mailto:hkaji.blog@gmail.com><i class="ti-email mr-3 text-primary"></i>hkaji.blog@gmail.com</a>
+</li>
+</ul>
+</div>
+<div class="col-lg-3 col-sm-6 mb-5">
+<h6 class=mb-4>Social Contacts</h6>
+<ul class=list-unstyled>
+<li class=mb-3><a class=text-dark href=#>facebook</a></li>
+<li class=mb-3><a class=text-dark href=#>twitter</a></li>
+<li class=mb-3><a class=text-dark href=https://github.com/hkaji>github</a></li>
+</ul>
+</div>
+<div class="col-lg-3 col-sm-6 mb-5">
+<h6 class=mb-4>Categories</h6>
+<ul class=list-unstyled>
+<li class=mb-3><a class=text-dark href=/categories/3dprinter>3dprinter</a>
+</li>
+<li class=mb-3><a class=text-dark href=/categories/etc>Etc</a>
+</li>
+<li class=mb-3><a class=text-dark href=/categories/go>Go</a>
+</li>
+<li class=mb-3><a class=text-dark href=/categories/news>News</a>
+</li>
+<li class=mb-3><a class=text-dark href=/categories/raspi>Raspi</a>
+</li>
+<li class=mb-3><a class=text-dark href=/categories/robo>Robo</a>
+</li>
+<li class=mb-3><a class=text-dark href=/categories/tsdb>Tsdb</a>
+</li>
+<li class=mb-3><a class=text-dark href=/categories/www>WWW</a>
+</li>
+</ul>
+</div>
+<div class="col-lg-3 col-sm-6 mb-5">
+<h6 class=mb-4>Quick Links</h6>
+<ul class=list-unstyled>
+<li class=mb-3><a class=text-dark href=https://hkaji.github.io/about>About</a></li>
+<li class=mb-3><a class=text-dark href=https://hkaji.github.io/blog>Blog/Post</a></li>
+<li class=mb-3><a class=text-dark href=https://hkaji.github.io/contact>Contact</a></li>
+<li class=mb-3><a class=text-dark href=https://hkaji.github.io/privacypolicy>Privacy Policy</a></li>
+</ul>
+</div>
+<div class="col-12 border-top py-4 text-center">
+Powered by <a href=https://hugo.io>Hugo</a>
+Theme <a href=https://github.com/gethugothemes/liva-hugo>Liva Hugo</a>
+| copyright © 2015 <a href=https://hkaji.github.io>hkaji</a> All Rights Reserved |
+</div>
+</div>
+</div>
+</footer>
+<script>var indexURL="https://hkaji.github.io/index.json"</script>
+<script src=https://hkaji.github.io/plugins/jQuery/jquery.min.js></script>
+<script src=https://hkaji.github.io/plugins/bootstrap/bootstrap.min.js></script>
+<script src=https://hkaji.github.io/plugins/slick/slick.min.js></script>
+<script src=https://hkaji.github.io/plugins/venobox/venobox.min.js></script>
+<script src=https://hkaji.github.io/plugins/search/fuse.min.js></script>
+<script src=https://hkaji.github.io/plugins/search/mark.js></script>
+<script src=https://hkaji.github.io/plugins/search/search.js></script>
+<script src=https://hkaji.github.io/js/script.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js></script>
+<div id=js-cookie-box class="cookie-box cookie-box-hide">
+This site uses cookies. By continuing to use this website, you agree to their use. <span id=js-cookie-button class="btn btn-sm btn-primary ml-2">I Accept</span>
+</div>
+<script>(function(c){const a=document.getElementById('js-cookie-box'),b=document.getElementById('js-cookie-button');Cookies.get('cookie-box')||(a.classList.remove('cookie-box-hide'),b.onclick=function(){Cookies.set('cookie-box',!0,{expires:2}),a.classList.add('cookie-box-hide')})})(jQuery)</script>
+<style>.cookie-box{position:fixed;left:0;right:0;bottom:0;text-align:center;z-index:9999;padding:1rem 2rem;background:#474747;transition:all .75s cubic-bezier(.19,1,.22,1);color:#fdfdfd}.cookie-box-hide{display:none}</style>
+</body>
+</html>

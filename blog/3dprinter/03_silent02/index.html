@@ -1,0 +1,205 @@
+<!doctype html><html lang=ja><head>
+<meta charset=utf-8>
+<title>一歩のはまりから/ipponohamari</title>
+<meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1">
+<meta name=description content="マイコンや倒立ロボでつまずいた人は、お立ち寄りください。きっと役に立てると思います">
+<meta name=author content="hkaji">
+<meta name=generator content="Hugo 0.88.1">
+<link rel=stylesheet href=https://hkaji.github.io/plugins/bootstrap/bootstrap.min.css>
+<link rel=stylesheet href=https://hkaji.github.io/plugins/slick/slick.css>
+<link rel=stylesheet href=https://hkaji.github.io/plugins/themify-icons/themify-icons.css>
+<link rel=stylesheet href=https://hkaji.github.io/plugins/venobox/venobox.css>
+<link rel=stylesheet href=https://hkaji.github.io/scss/style.min.css media=screen>
+<link rel="shortcut icon" href=https://hkaji.github.io/images/favicon.png type=image/x-icon>
+<link rel=icon href=https://hkaji.github.io/images/favicon.png type=image/x-icon>
+<script>(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)})(window,document,'script','//www.google-analytics.com/analytics.js','ga'),ga('create','UA-2831102754','auto'),ga('send','pageview')</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-V3DKLV7482"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-V3DKLV7482')</script>
+<meta name=google-site-verification content="eNklt_-Jdl-3xVGM2Lx-ybzzPso6QpwJqVnbR38n8zM">
+</head><head>
+<script type=text/javascript src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js></script>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css>
+<script type=text/javascript src=https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js></script>
+</head>
+<body>
+<div class=preloader>
+</div>
+<header class=navigation>
+<div class=container>
+<nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
+<a class="navbar-brand mobile-view" href=https://hkaji.github.io/><img class=img-fluid src=https://hkaji.github.io/images/logo.png alt=一歩のはまりから/ipponohamari></a>
+<button class="navbar-toggler border-0" type=button data-toggle=collapse data-target=#navigation>
+<i class=ti-menu></i>
+</button>
+<div class="collapse navbar-collapse text-center" id=navigation>
+<div class=desktop-view>
+<ul class="navbar-nav mr-auto">
+<li class=nav-item>
+<a class=nav-link href=#><i class=ti-facebook></i></a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=#><i class=ti-twitter-alt></i></a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=https://github.com/hkaji><i class=ti-github></i></a>
+</li>
+</ul>
+</div>
+<a class="navbar-brand mx-auto desktop-view" href=https://hkaji.github.io/><img class=img-fluid src=https://hkaji.github.io/images/logo.png alt=一歩のはまりから/ipponohamari></a>
+<ul class=navbar-nav>
+<li class=nav-item>
+<a class=nav-link href=https://hkaji.github.io/about>About</a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=https://hkaji.github.io/blog>Blog/Post</a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=https://hkaji.github.io/contact>Contact</a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=https://hkaji.github.io/privacypolicy>Privacy Policy</a>
+</li>
+</ul>
+<div class="search pl-lg-4">
+<button id=searchOpen class=search-btn><i class=ti-search></i></button>
+<div class=search-wrapper>
+<form action=https://hkaji.github.io//search class=h-100>
+<input class="search-box px-4" id=search-query name=s type=search placeholder="Type & Hit Enter...">
+</form>
+<button id=searchClose class=search-close><i class="ti-close text-dark"></i></button>
+</div>
+</div>
+</div>
+</nav>
+</div>
+</header>
+<section class=section-sm>
+<div class=container>
+<div class=row>
+<div class="col-lg-8 mx-auto">
+<a href=/categories/3dprinter class=text-primary>3 dprinter</a>
+<h2>3D printer静音化(その2)&mldr;電源・ボード編</h2>
+<div class="mb-3 post-meta">
+<span>By hkaji</span>
+<span class="border-bottom border-primary px-2 mx-1"></span>
+<span>04 October 2021</span>
+<span>Update 04 October 2021</span>
+</div>
+<img src=https://hkaji.github.io/image/3dprinter/rps20210819_121006.jpg class="img-fluid w-25 mb-4" alt="3D printer静音化(その2)&mldr;電源・ボード編">
+<div class="content mb-5">
+<h2 id=今回は>今回は</h2>
+<p>3Dプリンターの静音化に向けて部品を作成したので、電源ユニットと制御ユニットの静音ファン交換や配線をします。</p>
+<h2 id=静音ファン取付など>静音ファン取付など</h2>
+<p>3Dプリンター本体下部の各ネジを外してユニットをばらします。作成した静音ファン用の部品に静音ファンを取り付けます。ネジ穴の位置はばっちりでした。</p>
+<p>電源ユニット</p>
+<div class=fancybox>
+<a data-fancybox href=/images/3dprinter/rps20210819_120905.jpg data-caption=PSU><img src=/images/3dprinter/rps20210819_120905.jpg width=300px></a>
+</div>
+<p>制御ユニット</p>
+<div class=fancybox>
+<a data-fancybox href=/images/3dprinter/rps20210819_120949.jpg data-caption=control_unit><img src=/images/3dprinter/rps20210819_120949.jpg width=300px></a>
+</div>
+<p>電源ユニットはもともと12Vなのでプラスマイナス間違わないように配線して納めれば終了です。制御ユニットは、24Vなので降圧変換器を間に入れて12Vに降圧します。</p>
+<div class=fancybox>
+<a data-fancybox href=/images/3dprinter/rps20210819_121006.jpg data-caption=DC/DC><img src=/images/3dprinter/rps20210819_121006.jpg width=300px></a>
+</div>
+<p>左が入力、右が出力です。とくに設定はありませんが7seg上の青い部品の小さなネジが可変抵抗で細部の出力電圧を調整できます。最初は11Vだったので調整して12Vにしました。7seg左のボタンは、入力と出力電圧表示の切り替え、右のボタンは出力のon/offです。</p>
+<p>ファンの厚み分底上げしないといけないので、四隅の両面テープで止めてあるゴムをはがして、印刷して作成した高さ38mmの足をXレールにはめます。印刷精度でレールにはまりにくいので、向きはバラバラです。10mmの板ゴムを切って準備しておいたのですが、別途作成しなくてもはがしたゴムをそのまま流用すればよかったです。</p>
+<p>ということで2つのユニットの静音化作業は完了しました。</p>
+<div class=fancybox>
+<a data-fancybox href=/images/3dprinter/rps20210819_120932.jpg data-caption="PSU and mother board"><img src=/images/3dprinter/rps20210819_120932.jpg width=300px></a>
+</div>
+<div class=fancybox>
+<a data-fancybox href=/images/3dprinter/rps20210819_121051.jpg data-caption=脚延長><img src=/images/3dprinter/rps20210819_121051.jpg width=300px></a>
+</div>
+<p>お試し印刷してみます。制御ユニットのファンは、動いている？くらい静かになりました。電源ユニットは、少し静かになりましたが静音とまでは程遠い感じです。配線等は当たっていないので、ファン自体がうるさいようです。しばらくこれで使ってみて、風量が十分で静かなファンを探したいと思います。</p>
+<h2 id=今回のまとめ>今回のまとめ</h2>
+<p>電源ユニットと制御ユニットのファンを静音化しましたが、電源ユニットのファンはまだちょっとうるさいです。引き続き静音化続きます。材料を熱しているヘッドユニットにもファンがあるので、そちらも静音化したいと思います。</p>
+<h2 id=参考リンク>参考リンク</h2>
+<p><a href=https://kurashi-note.com/post-8312/>Ender3 V2本格静音化MOD　メインボード・PSU・ホットエンド・造形物冷却用4つの騒音ファンを静音ファンに交換</a></p>
+</div>
+<div id=disqus_thread></div>
+<script type=application/javascript>var disqus_config=function(){};(function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById('disqus_thread').innerHTML='Disqus comments not available by default when the website is previewed locally.';return}var b=document,a=b.createElement('script');a.async=!0,a.src='//https-hkaji-github-io.disqus.com/embed.js',a.setAttribute('data-timestamp',+new Date),(b.head||b.body).appendChild(a)})()</script>
+<noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript>
+<a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a>
+</div>
+</div>
+</div>
+</section>
+<footer class=text-capitalize>
+<div class=container>
+<div class="row justify-content-center">
+<div class="col-12 text-center mb-5">
+<a href=https://hkaji.github.io/><img src=https://hkaji.github.io/images/logo.png alt=一歩のはまりから/ipponohamari></a>
+</div>
+<div class="col-lg-3 col-sm-6 mb-5">
+<h6 class=mb-4>Contact Me</h6>
+<ul class=list-unstyled>
+<li class=mb-3><i class="ti-location-pin mr-3 text-primary"></i>Kanagawa, Japan</li>
+<li class=mb-3><a class=text-dark href=mailto:hkaji.blog@gmail.com><i class="ti-email mr-3 text-primary"></i>hkaji.blog@gmail.com</a>
+</li>
+</ul>
+</div>
+<div class="col-lg-3 col-sm-6 mb-5">
+<h6 class=mb-4>Social Contacts</h6>
+<ul class=list-unstyled>
+<li class=mb-3><a class=text-dark href=#>facebook</a></li>
+<li class=mb-3><a class=text-dark href=#>twitter</a></li>
+<li class=mb-3><a class=text-dark href=https://github.com/hkaji>github</a></li>
+</ul>
+</div>
+<div class="col-lg-3 col-sm-6 mb-5">
+<h6 class=mb-4>Categories</h6>
+<ul class=list-unstyled>
+<li class=mb-3><a class=text-dark href=/categories/3dprinter>3dprinter</a>
+</li>
+<li class=mb-3><a class=text-dark href=/categories/etc>Etc</a>
+</li>
+<li class=mb-3><a class=text-dark href=/categories/go>Go</a>
+</li>
+<li class=mb-3><a class=text-dark href=/categories/news>News</a>
+</li>
+<li class=mb-3><a class=text-dark href=/categories/raspi>Raspi</a>
+</li>
+<li class=mb-3><a class=text-dark href=/categories/robo>Robo</a>
+</li>
+<li class=mb-3><a class=text-dark href=/categories/tsdb>Tsdb</a>
+</li>
+<li class=mb-3><a class=text-dark href=/categories/www>WWW</a>
+</li>
+</ul>
+</div>
+<div class="col-lg-3 col-sm-6 mb-5">
+<h6 class=mb-4>Quick Links</h6>
+<ul class=list-unstyled>
+<li class=mb-3><a class=text-dark href=https://hkaji.github.io/about>About</a></li>
+<li class=mb-3><a class=text-dark href=https://hkaji.github.io/blog>Blog/Post</a></li>
+<li class=mb-3><a class=text-dark href=https://hkaji.github.io/contact>Contact</a></li>
+<li class=mb-3><a class=text-dark href=https://hkaji.github.io/privacypolicy>Privacy Policy</a></li>
+</ul>
+</div>
+<div class="col-12 border-top py-4 text-center">
+Powered by <a href=https://hugo.io>Hugo</a>
+Theme <a href=https://github.com/gethugothemes/liva-hugo>Liva Hugo</a>
+| copyright © 2015 <a href=https://hkaji.github.io>hkaji</a> All Rights Reserved |
+</div>
+</div>
+</div>
+</footer>
+<script>var indexURL="https://hkaji.github.io/index.json"</script>
+<script src=https://hkaji.github.io/plugins/jQuery/jquery.min.js></script>
+<script src=https://hkaji.github.io/plugins/bootstrap/bootstrap.min.js></script>
+<script src=https://hkaji.github.io/plugins/slick/slick.min.js></script>
+<script src=https://hkaji.github.io/plugins/venobox/venobox.min.js></script>
+<script src=https://hkaji.github.io/plugins/search/fuse.min.js></script>
+<script src=https://hkaji.github.io/plugins/search/mark.js></script>
+<script src=https://hkaji.github.io/plugins/search/search.js></script>
+<script src=https://hkaji.github.io/js/script.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js></script>
+<div id=js-cookie-box class="cookie-box cookie-box-hide">
+This site uses cookies. By continuing to use this website, you agree to their use. <span id=js-cookie-button class="btn btn-sm btn-primary ml-2">I Accept</span>
+</div>
+<script>(function(c){const a=document.getElementById('js-cookie-box'),b=document.getElementById('js-cookie-button');Cookies.get('cookie-box')||(a.classList.remove('cookie-box-hide'),b.onclick=function(){Cookies.set('cookie-box',!0,{expires:2}),a.classList.add('cookie-box-hide')})})(jQuery)</script>
+<style>.cookie-box{position:fixed;left:0;right:0;bottom:0;text-align:center;z-index:9999;padding:1rem 2rem;background:#474747;transition:all .75s cubic-bezier(.19,1,.22,1);color:#fdfdfd}.cookie-box-hide{display:none}</style>
+</body>
+</html>

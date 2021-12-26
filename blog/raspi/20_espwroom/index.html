@@ -1,0 +1,254 @@
+<!doctype html><html lang=ja><head>
+<meta charset=utf-8>
+<title>一歩のはまりから/ipponohamari</title>
+<meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1">
+<meta name=description content="マイコンや倒立ロボでつまずいた人は、お立ち寄りください。きっと役に立てると思います">
+<meta name=author content="hkaji">
+<meta name=generator content="Hugo 0.88.1">
+<link rel=stylesheet href=https://hkaji.github.io/plugins/bootstrap/bootstrap.min.css>
+<link rel=stylesheet href=https://hkaji.github.io/plugins/slick/slick.css>
+<link rel=stylesheet href=https://hkaji.github.io/plugins/themify-icons/themify-icons.css>
+<link rel=stylesheet href=https://hkaji.github.io/plugins/venobox/venobox.css>
+<link rel=stylesheet href=https://hkaji.github.io/scss/style.min.css media=screen>
+<link rel="shortcut icon" href=https://hkaji.github.io/images/favicon.png type=image/x-icon>
+<link rel=icon href=https://hkaji.github.io/images/favicon.png type=image/x-icon>
+<script>(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)})(window,document,'script','//www.google-analytics.com/analytics.js','ga'),ga('create','UA-2831102754','auto'),ga('send','pageview')</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-V3DKLV7482"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-V3DKLV7482')</script>
+<meta name=google-site-verification content="eNklt_-Jdl-3xVGM2Lx-ybzzPso6QpwJqVnbR38n8zM">
+</head><head>
+<script type=text/javascript src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js></script>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css>
+<script type=text/javascript src=https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js></script>
+</head>
+<body>
+<div class=preloader>
+</div>
+<header class=navigation>
+<div class=container>
+<nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
+<a class="navbar-brand mobile-view" href=https://hkaji.github.io/><img class=img-fluid src=https://hkaji.github.io/images/logo.png alt=一歩のはまりから/ipponohamari></a>
+<button class="navbar-toggler border-0" type=button data-toggle=collapse data-target=#navigation>
+<i class=ti-menu></i>
+</button>
+<div class="collapse navbar-collapse text-center" id=navigation>
+<div class=desktop-view>
+<ul class="navbar-nav mr-auto">
+<li class=nav-item>
+<a class=nav-link href=#><i class=ti-facebook></i></a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=#><i class=ti-twitter-alt></i></a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=https://github.com/hkaji><i class=ti-github></i></a>
+</li>
+</ul>
+</div>
+<a class="navbar-brand mx-auto desktop-view" href=https://hkaji.github.io/><img class=img-fluid src=https://hkaji.github.io/images/logo.png alt=一歩のはまりから/ipponohamari></a>
+<ul class=navbar-nav>
+<li class=nav-item>
+<a class=nav-link href=https://hkaji.github.io/about>About</a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=https://hkaji.github.io/blog>Blog/Post</a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=https://hkaji.github.io/contact>Contact</a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=https://hkaji.github.io/privacypolicy>Privacy Policy</a>
+</li>
+</ul>
+<div class="search pl-lg-4">
+<button id=searchOpen class=search-btn><i class=ti-search></i></button>
+<div class=search-wrapper>
+<form action=https://hkaji.github.io//search class=h-100>
+<input class="search-box px-4" id=search-query name=s type=search placeholder="Type & Hit Enter...">
+</form>
+<button id=searchClose class=search-close><i class="ti-close text-dark"></i></button>
+</div>
+</div>
+</div>
+</nav>
+</div>
+</header>
+<section class=section-sm>
+<div class=container>
+<div class=row>
+<div class="col-lg-8 mx-auto">
+<a href=/categories/raspi class=text-primary>Raspi</a>
+<h2>2年目のラズパイ&mldr;10日目（ESP-WROOM-2)&mldr;python,LCD</h2>
+<div class="mb-3 post-meta">
+<span>By hkaji</span>
+<span class="border-bottom border-primary px-2 mx-1"></span>
+<span>10 June 2018</span>
+<span>Update 10 June 2018</span>
+</div>
+<img src=https://hkaji.github.io/images/ class="img-fluid w-25 mb-4" alt=2年目のラズパイ&mldr;10日目（ESP-WROOM-2)&mldr;python,LCD>
+<div class="content mb-5">
+<p>MicroPythonは、無事動いてくれました。
+ソースコードを綺麗に整形して表示できるように、GitHubも勉強してアカウントを作成し、使い方を覚えました。</p>
+<p>Lチカの状況を動画でblogへ張るため、動画編集ソフトを自宅のWindowsマシンにインストールし、スマホで撮った動画を編集しました。
+非力なマシンなので結構つらいものがあります。YouTubeページで少し前までは編集できたようですが、サービス終了とのこと。</p>
+<p>今回は、blogの中身薄いですが手間は結構かかってます。</p>
+<p>定番の「Lチカ」IO4ポートに抵抗入りLEDを接続。</p>
+<div class=highlight><div style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4>
+<table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0>
+<pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=1><a style=outline:none;text-decoration:none;color:inherit href=#1> 1</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=2><a style=outline:none;text-decoration:none;color:inherit href=#2> 2</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=3><a style=outline:none;text-decoration:none;color:inherit href=#3> 3</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=4><a style=outline:none;text-decoration:none;color:inherit href=#4> 4</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=5><a style=outline:none;text-decoration:none;color:inherit href=#5> 5</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=6><a style=outline:none;text-decoration:none;color:inherit href=#6> 6</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=7><a style=outline:none;text-decoration:none;color:inherit href=#7> 7</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=8><a style=outline:none;text-decoration:none;color:inherit href=#8> 8</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=9><a style=outline:none;text-decoration:none;color:inherit href=#9> 9</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=10><a style=outline:none;text-decoration:none;color:inherit href=#10>10</a>
+</span></code></pre></td>
+<td style=vertical-align:top;padding:0;margin:0;border:0;width:100%>
+<pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#069;font-weight:700>import</span> <span style=color:#0cf;font-weight:700>machine</span>
+<span style=color:#069;font-weight:700>import</span> <span style=color:#0cf;font-weight:700>time</span>
+
+pin <span style=color:#555>=</span> machine<span style=color:#555>.</span>Pin(<span style=color:#f60>4</span>, machine<span style=color:#555>.</span>Pin<span style=color:#555>.</span>OUT) <span style=color:#09f;font-style:italic># 最初の引数がPin番号</span>
+
+<span style=color:#069;font-weight:700>for</span> i <span style=color:#000;font-weight:700>in</span> <span style=color:#366>range</span>(<span style=color:#f60>10</span>):
+    pin<span style=color:#555>.</span>value(<span style=color:#f60>0</span>)
+    time<span style=color:#555>.</span>sleep(<span style=color:#f60>0.1</span>)
+    pin<span style=color:#555>.</span>value(<span style=color:#f60>1</span>)
+    time<span style=color:#555>.</span>sleep(<span style=color:#f60>0.1</span>)
+</code></pre></td></tr></table>
+</div>
+</div><p>LEDをPWMにて明るさ制御する(俗称「Lモア」)</p>
+<div class=highlight><div style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4>
+<table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0>
+<pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=1><a style=outline:none;text-decoration:none;color:inherit href=#1> 1</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=2><a style=outline:none;text-decoration:none;color:inherit href=#2> 2</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=3><a style=outline:none;text-decoration:none;color:inherit href=#3> 3</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=4><a style=outline:none;text-decoration:none;color:inherit href=#4> 4</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=5><a style=outline:none;text-decoration:none;color:inherit href=#5> 5</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=6><a style=outline:none;text-decoration:none;color:inherit href=#6> 6</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=7><a style=outline:none;text-decoration:none;color:inherit href=#7> 7</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=8><a style=outline:none;text-decoration:none;color:inherit href=#8> 8</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=9><a style=outline:none;text-decoration:none;color:inherit href=#9> 9</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=10><a style=outline:none;text-decoration:none;color:inherit href=#10>10</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=11><a style=outline:none;text-decoration:none;color:inherit href=#11>11</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=12><a style=outline:none;text-decoration:none;color:inherit href=#12>12</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=13><a style=outline:none;text-decoration:none;color:inherit href=#13>13</a>
+</span></code></pre></td>
+<td style=vertical-align:top;padding:0;margin:0;border:0;width:100%>
+<pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#069;font-weight:700>import</span> <span style=color:#0cf;font-weight:700>time</span>
+<span style=color:#069;font-weight:700>import</span> <span style=color:#0cf;font-weight:700>machine</span>
+
+pwm <span style=color:#555>=</span> machine<span style=color:#555>.</span>PWM(machine<span style=color:#555>.</span>Pin(<span style=color:#f60>4</span>)) <span style=color:#09f;font-style:italic># この数字が出力Pin番号</span>
+pwm<span style=color:#555>.</span>freq(<span style=color:#f60>60</span>)
+
+<span style=color:#069;font-weight:700>while</span> <span style=color:#069;font-weight:700>True</span>:
+    <span style=color:#069;font-weight:700>for</span> i <span style=color:#000;font-weight:700>in</span> <span style=color:#366>range</span>(<span style=color:#f60>1024</span>):
+        pwm<span style=color:#555>.</span>duty(i)
+        time<span style=color:#555>.</span>sleep(<span style=color:#f60>0.001</span>)
+    <span style=color:#069;font-weight:700>for</span> i <span style=color:#000;font-weight:700>in</span> <span style=color:#366>range</span>(<span style=color:#f60>1023</span>, <span style=color:#555>-</span><span style=color:#f60>1</span>, <span style=color:#555>-</span><span style=color:#f60>1</span>):
+        pwm<span style=color:#555>.</span>duty(i)
+        time<span style=color:#555>.</span>sleep(<span style=color:#f60>0.001</span>)
+</code></pre></td></tr></table>
+</div>
+</div><p>状況の動画です。LチカからのLモア(手ブレあり)です。
+<div style=position:relative;padding-bottom:56.25%;height:0;overflow:hidden>
+<iframe src=https://www.youtube.com/embed/H86XubauK3s style=position:absolute;top:0;left:0;width:100%;height:100%;border:0 allowfullscreen title="YouTube Video"></iframe>
+</div>
+<div style=position:relative;padding-bottom:56.25%;height:0;overflow:hidden>
+<iframe src=https://www.youtube.com/embed/F6dCDcRTCQ0 style=position:absolute;top:0;left:0;width:100%;height:100%;border:0 allowfullscreen title="YouTube Video"></iframe>
+</div>
+</p>
+<p>あとは、
+ちょっと脱線して、小さいLCDへの出力です。</p>
+<p>●aqm1602y-rn-gbw python</p>
+<p><a href=http://www.takunoko.com/blog/aqm1602xa-rn-gbw%E3%82%92raspberry-pi%E3%81%A7%E4%BD%BF%E3%81%86/>http://www.takunoko.com/blog/aqm1602xa-rn-gbw%E3%82%92raspberry-pi%E3%81%A7%E4%BD%BF%E3%81%86/</a>
+<a href=http://kaizou55.blog84.fc2.com/blog-entry-5.html>http://kaizou55.blog84.fc2.com/blog-entry-5.html</a></p>
+<p>今回は間に合いそうにないので、また次回に。</p>
+</div>
+<div id=disqus_thread></div>
+<script type=application/javascript>var disqus_config=function(){};(function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById('disqus_thread').innerHTML='Disqus comments not available by default when the website is previewed locally.';return}var b=document,a=b.createElement('script');a.async=!0,a.src='//https-hkaji-github-io.disqus.com/embed.js',a.setAttribute('data-timestamp',+new Date),(b.head||b.body).appendChild(a)})()</script>
+<noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript>
+<a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a>
+</div>
+</div>
+</div>
+</section>
+<footer class=text-capitalize>
+<div class=container>
+<div class="row justify-content-center">
+<div class="col-12 text-center mb-5">
+<a href=https://hkaji.github.io/><img src=https://hkaji.github.io/images/logo.png alt=一歩のはまりから/ipponohamari></a>
+</div>
+<div class="col-lg-3 col-sm-6 mb-5">
+<h6 class=mb-4>Contact Me</h6>
+<ul class=list-unstyled>
+<li class=mb-3><i class="ti-location-pin mr-3 text-primary"></i>Kanagawa, Japan</li>
+<li class=mb-3><a class=text-dark href=mailto:hkaji.blog@gmail.com><i class="ti-email mr-3 text-primary"></i>hkaji.blog@gmail.com</a>
+</li>
+</ul>
+</div>
+<div class="col-lg-3 col-sm-6 mb-5">
+<h6 class=mb-4>Social Contacts</h6>
+<ul class=list-unstyled>
+<li class=mb-3><a class=text-dark href=#>facebook</a></li>
+<li class=mb-3><a class=text-dark href=#>twitter</a></li>
+<li class=mb-3><a class=text-dark href=https://github.com/hkaji>github</a></li>
+</ul>
+</div>
+<div class="col-lg-3 col-sm-6 mb-5">
+<h6 class=mb-4>Categories</h6>
+<ul class=list-unstyled>
+<li class=mb-3><a class=text-dark href=/categories/3dprinter>3dprinter</a>
+</li>
+<li class=mb-3><a class=text-dark href=/categories/etc>Etc</a>
+</li>
+<li class=mb-3><a class=text-dark href=/categories/go>Go</a>
+</li>
+<li class=mb-3><a class=text-dark href=/categories/news>News</a>
+</li>
+<li class=mb-3><a class=text-dark href=/categories/raspi>Raspi</a>
+</li>
+<li class=mb-3><a class=text-dark href=/categories/robo>Robo</a>
+</li>
+<li class=mb-3><a class=text-dark href=/categories/tsdb>Tsdb</a>
+</li>
+<li class=mb-3><a class=text-dark href=/categories/www>WWW</a>
+</li>
+</ul>
+</div>
+<div class="col-lg-3 col-sm-6 mb-5">
+<h6 class=mb-4>Quick Links</h6>
+<ul class=list-unstyled>
+<li class=mb-3><a class=text-dark href=https://hkaji.github.io/about>About</a></li>
+<li class=mb-3><a class=text-dark href=https://hkaji.github.io/blog>Blog/Post</a></li>
+<li class=mb-3><a class=text-dark href=https://hkaji.github.io/contact>Contact</a></li>
+<li class=mb-3><a class=text-dark href=https://hkaji.github.io/privacypolicy>Privacy Policy</a></li>
+</ul>
+</div>
+<div class="col-12 border-top py-4 text-center">
+Powered by <a href=https://hugo.io>Hugo</a>
+Theme <a href=https://github.com/gethugothemes/liva-hugo>Liva Hugo</a>
+| copyright © 2015 <a href=https://hkaji.github.io>hkaji</a> All Rights Reserved |
+</div>
+</div>
+</div>
+</footer>
+<script>var indexURL="https://hkaji.github.io/index.json"</script>
+<script src=https://hkaji.github.io/plugins/jQuery/jquery.min.js></script>
+<script src=https://hkaji.github.io/plugins/bootstrap/bootstrap.min.js></script>
+<script src=https://hkaji.github.io/plugins/slick/slick.min.js></script>
+<script src=https://hkaji.github.io/plugins/venobox/venobox.min.js></script>
+<script src=https://hkaji.github.io/plugins/search/fuse.min.js></script>
+<script src=https://hkaji.github.io/plugins/search/mark.js></script>
+<script src=https://hkaji.github.io/plugins/search/search.js></script>
+<script src=https://hkaji.github.io/js/script.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js></script>
+<div id=js-cookie-box class="cookie-box cookie-box-hide">
+This site uses cookies. By continuing to use this website, you agree to their use. <span id=js-cookie-button class="btn btn-sm btn-primary ml-2">I Accept</span>
+</div>
+<script>(function(c){const a=document.getElementById('js-cookie-box'),b=document.getElementById('js-cookie-button');Cookies.get('cookie-box')||(a.classList.remove('cookie-box-hide'),b.onclick=function(){Cookies.set('cookie-box',!0,{expires:2}),a.classList.add('cookie-box-hide')})})(jQuery)</script>
+<style>.cookie-box{position:fixed;left:0;right:0;bottom:0;text-align:center;z-index:9999;padding:1rem 2rem;background:#474747;transition:all .75s cubic-bezier(.19,1,.22,1);color:#fdfdfd}.cookie-box-hide{display:none}</style>
+</body>
+</html>

@@ -1,0 +1,590 @@
+<!doctype html><html lang=ja><head>
+<meta charset=utf-8>
+<title>一歩のはまりから/ipponohamari</title>
+<meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1">
+<meta name=description content="マイコンや倒立ロボでつまずいた人は、お立ち寄りください。きっと役に立てると思います">
+<meta name=author content="hkaji">
+<meta name=generator content="Hugo 0.88.1">
+<link rel=stylesheet href=https://hkaji.github.io/plugins/bootstrap/bootstrap.min.css>
+<link rel=stylesheet href=https://hkaji.github.io/plugins/slick/slick.css>
+<link rel=stylesheet href=https://hkaji.github.io/plugins/themify-icons/themify-icons.css>
+<link rel=stylesheet href=https://hkaji.github.io/plugins/venobox/venobox.css>
+<link rel=stylesheet href=https://hkaji.github.io/scss/style.min.css media=screen>
+<link rel="shortcut icon" href=https://hkaji.github.io/images/favicon.png type=image/x-icon>
+<link rel=icon href=https://hkaji.github.io/images/favicon.png type=image/x-icon>
+<script>(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)})(window,document,'script','//www.google-analytics.com/analytics.js','ga'),ga('create','UA-2831102754','auto'),ga('send','pageview')</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-V3DKLV7482"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-V3DKLV7482')</script>
+<meta name=google-site-verification content="eNklt_-Jdl-3xVGM2Lx-ybzzPso6QpwJqVnbR38n8zM">
+</head><head>
+<script type=text/javascript src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js></script>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css>
+<script type=text/javascript src=https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js></script>
+</head>
+<body>
+<div class=preloader>
+</div>
+<header class=navigation>
+<div class=container>
+<nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
+<a class="navbar-brand mobile-view" href=https://hkaji.github.io/><img class=img-fluid src=https://hkaji.github.io/images/logo.png alt=一歩のはまりから/ipponohamari></a>
+<button class="navbar-toggler border-0" type=button data-toggle=collapse data-target=#navigation>
+<i class=ti-menu></i>
+</button>
+<div class="collapse navbar-collapse text-center" id=navigation>
+<div class=desktop-view>
+<ul class="navbar-nav mr-auto">
+<li class=nav-item>
+<a class=nav-link href=#><i class=ti-facebook></i></a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=#><i class=ti-twitter-alt></i></a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=https://github.com/hkaji><i class=ti-github></i></a>
+</li>
+</ul>
+</div>
+<a class="navbar-brand mx-auto desktop-view" href=https://hkaji.github.io/><img class=img-fluid src=https://hkaji.github.io/images/logo.png alt=一歩のはまりから/ipponohamari></a>
+<ul class=navbar-nav>
+<li class=nav-item>
+<a class=nav-link href=https://hkaji.github.io/about>About</a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=https://hkaji.github.io/blog>Blog/Post</a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=https://hkaji.github.io/contact>Contact</a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=https://hkaji.github.io/privacypolicy>Privacy Policy</a>
+</li>
+</ul>
+<div class="search pl-lg-4">
+<button id=searchOpen class=search-btn><i class=ti-search></i></button>
+<div class=search-wrapper>
+<form action=https://hkaji.github.io//search class=h-100>
+<input class="search-box px-4" id=search-query name=s type=search placeholder="Type & Hit Enter...">
+</form>
+<button id=searchClose class=search-close><i class="ti-close text-dark"></i></button>
+</div>
+</div>
+</div>
+</nav>
+</div>
+</header>
+<section class=section-sm>
+<div class=container>
+<div class=row>
+<div class="col-lg-8 mx-auto">
+<a href=/categories/raspi class=text-primary>Raspi</a>
+<h2>2年目のラズパイ&mldr;11日目&mldr;radikoでラジオ</h2>
+<div class="mb-3 post-meta">
+<span>By hkaji</span>
+<span class="border-bottom border-primary px-2 mx-1"></span>
+<span>19 January 2019</span>
+<span>Update 19 January 2019</span>
+</div>
+<img src=https://hkaji.github.io/images/raspi/rps20190119_110008.jpg class="img-fluid w-25 mb-4" alt=2年目のラズパイ&mldr;11日目&mldr;radikoでラジオ>
+<div class="content mb-5">
+<p>久しぶりの更新です。</p>
+<p>ラズパイでradikoを聞こえるようにしました。</p>
+<p>家のPCは、10年ほど前に購入したDELLのセットもの。
+CPUはceleron2.2GHzにMemは4GBと当時はそこそこでしたが、
+WWW調べてラジオ聞いてTeraTermでラズパイをたたいてとやってると、ラジオの音が途切れます。
+<div class=fancybox>
+<a data-fancybox=radiko href=/images/raspi/rps20190119_105939.jpg data-caption="radiko on pi2b"><img src=/images/raspi/rps20190119_105939.jpg width=300px></a>
+</div>
+</p>
+<p>こちらのラズパイは、机の上に常時置いてあり電源ONになってます。半年以上温度+湿度+気圧を15分毎に測定して、Ambientのサーバーにデーターを送っています。
+それにしか使っていないので、恒常的な負荷はかかってません。</p>
+<p>参考にしたのはこちら。</p>
+<p><a href=http://d.hatena.ne.jp/zariganitosh/20130124/rtmpdump_radiko_access>http://d.hatena.ne.jp/zariganitosh/20130124/rtmpdump_radiko_access</a></p>
+<p>いろいろと先人が開拓してます。
+ラジコの仕様が変わるたびに追従する必要があります。</p>
+<p>とりあえず</p>
+<div class=highlight><div style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4>
+<table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0>
+<pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=1><a style=outline:none;text-decoration:none;color:inherit href=#1>1</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=2><a style=outline:none;text-decoration:none;color:inherit href=#2>2</a>
+</span></code></pre></td>
+<td style=vertical-align:top;padding:0;margin:0;border:0;width:100%>
+<pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#09f;font-style:italic>#apt-get update</span>
+<span style=color:#09f;font-style:italic>#apt-get upgrade</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>で、ライブラリ等を最新版に。</p>
+<p>radiko.shというのが転がっているのでそれをget。
+ただし、radikoの前の仕様のものがほとんどなので、10箇所ほど修正が必要です。
+修正したものを最下部へ張っておきます。</p>
+<p>関連リンクを参考に必要なpkgやlibをインストールすれば、問題なく動きます。</p>
+<div class=highlight><div style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4>
+<table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0>
+<pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=1><a style=outline:none;text-decoration:none;color:inherit href=#1>1</a>
+</span></code></pre></td>
+<td style=vertical-align:top;padding:0;margin:0;border:0;width:100%>
+<pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#09f;font-style:italic>#radiko.sh FMJ</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>これでJ-WaveがストリーミングされオーディオジャックかHDMIいずれかへ出力します。デフォルトautoで認識してくれます。
+<div class=fancybox>
+<a data-fancybox=radiko href=/images/raspi/rps20190119_110008.jpg data-caption="pi2b connct to AMP"><img src=/images/raspi/rps20190119_110008.jpg width=300px></a>
+</div>
+</p>
+<p>自宅では、HDMI接続でAVアンプに接続してます。</p>
+<p>ここからradiko.sh修正版</p>
+<div class=highlight><div style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4>
+<table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0>
+<pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=1><a style=outline:none;text-decoration:none;color:inherit href=#1>  1</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=2><a style=outline:none;text-decoration:none;color:inherit href=#2>  2</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=3><a style=outline:none;text-decoration:none;color:inherit href=#3>  3</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=4><a style=outline:none;text-decoration:none;color:inherit href=#4>  4</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=5><a style=outline:none;text-decoration:none;color:inherit href=#5>  5</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=6><a style=outline:none;text-decoration:none;color:inherit href=#6>  6</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=7><a style=outline:none;text-decoration:none;color:inherit href=#7>  7</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=8><a style=outline:none;text-decoration:none;color:inherit href=#8>  8</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=9><a style=outline:none;text-decoration:none;color:inherit href=#9>  9</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=10><a style=outline:none;text-decoration:none;color:inherit href=#10> 10</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=11><a style=outline:none;text-decoration:none;color:inherit href=#11> 11</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=12><a style=outline:none;text-decoration:none;color:inherit href=#12> 12</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=13><a style=outline:none;text-decoration:none;color:inherit href=#13> 13</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=14><a style=outline:none;text-decoration:none;color:inherit href=#14> 14</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=15><a style=outline:none;text-decoration:none;color:inherit href=#15> 15</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=16><a style=outline:none;text-decoration:none;color:inherit href=#16> 16</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=17><a style=outline:none;text-decoration:none;color:inherit href=#17> 17</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=18><a style=outline:none;text-decoration:none;color:inherit href=#18> 18</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=19><a style=outline:none;text-decoration:none;color:inherit href=#19> 19</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=20><a style=outline:none;text-decoration:none;color:inherit href=#20> 20</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=21><a style=outline:none;text-decoration:none;color:inherit href=#21> 21</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=22><a style=outline:none;text-decoration:none;color:inherit href=#22> 22</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=23><a style=outline:none;text-decoration:none;color:inherit href=#23> 23</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=24><a style=outline:none;text-decoration:none;color:inherit href=#24> 24</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=25><a style=outline:none;text-decoration:none;color:inherit href=#25> 25</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=26><a style=outline:none;text-decoration:none;color:inherit href=#26> 26</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=27><a style=outline:none;text-decoration:none;color:inherit href=#27> 27</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=28><a style=outline:none;text-decoration:none;color:inherit href=#28> 28</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=29><a style=outline:none;text-decoration:none;color:inherit href=#29> 29</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=30><a style=outline:none;text-decoration:none;color:inherit href=#30> 30</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=31><a style=outline:none;text-decoration:none;color:inherit href=#31> 31</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=32><a style=outline:none;text-decoration:none;color:inherit href=#32> 32</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=33><a style=outline:none;text-decoration:none;color:inherit href=#33> 33</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=34><a style=outline:none;text-decoration:none;color:inherit href=#34> 34</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=35><a style=outline:none;text-decoration:none;color:inherit href=#35> 35</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=36><a style=outline:none;text-decoration:none;color:inherit href=#36> 36</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=37><a style=outline:none;text-decoration:none;color:inherit href=#37> 37</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=38><a style=outline:none;text-decoration:none;color:inherit href=#38> 38</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=39><a style=outline:none;text-decoration:none;color:inherit href=#39> 39</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=40><a style=outline:none;text-decoration:none;color:inherit href=#40> 40</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=41><a style=outline:none;text-decoration:none;color:inherit href=#41> 41</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=42><a style=outline:none;text-decoration:none;color:inherit href=#42> 42</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=43><a style=outline:none;text-decoration:none;color:inherit href=#43> 43</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=44><a style=outline:none;text-decoration:none;color:inherit href=#44> 44</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=45><a style=outline:none;text-decoration:none;color:inherit href=#45> 45</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=46><a style=outline:none;text-decoration:none;color:inherit href=#46> 46</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=47><a style=outline:none;text-decoration:none;color:inherit href=#47> 47</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=48><a style=outline:none;text-decoration:none;color:inherit href=#48> 48</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=49><a style=outline:none;text-decoration:none;color:inherit href=#49> 49</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=50><a style=outline:none;text-decoration:none;color:inherit href=#50> 50</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=51><a style=outline:none;text-decoration:none;color:inherit href=#51> 51</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=52><a style=outline:none;text-decoration:none;color:inherit href=#52> 52</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=53><a style=outline:none;text-decoration:none;color:inherit href=#53> 53</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=54><a style=outline:none;text-decoration:none;color:inherit href=#54> 54</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=55><a style=outline:none;text-decoration:none;color:inherit href=#55> 55</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=56><a style=outline:none;text-decoration:none;color:inherit href=#56> 56</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=57><a style=outline:none;text-decoration:none;color:inherit href=#57> 57</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=58><a style=outline:none;text-decoration:none;color:inherit href=#58> 58</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=59><a style=outline:none;text-decoration:none;color:inherit href=#59> 59</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=60><a style=outline:none;text-decoration:none;color:inherit href=#60> 60</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=61><a style=outline:none;text-decoration:none;color:inherit href=#61> 61</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=62><a style=outline:none;text-decoration:none;color:inherit href=#62> 62</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=63><a style=outline:none;text-decoration:none;color:inherit href=#63> 63</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=64><a style=outline:none;text-decoration:none;color:inherit href=#64> 64</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=65><a style=outline:none;text-decoration:none;color:inherit href=#65> 65</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=66><a style=outline:none;text-decoration:none;color:inherit href=#66> 66</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=67><a style=outline:none;text-decoration:none;color:inherit href=#67> 67</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=68><a style=outline:none;text-decoration:none;color:inherit href=#68> 68</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=69><a style=outline:none;text-decoration:none;color:inherit href=#69> 69</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=70><a style=outline:none;text-decoration:none;color:inherit href=#70> 70</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=71><a style=outline:none;text-decoration:none;color:inherit href=#71> 71</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=72><a style=outline:none;text-decoration:none;color:inherit href=#72> 72</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=73><a style=outline:none;text-decoration:none;color:inherit href=#73> 73</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=74><a style=outline:none;text-decoration:none;color:inherit href=#74> 74</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=75><a style=outline:none;text-decoration:none;color:inherit href=#75> 75</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=76><a style=outline:none;text-decoration:none;color:inherit href=#76> 76</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=77><a style=outline:none;text-decoration:none;color:inherit href=#77> 77</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=78><a style=outline:none;text-decoration:none;color:inherit href=#78> 78</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=79><a style=outline:none;text-decoration:none;color:inherit href=#79> 79</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=80><a style=outline:none;text-decoration:none;color:inherit href=#80> 80</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=81><a style=outline:none;text-decoration:none;color:inherit href=#81> 81</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=82><a style=outline:none;text-decoration:none;color:inherit href=#82> 82</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=83><a style=outline:none;text-decoration:none;color:inherit href=#83> 83</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=84><a style=outline:none;text-decoration:none;color:inherit href=#84> 84</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=85><a style=outline:none;text-decoration:none;color:inherit href=#85> 85</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=86><a style=outline:none;text-decoration:none;color:inherit href=#86> 86</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=87><a style=outline:none;text-decoration:none;color:inherit href=#87> 87</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=88><a style=outline:none;text-decoration:none;color:inherit href=#88> 88</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=89><a style=outline:none;text-decoration:none;color:inherit href=#89> 89</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=90><a style=outline:none;text-decoration:none;color:inherit href=#90> 90</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=91><a style=outline:none;text-decoration:none;color:inherit href=#91> 91</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=92><a style=outline:none;text-decoration:none;color:inherit href=#92> 92</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=93><a style=outline:none;text-decoration:none;color:inherit href=#93> 93</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=94><a style=outline:none;text-decoration:none;color:inherit href=#94> 94</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=95><a style=outline:none;text-decoration:none;color:inherit href=#95> 95</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=96><a style=outline:none;text-decoration:none;color:inherit href=#96> 96</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=97><a style=outline:none;text-decoration:none;color:inherit href=#97> 97</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=98><a style=outline:none;text-decoration:none;color:inherit href=#98> 98</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=99><a style=outline:none;text-decoration:none;color:inherit href=#99> 99</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=100><a style=outline:none;text-decoration:none;color:inherit href=#100>100</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=101><a style=outline:none;text-decoration:none;color:inherit href=#101>101</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=102><a style=outline:none;text-decoration:none;color:inherit href=#102>102</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=103><a style=outline:none;text-decoration:none;color:inherit href=#103>103</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=104><a style=outline:none;text-decoration:none;color:inherit href=#104>104</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=105><a style=outline:none;text-decoration:none;color:inherit href=#105>105</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=106><a style=outline:none;text-decoration:none;color:inherit href=#106>106</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=107><a style=outline:none;text-decoration:none;color:inherit href=#107>107</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=108><a style=outline:none;text-decoration:none;color:inherit href=#108>108</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=109><a style=outline:none;text-decoration:none;color:inherit href=#109>109</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=110><a style=outline:none;text-decoration:none;color:inherit href=#110>110</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=111><a style=outline:none;text-decoration:none;color:inherit href=#111>111</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=112><a style=outline:none;text-decoration:none;color:inherit href=#112>112</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=113><a style=outline:none;text-decoration:none;color:inherit href=#113>113</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=114><a style=outline:none;text-decoration:none;color:inherit href=#114>114</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=115><a style=outline:none;text-decoration:none;color:inherit href=#115>115</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=116><a style=outline:none;text-decoration:none;color:inherit href=#116>116</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=117><a style=outline:none;text-decoration:none;color:inherit href=#117>117</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=118><a style=outline:none;text-decoration:none;color:inherit href=#118>118</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=119><a style=outline:none;text-decoration:none;color:inherit href=#119>119</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=120><a style=outline:none;text-decoration:none;color:inherit href=#120>120</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=121><a style=outline:none;text-decoration:none;color:inherit href=#121>121</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=122><a style=outline:none;text-decoration:none;color:inherit href=#122>122</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=123><a style=outline:none;text-decoration:none;color:inherit href=#123>123</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=124><a style=outline:none;text-decoration:none;color:inherit href=#124>124</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=125><a style=outline:none;text-decoration:none;color:inherit href=#125>125</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=126><a style=outline:none;text-decoration:none;color:inherit href=#126>126</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=127><a style=outline:none;text-decoration:none;color:inherit href=#127>127</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=128><a style=outline:none;text-decoration:none;color:inherit href=#128>128</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=129><a style=outline:none;text-decoration:none;color:inherit href=#129>129</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=130><a style=outline:none;text-decoration:none;color:inherit href=#130>130</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=131><a style=outline:none;text-decoration:none;color:inherit href=#131>131</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=132><a style=outline:none;text-decoration:none;color:inherit href=#132>132</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=133><a style=outline:none;text-decoration:none;color:inherit href=#133>133</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=134><a style=outline:none;text-decoration:none;color:inherit href=#134>134</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=135><a style=outline:none;text-decoration:none;color:inherit href=#135>135</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=136><a style=outline:none;text-decoration:none;color:inherit href=#136>136</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=137><a style=outline:none;text-decoration:none;color:inherit href=#137>137</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=138><a style=outline:none;text-decoration:none;color:inherit href=#138>138</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=139><a style=outline:none;text-decoration:none;color:inherit href=#139>139</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=140><a style=outline:none;text-decoration:none;color:inherit href=#140>140</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=141><a style=outline:none;text-decoration:none;color:inherit href=#141>141</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=142><a style=outline:none;text-decoration:none;color:inherit href=#142>142</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=143><a style=outline:none;text-decoration:none;color:inherit href=#143>143</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=144><a style=outline:none;text-decoration:none;color:inherit href=#144>144</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=145><a style=outline:none;text-decoration:none;color:inherit href=#145>145</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=146><a style=outline:none;text-decoration:none;color:inherit href=#146>146</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=147><a style=outline:none;text-decoration:none;color:inherit href=#147>147</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=148><a style=outline:none;text-decoration:none;color:inherit href=#148>148</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=149><a style=outline:none;text-decoration:none;color:inherit href=#149>149</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=150><a style=outline:none;text-decoration:none;color:inherit href=#150>150</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=151><a style=outline:none;text-decoration:none;color:inherit href=#151>151</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=152><a style=outline:none;text-decoration:none;color:inherit href=#152>152</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=153><a style=outline:none;text-decoration:none;color:inherit href=#153>153</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=154><a style=outline:none;text-decoration:none;color:inherit href=#154>154</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=155><a style=outline:none;text-decoration:none;color:inherit href=#155>155</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=156><a style=outline:none;text-decoration:none;color:inherit href=#156>156</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=157><a style=outline:none;text-decoration:none;color:inherit href=#157>157</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=158><a style=outline:none;text-decoration:none;color:inherit href=#158>158</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=159><a style=outline:none;text-decoration:none;color:inherit href=#159>159</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=160><a style=outline:none;text-decoration:none;color:inherit href=#160>160</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=161><a style=outline:none;text-decoration:none;color:inherit href=#161>161</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=162><a style=outline:none;text-decoration:none;color:inherit href=#162>162</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=163><a style=outline:none;text-decoration:none;color:inherit href=#163>163</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=164><a style=outline:none;text-decoration:none;color:inherit href=#164>164</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=165><a style=outline:none;text-decoration:none;color:inherit href=#165>165</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=166><a style=outline:none;text-decoration:none;color:inherit href=#166>166</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=167><a style=outline:none;text-decoration:none;color:inherit href=#167>167</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=168><a style=outline:none;text-decoration:none;color:inherit href=#168>168</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=169><a style=outline:none;text-decoration:none;color:inherit href=#169>169</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=170><a style=outline:none;text-decoration:none;color:inherit href=#170>170</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=171><a style=outline:none;text-decoration:none;color:inherit href=#171>171</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=172><a style=outline:none;text-decoration:none;color:inherit href=#172>172</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=173><a style=outline:none;text-decoration:none;color:inherit href=#173>173</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=174><a style=outline:none;text-decoration:none;color:inherit href=#174>174</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=175><a style=outline:none;text-decoration:none;color:inherit href=#175>175</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=176><a style=outline:none;text-decoration:none;color:inherit href=#176>176</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=177><a style=outline:none;text-decoration:none;color:inherit href=#177>177</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=178><a style=outline:none;text-decoration:none;color:inherit href=#178>178</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=179><a style=outline:none;text-decoration:none;color:inherit href=#179>179</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=180><a style=outline:none;text-decoration:none;color:inherit href=#180>180</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=181><a style=outline:none;text-decoration:none;color:inherit href=#181>181</a>
+</span></code></pre></td>
+<td style=vertical-align:top;padding:0;margin:0;border:0;width:100%>
+<pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#099>#!/bin/bash
+</span><span style=color:#099></span>
+<span style=color:#09f;font-style:italic># https://gist.github.com/matchy2/3956266 を若干修正</span>
+
+<span style=color:#069;font-weight:700>if</span> <span style=color:#555>[</span> <span style=color:#033>$#</span> -eq <span style=color:#f60>1</span> <span style=color:#555>]</span>; <span style=color:#069;font-weight:700>then</span>
+  <span style=color:#033>channel</span><span style=color:#555>=</span><span style=color:#033>$1</span>
+<span style=color:#069;font-weight:700>else</span>
+  <span style=color:#366>echo</span> <span style=color:#c30>&#34;usage : </span><span style=color:#033>$0</span><span style=color:#c30> channel_name&#34;</span>
+  <span style=color:#366>echo</span> <span style=color:#c30>&#34;         channel_name list&#34;</span>
+  <span style=color:#366>echo</span> <span style=color:#c30>&#34;           TBS Radio: TBS&#34;</span>
+  <span style=color:#366>echo</span> <span style=color:#c30>&#34;           Nippon Cultural Broadcasting: QRR&#34;</span>
+  <span style=color:#366>echo</span> <span style=color:#c30>&#34;           Nippon Broadcasting: LFR&#34;</span>
+  <span style=color:#366>echo</span> <span style=color:#c30>&#34;           Radio Nippon: JORF&#34;</span>
+  <span style=color:#366>echo</span> <span style=color:#c30>&#34;           Inter FM: INT&#34;</span>
+  <span style=color:#366>echo</span> <span style=color:#c30>&#34;           Tokyo FM: FMT&#34;</span>
+  <span style=color:#366>echo</span> <span style=color:#c30>&#34;           J-WAVE: FMJ&#34;</span>
+  <span style=color:#366>echo</span> <span style=color:#c30>&#34;           bayfm 78.0MHz: BAYFM78&#34;</span>
+  <span style=color:#366>echo</span> <span style=color:#c30>&#34;           NACK5: NACK5&#34;</span>
+  <span style=color:#366>echo</span> <span style=color:#c30>&#34;           FM yokohama 84.7: YFM&#34;</span>
+  <span style=color:#366>exit</span> <span style=color:#f60>1</span>
+<span style=color:#069;font-weight:700>fi</span>
+
+<span style=color:#09f;font-style:italic>#</span>
+<span style=color:#09f;font-style:italic># parameter setting</span>
+<span style=color:#09f;font-style:italic>#</span>
+<span style=color:#033>pid</span><span style=color:#555>=</span><span style=color:#033>$$</span>
+<span style=color:#033>date</span><span style=color:#555>=</span><span style=color:#c30>`</span>date <span style=color:#c30>&#39;+%Y-%m-%d-%H:%M&#39;</span><span style=color:#c30>`</span>
+<span style=color:#033>playerurl</span><span style=color:#555>=</span>http://radiko.jp/apps/js/flash/myplayer-release.swf
+<span style=color:#033>outdir</span><span style=color:#555>=</span><span style=color:#c30>&#34;/home/pi/radiko&#34;</span>
+<span style=color:#033>playerfile</span><span style=color:#555>=</span><span style=color:#c30>&#34;</span><span style=color:#a00>${</span><span style=color:#033>outdir</span><span style=color:#a00>}</span><span style=color:#c30>/player.swf&#34;</span>
+<span style=color:#033>keyfile</span><span style=color:#555>=</span><span style=color:#c30>&#34;</span><span style=color:#a00>${</span><span style=color:#033>outdir</span><span style=color:#a00>}</span><span style=color:#c30>/authkey.png&#34;</span>
+<span style=color:#033>auth1_fms_file</span><span style=color:#555>=</span><span style=color:#c30>&#34;</span><span style=color:#a00>${</span><span style=color:#033>outdir</span><span style=color:#a00>}</span><span style=color:#c30>/auth1_fms_</span><span style=color:#a00>${</span><span style=color:#033>pid</span><span style=color:#a00>}</span><span style=color:#c30>&#34;</span>
+<span style=color:#033>auth2_fms_file</span><span style=color:#555>=</span><span style=color:#c30>&#34;</span><span style=color:#a00>${</span><span style=color:#033>outdir</span><span style=color:#a00>}</span><span style=color:#c30>/auth2_fms_</span><span style=color:#a00>${</span><span style=color:#033>pid</span><span style=color:#a00>}</span><span style=color:#c30>&#34;</span>
+<span style=color:#033>channel_file</span><span style=color:#555>=</span><span style=color:#c30>&#34;</span><span style=color:#a00>${</span><span style=color:#033>outdir</span><span style=color:#a00>}</span><span style=color:#c30>/</span><span style=color:#a00>${</span><span style=color:#033>channel</span><span style=color:#a00>}</span><span style=color:#c30>.xml&#34;</span>
+mkdir -p <span style=color:#a00>${</span><span style=color:#033>outdir</span><span style=color:#a00>}</span>
+
+<span style=color:#09f;font-style:italic>#</span>
+<span style=color:#09f;font-style:italic># get player</span>
+<span style=color:#09f;font-style:italic>#</span>
+<span style=color:#069;font-weight:700>if</span> <span style=color:#555>[</span> ! -f <span style=color:#033>$playerfile</span> <span style=color:#555>]</span>; <span style=color:#069;font-weight:700>then</span>
+  wget -q -O <span style=color:#033>$playerfile</span> <span style=color:#033>$playerurl</span>
+
+  <span style=color:#069;font-weight:700>if</span> <span style=color:#555>[</span> <span style=color:#033>$?</span> -ne <span style=color:#f60>0</span> <span style=color:#555>]</span>; <span style=color:#069;font-weight:700>then</span>
+    <span style=color:#366>echo</span> <span style=color:#c30>&#34;failed to get player&#34;</span>
+    <span style=color:#366>exit</span> <span style=color:#f60>1</span>
+  <span style=color:#069;font-weight:700>fi</span>
+<span style=color:#069;font-weight:700>fi</span>
+
+<span style=color:#09f;font-style:italic>#</span>
+<span style=color:#09f;font-style:italic># parameter setting</span>
+<span style=color:#09f;font-style:italic>#</span>
+<span style=color:#033>pid</span><span style=color:#555>=</span><span style=color:#033>$$</span>
+<span style=color:#033>date</span><span style=color:#555>=</span><span style=color:#c30>`</span>date <span style=color:#c30>&#39;+%Y-%m-%d-%H:%M&#39;</span><span style=color:#c30>`</span>
+<span style=color:#033>playerurl</span><span style=color:#555>=</span>http://radiko.jp/apps/js/flash/myplayer-release.swf
+<span style=color:#033>outdir</span><span style=color:#555>=</span><span style=color:#c30>&#34;/home/pi/radiko&#34;</span>
+<span style=color:#033>playerfile</span><span style=color:#555>=</span><span style=color:#c30>&#34;</span><span style=color:#a00>${</span><span style=color:#033>outdir</span><span style=color:#a00>}</span><span style=color:#c30>/player.swf&#34;</span>
+<span style=color:#033>keyfile</span><span style=color:#555>=</span><span style=color:#c30>&#34;</span><span style=color:#a00>${</span><span style=color:#033>outdir</span><span style=color:#a00>}</span><span style=color:#c30>/authkey.png&#34;</span>
+<span style=color:#033>auth1_fms_file</span><span style=color:#555>=</span><span style=color:#c30>&#34;</span><span style=color:#a00>${</span><span style=color:#033>outdir</span><span style=color:#a00>}</span><span style=color:#c30>/auth1_fms_</span><span style=color:#a00>${</span><span style=color:#033>pid</span><span style=color:#a00>}</span><span style=color:#c30>&#34;</span>
+<span style=color:#033>auth2_fms_file</span><span style=color:#555>=</span><span style=color:#c30>&#34;</span><span style=color:#a00>${</span><span style=color:#033>outdir</span><span style=color:#a00>}</span><span style=color:#c30>/auth2_fms_</span><span style=color:#a00>${</span><span style=color:#033>pid</span><span style=color:#a00>}</span><span style=color:#c30>&#34;</span>
+<span style=color:#033>channel_file</span><span style=color:#555>=</span><span style=color:#c30>&#34;</span><span style=color:#a00>${</span><span style=color:#033>outdir</span><span style=color:#a00>}</span><span style=color:#c30>/</span><span style=color:#a00>${</span><span style=color:#033>channel</span><span style=color:#a00>}</span><span style=color:#c30>.xml&#34;</span>
+mkdir -p <span style=color:#a00>${</span><span style=color:#033>outdir</span><span style=color:#a00>}</span>
+
+<span style=color:#09f;font-style:italic>#</span>
+<span style=color:#09f;font-style:italic># get player</span>
+<span style=color:#09f;font-style:italic>#</span>
+<span style=color:#069;font-weight:700>if</span> <span style=color:#555>[</span> ! -f <span style=color:#033>$playerfile</span> <span style=color:#555>]</span>; <span style=color:#069;font-weight:700>then</span>
+  wget -q -O <span style=color:#033>$playerfile</span> <span style=color:#033>$playerurl</span>
+
+  <span style=color:#069;font-weight:700>if</span> <span style=color:#555>[</span> <span style=color:#033>$?</span> -ne <span style=color:#f60>0</span> <span style=color:#555>]</span>; <span style=color:#069;font-weight:700>then</span>
+    <span style=color:#366>echo</span> <span style=color:#c30>&#34;failed to get player&#34;</span>
+    <span style=color:#366>exit</span> <span style=color:#f60>1</span>
+  <span style=color:#069;font-weight:700>fi</span>
+<span style=color:#069;font-weight:700>fi</span>
+
+<span style=color:#09f;font-style:italic>#</span>
+<span style=color:#09f;font-style:italic># get keydata (need swftool)</span>
+<span style=color:#09f;font-style:italic>#</span>
+<span style=color:#069;font-weight:700>if</span> <span style=color:#555>[</span> ! -f <span style=color:#033>$keyfile</span> <span style=color:#555>]</span>; <span style=color:#069;font-weight:700>then</span>
+  swfextract -b <span style=color:#f60>12</span> <span style=color:#033>$playerfile</span> -o <span style=color:#033>$keyfile</span>
+
+  <span style=color:#069;font-weight:700>if</span> <span style=color:#555>[</span> ! -f <span style=color:#033>$keyfile</span> <span style=color:#555>]</span>; <span style=color:#069;font-weight:700>then</span>
+    <span style=color:#366>echo</span> <span style=color:#c30>&#34;failed to get keydata&#34;</span>
+    <span style=color:#366>exit</span> <span style=color:#f60>1</span>
+  <span style=color:#069;font-weight:700>fi</span>
+<span style=color:#069;font-weight:700>fi</span>
+
+<span style=color:#069;font-weight:700>if</span> <span style=color:#555>[</span> -f <span style=color:#a00>${</span><span style=color:#033>auth1_fms_file</span><span style=color:#a00>}</span> <span style=color:#555>]</span>; <span style=color:#069;font-weight:700>then</span>
+  rm -f <span style=color:#a00>${</span><span style=color:#033>auth1_fms_file</span><span style=color:#a00>}</span>
+<span style=color:#069;font-weight:700>fi</span>
+
+<span style=color:#09f;font-style:italic>#</span>
+<span style=color:#09f;font-style:italic># access auth1_fms</span>
+<span style=color:#09f;font-style:italic>#</span>
+wget -q <span style=color:#c30;font-weight:700>\
+</span><span style=color:#c30;font-weight:700></span>     --header<span style=color:#555>=</span><span style=color:#c30>&#34;pragma: no-cache&#34;</span> <span style=color:#c30;font-weight:700>\
+</span><span style=color:#c30;font-weight:700></span>     --header<span style=color:#555>=</span><span style=color:#c30>&#34;X-Radiko-App: pc_ts&#34;</span> <span style=color:#c30;font-weight:700>\
+</span><span style=color:#c30;font-weight:700></span>     --header<span style=color:#555>=</span><span style=color:#c30>&#34;X-Radiko-App-Version: 4.0.1&#34;</span> <span style=color:#c30;font-weight:700>\
+</span><span style=color:#c30;font-weight:700></span>     --header<span style=color:#555>=</span><span style=color:#c30>&#34;X-Radiko-User: test-stream&#34;</span> <span style=color:#c30;font-weight:700>\
+</span><span style=color:#c30;font-weight:700></span>     --header<span style=color:#555>=</span><span style=color:#c30>&#34;X-Radiko-Device: pc&#34;</span> <span style=color:#c30;font-weight:700>\
+</span><span style=color:#c30;font-weight:700></span>     --post-data<span style=color:#555>=</span><span style=color:#c30>&#39;\r\n&#39;</span> <span style=color:#c30;font-weight:700>\
+</span><span style=color:#c30;font-weight:700></span>     --no-check-certificate <span style=color:#c30;font-weight:700>\
+</span><span style=color:#c30;font-weight:700></span>     --save-headers <span style=color:#c30;font-weight:700>\
+</span><span style=color:#c30;font-weight:700></span>     -O <span style=color:#a00>${</span><span style=color:#033>auth1_fms_file</span><span style=color:#a00>}</span> <span style=color:#c30;font-weight:700>\
+</span><span style=color:#c30;font-weight:700></span>     https://radiko.jp/v2/api/auth1_fms
+
+<span style=color:#069;font-weight:700>if</span> <span style=color:#555>[</span> <span style=color:#033>$?</span> -ne <span style=color:#f60>0</span> <span style=color:#555>]</span>; <span style=color:#069;font-weight:700>then</span>
+  <span style=color:#366>echo</span> <span style=color:#c30>&#34;failed auth1 process&#34;</span>
+  <span style=color:#366>exit</span> <span style=color:#f60>1</span>
+<span style=color:#069;font-weight:700>fi</span>
+
+<span style=color:#09f;font-style:italic>#</span>
+<span style=color:#09f;font-style:italic># get partial key</span>
+<span style=color:#09f;font-style:italic>#</span>
+<span style=color:#033>authtoken</span><span style=color:#555>=</span><span style=color:#c30>`</span>perl -ne <span style=color:#c30>&#39;print $1 if(/x-radiko-authtoken: ([\w-]+)/i)&#39;</span> <span style=color:#a00>${</span><span style=color:#033>auth1_fms_file</span><span style=color:#a00>}</span><span style=color:#c30>`</span>
+<span style=color:#033>offset</span><span style=color:#555>=</span><span style=color:#c30>`</span>perl -ne <span style=color:#c30>&#39;print $1 if(/x-radiko-keyoffset: (\d+)/i)&#39;</span> <span style=color:#a00>${</span><span style=color:#033>auth1_fms_file</span><span style=color:#a00>}</span><span style=color:#c30>`</span>
+<span style=color:#033>length</span><span style=color:#555>=</span><span style=color:#c30>`</span>perl -ne <span style=color:#c30>&#39;print $1 if(/x-radiko-keylength: (\d+)/i)&#39;</span> <span style=color:#a00>${</span><span style=color:#033>auth1_fms_file</span><span style=color:#a00>}</span><span style=color:#c30>`</span>
+
+<span style=color:#033>partialkey</span><span style=color:#555>=</span><span style=color:#c30>`</span>dd <span style=color:#069;font-weight:700>if</span><span style=color:#555>=</span><span style=color:#033>$keyfile</span> <span style=color:#033>bs</span><span style=color:#555>=</span><span style=color:#f60>1</span> <span style=color:#033>skip</span><span style=color:#555>=</span><span style=color:#a00>${</span><span style=color:#033>offset</span><span style=color:#a00>}</span> <span style=color:#033>count</span><span style=color:#555>=</span><span style=color:#a00>${</span><span style=color:#033>length</span><span style=color:#a00>}</span> 2&gt; /dev/null | base64<span style=color:#c30>`</span>
+
+<span style=color:#366>echo</span> <span style=color:#c30>&#34;authtoken: </span><span style=color:#a00>${</span><span style=color:#033>authtoken</span><span style=color:#a00>}</span><span style=color:#c30> \noffset: </span><span style=color:#a00>${</span><span style=color:#033>offset</span><span style=color:#a00>}</span><span style=color:#c30> length: </span><span style=color:#a00>${</span><span style=color:#033>length</span><span style=color:#a00>}</span><span style=color:#c30> \npartialkey: </span><span style=color:#033>$partialkey</span><span style=color:#c30>&#34;</span>
+
+rm -f <span style=color:#a00>${</span><span style=color:#033>auth1_fms_file</span><span style=color:#a00>}</span>
+
+<span style=color:#069;font-weight:700>if</span> <span style=color:#555>[</span> -f <span style=color:#a00>${</span><span style=color:#033>auth2_fms_file</span><span style=color:#a00>}</span> <span style=color:#555>]</span>; <span style=color:#069;font-weight:700>then</span>
+  rm -f <span style=color:#a00>${</span><span style=color:#033>auth2_fms_file</span><span style=color:#a00>}</span>
+<span style=color:#069;font-weight:700>fi</span>
+
+<span style=color:#09f;font-style:italic>#</span>
+<span style=color:#09f;font-style:italic># access auth2_fms</span>
+<span style=color:#09f;font-style:italic>#</span>
+wget -q <span style=color:#c30;font-weight:700>\
+</span><span style=color:#c30;font-weight:700></span>  --header<span style=color:#555>=</span><span style=color:#c30>&#34;pragma: no-cache&#34;</span> <span style=color:#c30;font-weight:700>\
+</span><span style=color:#c30;font-weight:700></span>  --header<span style=color:#555>=</span><span style=color:#c30>&#34;X-Radiko-App: pc_ts&#34;</span> <span style=color:#c30;font-weight:700>\
+</span><span style=color:#c30;font-weight:700></span>  --header<span style=color:#555>=</span><span style=color:#c30>&#34;X-Radiko-App-Version: 4.0.1&#34;</span> <span style=color:#c30;font-weight:700>\
+</span><span style=color:#c30;font-weight:700></span>  --header<span style=color:#555>=</span><span style=color:#c30>&#34;X-Radiko-User: test-stream&#34;</span> <span style=color:#c30;font-weight:700>\
+</span><span style=color:#c30;font-weight:700></span>  --header<span style=color:#555>=</span><span style=color:#c30>&#34;X-Radiko-Device: pc&#34;</span> <span style=color:#c30;font-weight:700>\
+</span><span style=color:#c30;font-weight:700></span>  --header<span style=color:#555>=</span><span style=color:#c30>&#34;X-Radiko-AuthToken: </span><span style=color:#a00>${</span><span style=color:#033>authtoken</span><span style=color:#a00>}</span><span style=color:#c30>&#34;</span> <span style=color:#c30;font-weight:700>\
+</span><span style=color:#c30;font-weight:700></span>  --header<span style=color:#555>=</span><span style=color:#c30>&#34;X-Radiko-PartialKey: </span><span style=color:#a00>${</span><span style=color:#033>partialkey</span><span style=color:#a00>}</span><span style=color:#c30>&#34;</span> <span style=color:#c30;font-weight:700>\
+</span><span style=color:#c30;font-weight:700></span>  --post-data<span style=color:#555>=</span><span style=color:#c30>&#39;\r\n&#39;</span> <span style=color:#c30;font-weight:700>\
+</span><span style=color:#c30;font-weight:700></span>  --no-check-certificate <span style=color:#c30;font-weight:700>\
+</span><span style=color:#c30;font-weight:700></span>  -O <span style=color:#a00>${</span><span style=color:#033>auth2_fms_file</span><span style=color:#a00>}</span> <span style=color:#c30;font-weight:700>\
+</span><span style=color:#c30;font-weight:700></span>  https://radiko.jp/v2/api/auth2_fms
+
+<span style=color:#069;font-weight:700>if</span> <span style=color:#555>[</span> <span style=color:#033>$?</span> -ne <span style=color:#f60>0</span> -o ! -f <span style=color:#a00>${</span><span style=color:#033>auth2_fms_file</span><span style=color:#a00>}</span> <span style=color:#555>]</span>; <span style=color:#069;font-weight:700>then</span>
+  <span style=color:#366>echo</span> <span style=color:#c30>&#34;failed auth2 process&#34;</span>
+  <span style=color:#366>exit</span> <span style=color:#f60>1</span>
+<span style=color:#069;font-weight:700>fi</span>
+
+<span style=color:#366>echo</span> <span style=color:#c30>&#34;authentication success&#34;</span>
+
+<span style=color:#033>areaid</span><span style=color:#555>=</span><span style=color:#c30>`</span>perl -ne <span style=color:#c30>&#39;print $1 if(/^([^,]+),/i)&#39;</span> <span style=color:#a00>${</span><span style=color:#033>auth2_fms_file</span><span style=color:#a00>}</span><span style=color:#c30>`</span>
+<span style=color:#366>echo</span> <span style=color:#c30>&#34;areaid: </span><span style=color:#033>$areaid</span><span style=color:#c30>&#34;</span>
+
+rm -f <span style=color:#a00>${</span><span style=color:#033>auth2_fms_file</span><span style=color:#a00>}</span>
+
+<span style=color:#09f;font-style:italic>#</span>
+<span style=color:#09f;font-style:italic># get stream-url</span>
+<span style=color:#09f;font-style:italic>#</span>
+
+<span style=color:#069;font-weight:700>if</span> <span style=color:#555>[</span> -f <span style=color:#a00>${</span><span style=color:#033>channel_file</span><span style=color:#a00>}</span> <span style=color:#555>]</span>; <span style=color:#069;font-weight:700>then</span>
+  rm -f <span style=color:#a00>${</span><span style=color:#033>channel_file</span><span style=color:#a00>}</span>
+<span style=color:#069;font-weight:700>fi</span>
+
+wget -q <span style=color:#c30>&#34;http://radiko.jp/v2/station/stream/</span><span style=color:#a00>${</span><span style=color:#033>channel</span><span style=color:#a00>}</span><span style=color:#c30>.xml&#34;</span> -O <span style=color:#a00>${</span><span style=color:#033>channel_file</span><span style=color:#a00>}</span>
+
+<span style=color:#033>stream_url</span><span style=color:#555>=</span><span style=color:#c30>`</span><span style=color:#366>echo</span> <span style=color:#c30>&#34;cat /url/item[1]/text()&#34;</span> | xmllint --shell <span style=color:#a00>${</span><span style=color:#033>channel_file</span><span style=color:#a00>}</span> | tail -2 | head -1<span style=color:#c30>`</span>
+<span style=color:#033>url_parts</span><span style=color:#555>=(</span><span style=color:#c30>`</span><span style=color:#366>echo</span> <span style=color:#a00>${</span><span style=color:#033>stream_url</span><span style=color:#a00>}</span> | perl -pe <span style=color:#c30>&#39;s!^(.*)://(.*?)/(.*)/(.*?)$/!$1://$2 $3 $4!&#39;</span><span style=color:#c30>`</span><span style=color:#555>)</span>
+
+rm -f <span style=color:#a00>${</span><span style=color:#033>channel_file</span><span style=color:#a00>}</span>
+
+<span style=color:#09f;font-style:italic>#</span>
+<span style=color:#09f;font-style:italic># rtmpdump and mplayer</span>
+<span style=color:#09f;font-style:italic>#</span>
+rtmpdump -v <span style=color:#c30;font-weight:700>\
+</span><span style=color:#c30;font-weight:700></span>  -r <span style=color:#a00>${</span><span style=color:#033>url_parts</span>[0]<span style=color:#a00>}</span> <span style=color:#c30;font-weight:700>\
+</span><span style=color:#c30;font-weight:700></span>  --app <span style=color:#a00>${</span><span style=color:#033>url_parts</span>[1]<span style=color:#a00>}</span> <span style=color:#c30;font-weight:700>\
+</span><span style=color:#c30;font-weight:700></span>  --playpath <span style=color:#a00>${</span><span style=color:#033>url_parts</span>[2]<span style=color:#a00>}</span> <span style=color:#c30;font-weight:700>\
+</span><span style=color:#c30;font-weight:700></span>  -W <span style=color:#033>$playerurl</span> <span style=color:#c30;font-weight:700>\
+</span><span style=color:#c30;font-weight:700></span>  -C S:<span style=color:#c30>&#34;&#34;</span> -C S:<span style=color:#c30>&#34;&#34;</span> -C S:<span style=color:#c30>&#34;&#34;</span> -C S:<span style=color:#033>$authtoken</span> <span style=color:#c30;font-weight:700>\
+</span><span style=color:#c30;font-weight:700></span>  --live<span style=color:#c30;font-weight:700>\
+</span><span style=color:#c30;font-weight:700></span>  | mplayer -
+</code></pre></td></tr></table>
+</div>
+</div>
+</div>
+<div id=disqus_thread></div>
+<script type=application/javascript>var disqus_config=function(){};(function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById('disqus_thread').innerHTML='Disqus comments not available by default when the website is previewed locally.';return}var b=document,a=b.createElement('script');a.async=!0,a.src='//https-hkaji-github-io.disqus.com/embed.js',a.setAttribute('data-timestamp',+new Date),(b.head||b.body).appendChild(a)})()</script>
+<noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript>
+<a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a>
+</div>
+</div>
+</div>
+</section>
+<footer class=text-capitalize>
+<div class=container>
+<div class="row justify-content-center">
+<div class="col-12 text-center mb-5">
+<a href=https://hkaji.github.io/><img src=https://hkaji.github.io/images/logo.png alt=一歩のはまりから/ipponohamari></a>
+</div>
+<div class="col-lg-3 col-sm-6 mb-5">
+<h6 class=mb-4>Contact Me</h6>
+<ul class=list-unstyled>
+<li class=mb-3><i class="ti-location-pin mr-3 text-primary"></i>Kanagawa, Japan</li>
+<li class=mb-3><a class=text-dark href=mailto:hkaji.blog@gmail.com><i class="ti-email mr-3 text-primary"></i>hkaji.blog@gmail.com</a>
+</li>
+</ul>
+</div>
+<div class="col-lg-3 col-sm-6 mb-5">
+<h6 class=mb-4>Social Contacts</h6>
+<ul class=list-unstyled>
+<li class=mb-3><a class=text-dark href=#>facebook</a></li>
+<li class=mb-3><a class=text-dark href=#>twitter</a></li>
+<li class=mb-3><a class=text-dark href=https://github.com/hkaji>github</a></li>
+</ul>
+</div>
+<div class="col-lg-3 col-sm-6 mb-5">
+<h6 class=mb-4>Categories</h6>
+<ul class=list-unstyled>
+<li class=mb-3><a class=text-dark href=/categories/3dprinter>3dprinter</a>
+</li>
+<li class=mb-3><a class=text-dark href=/categories/etc>Etc</a>
+</li>
+<li class=mb-3><a class=text-dark href=/categories/go>Go</a>
+</li>
+<li class=mb-3><a class=text-dark href=/categories/news>News</a>
+</li>
+<li class=mb-3><a class=text-dark href=/categories/raspi>Raspi</a>
+</li>
+<li class=mb-3><a class=text-dark href=/categories/robo>Robo</a>
+</li>
+<li class=mb-3><a class=text-dark href=/categories/tsdb>Tsdb</a>
+</li>
+<li class=mb-3><a class=text-dark href=/categories/www>WWW</a>
+</li>
+</ul>
+</div>
+<div class="col-lg-3 col-sm-6 mb-5">
+<h6 class=mb-4>Quick Links</h6>
+<ul class=list-unstyled>
+<li class=mb-3><a class=text-dark href=https://hkaji.github.io/about>About</a></li>
+<li class=mb-3><a class=text-dark href=https://hkaji.github.io/blog>Blog/Post</a></li>
+<li class=mb-3><a class=text-dark href=https://hkaji.github.io/contact>Contact</a></li>
+<li class=mb-3><a class=text-dark href=https://hkaji.github.io/privacypolicy>Privacy Policy</a></li>
+</ul>
+</div>
+<div class="col-12 border-top py-4 text-center">
+Powered by <a href=https://hugo.io>Hugo</a>
+Theme <a href=https://github.com/gethugothemes/liva-hugo>Liva Hugo</a>
+| copyright © 2015 <a href=https://hkaji.github.io>hkaji</a> All Rights Reserved |
+</div>
+</div>
+</div>
+</footer>
+<script>var indexURL="https://hkaji.github.io/index.json"</script>
+<script src=https://hkaji.github.io/plugins/jQuery/jquery.min.js></script>
+<script src=https://hkaji.github.io/plugins/bootstrap/bootstrap.min.js></script>
+<script src=https://hkaji.github.io/plugins/slick/slick.min.js></script>
+<script src=https://hkaji.github.io/plugins/venobox/venobox.min.js></script>
+<script src=https://hkaji.github.io/plugins/search/fuse.min.js></script>
+<script src=https://hkaji.github.io/plugins/search/mark.js></script>
+<script src=https://hkaji.github.io/plugins/search/search.js></script>
+<script src=https://hkaji.github.io/js/script.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js></script>
+<div id=js-cookie-box class="cookie-box cookie-box-hide">
+This site uses cookies. By continuing to use this website, you agree to their use. <span id=js-cookie-button class="btn btn-sm btn-primary ml-2">I Accept</span>
+</div>
+<script>(function(c){const a=document.getElementById('js-cookie-box'),b=document.getElementById('js-cookie-button');Cookies.get('cookie-box')||(a.classList.remove('cookie-box-hide'),b.onclick=function(){Cookies.set('cookie-box',!0,{expires:2}),a.classList.add('cookie-box-hide')})})(jQuery)</script>
+<style>.cookie-box{position:fixed;left:0;right:0;bottom:0;text-align:center;z-index:9999;padding:1rem 2rem;background:#474747;transition:all .75s cubic-bezier(.19,1,.22,1);color:#fdfdfd}.cookie-box-hide{display:none}</style>
+</body>
+</html>
