@@ -79,118 +79,52 @@
 <section class=section-sm>
 <div class=container>
 <div class=row>
-<div class="col-lg-8 mb-5 mb-lg-0">
-<div class=row>
-<div class="col-md-6 mb-4">
-<article class=card>
-<img src=https://hkaji.github.io/images/etc/sudoku.jpg class=card-img-top alt=数独にチャレンジ>
-<div class="card-body px-0">
+<div class="col-lg-8 mx-auto">
 <a href=/categories/etc class=text-primary>Etc</a>
-<a href=https://hkaji.github.io/blog/etc/05_sudoku/ class="h5 d-block my-3">数独にチャレンジ</a>
+<h2>家のネットワークが爆速に&mldr;宅内配線編</h2>
 <div class="mb-3 post-meta">
 <span>By hkaji</span>
 <span class="border-bottom border-primary px-2 mx-1"></span>
-<span>25 November 2021</span>
+<span>29 January 2022</span>
+<span>Update 29 January 2022</span>
 </div>
-<p class=card-text>こちらの動画に触発されて こちらの動画に触発されて、これは実際にやってみないと。 直感的には凄く面倒な感じですが、pythonソースも公開されて</p>
-<a href=https://hkaji.github.io/blog/etc/05_sudoku/ class="btn btn-outline-primary">read more</a>
+<img src=https://hkaji.github.io/images/ class="img-fluid w-25 mb-4" alt=家のネットワークが爆速に&mldr;宅内配線編>
+<div class="content mb-5">
+<h2 id=プロバイダー変更_宅内配線編>プロバイダー変更_宅内配線編</h2>
+<p>前回、プロバイダー変更をして回線速度が爆速になった件をまとめました。
+今回は、屋内配線の変更点についてまとめたものです。</p>
+<h2 id=各装置と回線インターフェイス>各装置と回線インターフェイス</h2>
+<h3 id=nttルータpr-400>NTTルータ（PR-400）</h3>
+<p>NTT局舎から光ファイバーをONUで受けて、ルーター機能もあります。WWWの設定画面で各種設定をします。簡単なパケットフィルターやポート転送の設定ができます。IPoEとPPPoEの切替もできます。LAN側は、RJ-45コネクタが4ポート出ていて、設定画面では10/100Mの切替しかありませんが1Gまで対応です。</p>
+<h3 id=elecomルーター>ELECOMルーター</h3>
+<p>入力も出力もRJ-45な1G対応のインターフェイスを持っています。WiFi機能もあり、2.4GHz帯と5GHz帯どちらも使えます。</p>
+<h3 id=マルチメディアボックス>マルチメディアボックス</h3>
+<p>電話やLAN、テレビ配線等をまとめられるPnasonic製の家庭用の設備箱です。10年前の新築時に設置しました。この箱を中心に各部屋へ電話線とLANケーブルが延びてます。電話線は無線タイプの子機を使っているので未使用です。箱の中にHUBがあります。当時は10/100Mしかありませんでした。その後1Gタイプが発売されたようですが4ポートで定価3.5万円、実売も3万円程度と非常にお高いものです。家電量販店でも1G対応の4ポートHUBは、2-3千円で購入できます。</p>
+<p>LAN配線は、CAT5ケーブルだと思います。8線すべて接続されています。</p>
+<h2 id=宅内配線変更箇所>宅内配線変更箇所</h2>
+<p>宅内配線のbefore/afterは、この図のとおりです。
+before
+<div class=fancybox>
+<a data-fancybox=home href=/images/etc//home_NW_before.png data-caption="diagram of home NW"><img src=/images/etc//home_NW_before.png width=300px></a>
 </div>
-</article>
+</p>
+<p>after
+<div class=fancybox>
+<a data-fancybox=home href=/images/etc//home_NW_after.png data-caption="diagram of home NW"><img src=/images/etc//home_NW_after.png width=300px></a>
 </div>
+</p>
+<p>after図の<code>[]</code>で示した箇所を変更しました。家電量販店でCAT6Aというのを購入、550円/1m/1本でした。2本購入したので総額1,100+Tax円です。10年前の配線はそのまま活用です。</p>
+<h2 id=ケーブルの種類>ケーブルの種類</h2>
+<p>LANケーブルは、伝送速度によりカテゴリーで区別されています。ググるとたくさんまとめたページがあります。CAT5とCAT6A何が違うかと調べると2線ごとの撚り具合のようです。
+CAT7以上はケーブル内にセパレーターが入っていたり、シールド線が使われているようです。回線速度1Gbps以下であれば、CAT5もCAT5Aの違いは誤差の範囲ではと想像します。施工方法や環境によっても変化します。</p>
+<p>10年前、家庭内LANの速度が1Gになるとは思ってもいませんでした。時代と共に技術は進歩して価格は安くなるので、取り替えることができるように設計しておくことが重要なようです。</p>
+<h2 id=まとめ>まとめ</h2>
+<p>プロバイダー変更に伴い宅内配線を見直しました。家庭内でも普通に1Gの時代です。頭の速さがついていってるのかが一番気になるところです。</p>
 </div>
-</div>
-<div class=col-lg-4>
-<div class=widgets>
-<div class=widget>
-<h4 class=widget-title>このページの作者</h4>
-<img src=https://hkaji.github.io/images/author.jpg alt class="img-fluid author-thumb-sm d-block mx-auto rounded-circle mb-4">
-<p>人生の半分を折り返したおじさんが、自分の備忘録にまとめたものです。 マイコン、電子工作、3Dプリンターなどに興味を持っています。 何事も実際に動</p>
-<a href=https://hkaji.github.io/about/ class="btn btn-outline-primary">Know More</a>
-</div>
-<div class=widget>
-<h4 class=widget-title>Category</h4>
-<ul class=list-unstyled>
-<li><a href=/categories/raspi>raspi(28)</a></li>
-<li><a href=/categories/3dprinter>3dprinter(10)</a></li>
-<li><a href=/categories/etc>etc(10)</a></li>
-<li><a href=/categories/www>www(4)</a></li>
-<li><a href=/categories/tsdb>tsdb(2)</a></li>
-<li><a href=/categories/go>go(1)</a></li>
-<li><a href=/categories/news>news(1)</a></li>
-<li><a href=/categories/python>python(1)</a></li>
-<li><a href=/categories/robo>robo(1)</a></li>
-</ul>
-</div>
-<div class=widget>
-<h4 class=widget-title>Tag</h4>
-<ul class=list-inline>
-<li class=list-inline-item><a class="d-block p-2 bg-primary text-white" href=/tags/3v-motor>3v motor</a></li>
-<li class=list-inline-item><a class="d-block p-2 bg-primary text-white" href=/tags/3%e7%ab%af%e5%ad%90%e3%83%ac%e3%82%ae%e3%83%a5%e3%83%ac%e3%83%bc%e3%82%bf%e3%83%bc>3端子レギュレーター</a></li>
-<li class=list-inline-item><a class="d-block p-2 bg-primary text-white" href=/tags/ambient>Ambient</a></li>
-<li class=list-inline-item><a class="d-block p-2 bg-primary text-white" href=/tags/arduino>Arduino</a></li>
-<li class=list-inline-item><a class="d-block p-2 bg-primary text-white" href=/tags/bme280>Bme280</a></li>
-<li class=list-inline-item><a class="d-block p-2 bg-primary text-white" href=/tags/bmx055>Bmx055</a></li>
-<li class=list-inline-item><a class="d-block p-2 bg-primary text-white" href=/tags/bullseys>Bullseys</a></li>
-<li class=list-inline-item><a class="d-block p-2 bg-primary text-white" href=/tags/dc-motor>Dc motor</a></li>
-<li class=list-inline-item><a class="d-block p-2 bg-primary text-white" href=/tags/debian>Debian</a></li>
-<li class=list-inline-item><a class="d-block p-2 bg-primary text-white" href=/tags/ender3v2>Ender3v2</a></li>
-<li class=list-inline-item><a class="d-block p-2 bg-primary text-white" href=/tags/esp32>Esp32</a></li>
-<li class=list-inline-item><a class="d-block p-2 bg-primary text-white" href=/tags/esp8226>Esp8226</a></li>
-<li class=list-inline-item><a class="d-block p-2 bg-primary text-white" href=/tags/esp_wroom>Esp wroom</a></li>
-<li class=list-inline-item><a class="d-block p-2 bg-primary text-white" href=/tags/fancybox>Fancybox</a></li>
-<li class=list-inline-item><a class="d-block p-2 bg-primary text-white" href=/tags/ft232rl>Ft232rl</a></li>
-<li class=list-inline-item><a class="d-block p-2 bg-primary text-white" href=/tags/fusion360>Fusion360</a></li>
-<li class=list-inline-item><a class="d-block p-2 bg-primary text-white" href=/tags/github>Github</a></li>
-<li class=list-inline-item><a class="d-block p-2 bg-primary text-white" href=/tags/go-lang>Go lang</a></li>
-<li class=list-inline-item><a class="d-block p-2 bg-primary text-white" href=/tags/grafana>Grafana</a></li>
-<li class=list-inline-item><a class="d-block p-2 bg-primary text-white" href=/tags/html>HTML</a></li>
-<li class=list-inline-item><a class="d-block p-2 bg-primary text-white" href=/tags/hugo>Hugo</a></li>
-<li class=list-inline-item><a class="d-block p-2 bg-primary text-white" href=/tags/ipoe>Ipoe</a></li>
-<li class=list-inline-item><a class="d-block p-2 bg-primary text-white" href=/tags/lightbox>Lightbox</a></li>
-<li class=list-inline-item><a class="d-block p-2 bg-primary text-white" href=/tags/l%e3%83%81%e3%82%ab>Lチカ</a></li>
-<li class=list-inline-item><a class="d-block p-2 bg-primary text-white" href=/tags/m5stackc-plus>M5stackc plus</a></li>
-<li class=list-inline-item><a class="d-block p-2 bg-primary text-white" href=/tags/micropython>Micropython</a></li>
-<li class=list-inline-item><a class="d-block p-2 bg-primary text-white" href=/tags/octoprint>Octoprint</a></li>
-<li class=list-inline-item><a class="d-block p-2 bg-primary text-white" href=/tags/opencv>Opencv</a></li>
-<li class=list-inline-item><a class="d-block p-2 bg-primary text-white" href=/tags/pi-zero>Pi zero</a></li>
-<li class=list-inline-item><a class="d-block p-2 bg-primary text-white" href=/tags/pi2b>Pi2b</a></li>
-<li class=list-inline-item><a class="d-block p-2 bg-primary text-white" href=/tags/pi4b>Pi4b</a></li>
-<li class=list-inline-item><a class="d-block p-2 bg-primary text-white" href=/tags/prometheus>Prometheus</a></li>
-<li class=list-inline-item><a class="d-block p-2 bg-primary text-white" href=/tags/promql>Promql</a></li>
-<li class=list-inline-item><a class="d-block p-2 bg-primary text-white" href=/tags/python3>Python3</a></li>
-<li class=list-inline-item><a class="d-block p-2 bg-primary text-white" href=/tags/radiko>Radiko</a></li>
-<li class=list-inline-item><a class="d-block p-2 bg-primary text-white" href=/tags/sansui>Sansui</a></li>
-<li class=list-inline-item><a class="d-block p-2 bg-primary text-white" href=/tags/speaker>Speaker</a></li>
-<li class=list-inline-item><a class="d-block p-2 bg-primary text-white" href=/tags/ssd1306>Ssd1306</a></li>
-<li class=list-inline-item><a class="d-block p-2 bg-primary text-white" href=/tags/ssg>Ssg</a></li>
-<li class=list-inline-item><a class="d-block p-2 bg-primary text-white" href=/tags/ta7921p>Ta7921p</a></li>
-<li class=list-inline-item><a class="d-block p-2 bg-primary text-white" href=/tags/tag-test>Tag test</a></li>
-<li class=list-inline-item><a class="d-block p-2 bg-primary text-white" href=/tags/tesseract>Tesseract</a></li>
-<li class=list-inline-item><a class="d-block p-2 bg-primary text-white" href=/tags/timelapse>Timelapse</a></li>
-<li class=list-inline-item><a class="d-block p-2 bg-primary text-white" href=/tags/tpfe>Tpfe</a></li>
-<li class=list-inline-item><a class="d-block p-2 bg-primary text-white" href=/tags/vcxsrv>Vcxsrv</a></li>
-<li class=list-inline-item><a class="d-block p-2 bg-primary text-white" href=/tags/vscode>Vscode</a></li>
-<li class=list-inline-item><a class="d-block p-2 bg-primary text-white" href=/tags/win10>Win10</a></li>
-<li class=list-inline-item><a class="d-block p-2 bg-primary text-white" href=/tags/windows11>Windows11</a></li>
-<li class=list-inline-item><a class="d-block p-2 bg-primary text-white" href=/tags/wsl2>Wsl2</a></li>
-<li class=list-inline-item><a class="d-block p-2 bg-primary text-white" href=/tags/%e5%80%92%e7%ab%8b%e6%8c%af%e5%ad%90>倒立振子</a></li>
-<li class=list-inline-item><a class="d-block p-2 bg-primary text-white" href=/tags/%e9%9d%99%e9%9f%b3%e5%8c%96>静音化</a></li>
-</ul>
-</div>
-<div class=widget>
-<h4 class=widget-title>Social</h4>
-<ul class="list-inline social-links">
-<li class=list-inline-item><a href=#><i class=ti-facebook></i></a></li>
-<li class=list-inline-item><a href=#><i class=ti-twitter-alt></i></a></li>
-<li class=list-inline-item><a href=https://github.com/hkaji><i class=ti-github></i></a></li>
-</ul>
-</div>
-<div class=widget>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6564377198613408" crossorigin=anonymous></script>
-</div>
-</div>
-</div>
-<div class="col-12 mt-5">
+<div id=disqus_thread></div>
+<script type=application/javascript>var disqus_config=function(){};(function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById('disqus_thread').innerHTML='Disqus comments not available by default when the website is previewed locally.';return}var b=document,a=b.createElement('script');a.async=!0,a.src='//https-hkaji-github-io.disqus.com/embed.js',a.setAttribute('data-timestamp',+new Date),(b.head||b.body).appendChild(a)})()</script>
+<noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript>
+<a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a>
 </div>
 </div>
 </div>
