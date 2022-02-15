@@ -167,8 +167,39 @@
           &lt;/<span style=color:#309;font-weight:700>div</span>&gt;
 </code></pre></td></tr></table>
 </div>
-</div><p>hugoでページを作り直してGitHub Pageにpushします。その後、フォームに入力して送信するとActivation手順とランダムな数字がメールアドレスに送られてきます。
-手順に従ってActivationすれば完了です。</p>
+</div><p>hugoでページを作り直してGitHub Pageにpushします。その後、フォームに入力して送信するとActivation手順とランダムな数字がメールアドレスに送られてきます。</p>
+<p>最後は、このメールアドレスを隠すことも出来るようです。送られてくるメールにランダムな数字があるので、それをメールアドレスと入れ替えます。</p>
+<div class=highlight><div style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4>
+<table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0>
+<pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=1><a style=outline:none;text-decoration:none;color:inherit href=#1> 1</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=2><a style=outline:none;text-decoration:none;color:inherit href=#2> 2</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=3><a style=outline:none;text-decoration:none;color:inherit href=#3> 3</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=4><a style=outline:none;text-decoration:none;color:inherit href=#4> 4</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=5><a style=outline:none;text-decoration:none;color:inherit href=#5> 5</a>
+</span><span style=display:block;width:100%;background-color:#d8dada><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=6><a style=outline:none;text-decoration:none;color:inherit href=#6> 6</a>
+</span></span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=7><a style=outline:none;text-decoration:none;color:inherit href=#7> 7</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=8><a style=outline:none;text-decoration:none;color:inherit href=#8> 8</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=9><a style=outline:none;text-decoration:none;color:inherit href=#9> 9</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=10><a style=outline:none;text-decoration:none;color:inherit href=#10>10</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=11><a style=outline:none;text-decoration:none;color:inherit href=#11>11</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=12><a style=outline:none;text-decoration:none;color:inherit href=#12>12</a>
+</span></code></pre></td>
+<td style=vertical-align:top;padding:0;margin:0;border:0;width:100%>
+<pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:#309;font-weight:700>section</span> <span style=color:#309>class</span><span style=color:#555>=</span><span style=color:#c30>&#34;section-sm pb-0&#34;</span>&gt;
+  &lt;<span style=color:#309;font-weight:700>div</span> <span style=color:#309>class</span><span style=color:#555>=</span><span style=color:#c30>&#34;container&#34;</span>&gt;
+    &lt;<span style=color:#309;font-weight:700>div</span> <span style=color:#309>class</span><span style=color:#555>=</span><span style=color:#c30>&#34;row justify-content-center&#34;</span>&gt;
+      &lt;<span style=color:#309;font-weight:700>div</span> <span style=color:#309>class</span><span style=color:#555>=</span><span style=color:#c30>&#34;col-lg-8 text-center&#34;</span>&gt;
+        &lt;<span style=color:#309;font-weight:700>h2</span> <span style=color:#309>class</span><span style=color:#555>=</span><span style=color:#c30>&#34;mb-4&#34;</span>&gt;Hi Write To Me&lt;/<span style=color:#309;font-weight:700>h2</span>&gt;
+<span style=display:block;width:100%;background-color:#d8dada>        &lt;<span style=color:#309;font-weight:700>form</span> <span style=color:#309>action</span><span style=color:#555>=</span><span style=color:#c30>&#34;https://formsubmit.co/random_number from FormSubmit&#34;</span> <span style=color:#309>method</span><span style=color:#555>=</span><span style=color:#c30>&#34;POST&#34;</span> <span style=color:#309>class</span><span style=color:#555>=</span><span style=color:#c30>&#34;row&#34;</span>&gt;
+</span>          &lt;<span style=color:#309;font-weight:700>div</span> <span style=color:#309>class</span><span style=color:#555>=</span><span style=color:#c30>&#34;col-lg-6&#34;</span>&gt;
+            &lt;<span style=color:#309;font-weight:700>input</span> <span style=color:#309>type</span><span style=color:#555>=</span><span style=color:#c30>&#34;text&#34;</span> <span style=color:#309>class</span><span style=color:#555>=</span><span style=color:#c30>&#34;form-control mb-4&#34;</span> <span style=color:#309>id</span><span style=color:#555>=</span><span style=color:#c30>&#34;name&#34;</span> <span style=color:#309>name</span><span style=color:#555>=</span><span style=color:#c30>&#34;name&#34;</span> <span style=color:#309>placeholder</span><span style=color:#555>=</span><span style=color:#c30>&#34;Your Name&#34;</span>&gt;
+          &lt;/<span style=color:#309;font-weight:700>div</span>&gt;
+          &lt;<span style=color:#309;font-weight:700>div</span> <span style=color:#309>class</span><span style=color:#555>=</span><span style=color:#c30>&#34;col-lg-6&#34;</span>&gt;
+            &lt;<span style=color:#309;font-weight:700>input</span> <span style=color:#309>type</span><span style=color:#555>=</span><span style=color:#c30>&#34;email&#34;</span> <span style=color:#309>class</span><span style=color:#555>=</span><span style=color:#c30>&#34;form-control mb-4&#34;</span> <span style=color:#309>id</span><span style=color:#555>=</span><span style=color:#c30>&#34;email&#34;</span> <span style=color:#309>name</span><span style=color:#555>=</span><span style=color:#c30>&#34;email&#34;</span> <span style=color:#309>placeholder</span><span style=color:#555>=</span><span style=color:#c30>&#34;Your Email&#34;</span>&gt;
+          &lt;/<span style=color:#309;font-weight:700>div</span>&gt;
+</code></pre></td></tr></table>
+</div>
+</div><p>手順にしたがってActivationすれば完了です。</p>
 <p>
 <div class=fancybox>
 <a data-fancybox=cf href=/images/www//contact_form.jpg data-caption="contact form"><img src=/images/www//contact_form.jpg width=300px></a>
@@ -177,6 +208,7 @@
 <h2 id=まとめ>まとめ</h2>
 <p>SSGによって作成したページをホスティングサーバー上で動かすと、バックエンドのことはお任せになります。今どきはバックエンドの機能をいい感じに吸い取ってくれる無料サービスがあります。
 商用で利用するのは有料なところが多いですが、個人で少々使うくらいは無料でいけそうです。</p>
+<p>コンタクトフォーム稼働しましたのでご利用ください。といっても、使う人はそんなにいないでしょうね。</p>
 <h2 id=参考リンク>参考リンク</h2>
 <section class=footnotes role=doc-endnotes>
 <hr>
