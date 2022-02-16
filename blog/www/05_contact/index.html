@@ -205,6 +205,13 @@
 <a data-fancybox=cf href=/images/www//contact_form.jpg data-caption="contact form"><img src=/images/www//contact_form.jpg width=300px></a>
 </div>
 無事コンタクトフォームからメール送信できるようになりました。</p>
+<h3 id=データの流れを補足する>データの流れを補足する</h3>
+<p>フォーム入力後のデーターの流れを図にしました。図をクリックすると拡大します。
+<div class=fancybox>
+<a data-fancybox=cf href=/images/www//front_form_action.png data-caption="processing of form action"><img src=/images/www//front_form_action.png width=300px></a>
+</div>
+</p>
+<p>今回の設定ではform入力された内容を無料外部サービスにpostして、メール送信しています。図中左の箱2つがデータの流れです。ホスティングサービスや自前サーバーにて構成してform actionをmailtoを指定すると自前でMTAを構築設定しないといけません。図中右の箱の流れです。MTAの構築は以前簡単でしたが、最近はSPAMメールの温床になるので簡単ではありません。深みにはまって色々と設定した方やバックエンドのプロを目指す方はご自由にですが、便利な外部サービスを使うと興味が湧く部分に時間を有効に使えます。</p>
 <h2 id=まとめ>まとめ</h2>
 <p>SSGによって作成したページをホスティングサーバー上で動かすと、バックエンドのことはお任せになります。今どきはバックエンドの機能をいい感じに吸い取ってくれる無料サービスがあります。
 商用で利用するのは有料なところが多いですが、個人で少々使うくらいは無料でいけそうです。</p>
