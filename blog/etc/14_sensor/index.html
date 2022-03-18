@@ -93,7 +93,7 @@
 <h2 id=基板にセンサーを引っ越します>基板にセンサーを引っ越します</h2>
 <p>ブレッドボードにて運用中のセンサーです。
 <div class=fancybox>
-<a data-fancybox=sb href=/images/etc//DSC_1855.jpg data-caption="sensor circuit on breadboard"><img src=/images/etc//DSC_1855.jpg width=300px></a>
+<a data-fancybox=sb href=/images/etc//rps20220318_195117.jpg data-caption="sensor circuit on breadboard"><img src=/images/etc//rps20220318_195117.jpg width=300px></a>
 </div>
 </p>
 <p>これを先日完成した基板に移します。</p>
@@ -110,9 +110,10 @@
 <h3 id=なぜ動かない>なぜ動かない</h3>
 <p>USBケーブル接続すれば起動するはず。動きません。はぁーーーー。
 再度接続やコネクターのゆるみを確認します。
-テスターでもエンドエンドで接続確認しましたが問題ありません。</p>
+テスターでエンドエンドの接続確認しましたが問題ありません。</p>
 <h3 id=犯人はこれ>犯人はこれ</h3>
-<p>esp32のプログラムをi2c_scannerに入れ替えると、No dataです。ちゃんと動いていれば、I2Cデバイスのアドレスが表示されるはずです。</p>
+<p>esp32のプログラムをi2c_scannerに入れ替えてi2cの状況を確認するとNo dataです。
+ちゃんと動いていれば、I2Cデバイスのアドレスが表示されます。</p>
 <div class=highlight><div style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4>
 <table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0>
 <pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=1><a style=outline:none;text-decoration:none;color:inherit href=#1>1</a>
@@ -121,25 +122,26 @@
 <pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#033>sda</span><span style=color:#555>=</span>0,scl<span style=color:#555>=</span><span style=color:#f60>0</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>という表示もあります。I2Cラインのプルアップが足りないのか。ブレッドボードよりも配線は短くなっているのでそれはないでしょう。</p>
+</div><p>というエラー表示もあります。I2Cラインのプルアップが足りないのか。
+ブレッドボードの時より配線は短くなっているのでそれはないでしょう。</p>
 <p>師匠のアドバイスで「初心」に戻って再度配線を確認しました。
-今度はエンドエンドの導通ではなく、各ポイントの電圧を測定します。GNDは、すべて0です。
-3.3Vラインはマイコン側から確認すると作成した基板端子で1.5Vほどです。ん。</p>
+今度はエンドエンドの導通ではなく、各ポイントの電圧を測定します。GNDはすべて0です。
+3.3Vラインはマイコン側から確認していくと作成した基板端子で1.5Vほどです。ん。</p>
 <p>配線を確認したら、原因はこいつです。
 <div class=fancybox>
 <a data-fancybox=sb href=/images/etc//rps20220318_160339.jpg data-caption=disconnection><img src=/images/etc//rps20220318_160339.jpg width=300px></a>
 </div>
 </p>
-<p>見た目にはわかりませんが、内部で断線してます。この線を交換したら、i2c_scannerでは、デバイス3つのアドレスが表示されました。</p>
+<p>見た目にはわかりませんが、内部で断線してます。この線を交換したら、i2c_scannerの表示が3つそれぞれのデバイスアドレスが表示されました。</p>
 <h3 id=動作確認ok>動作確認OK</h3>
-<p>センサーデータをIoTクラウドサービスのAmbientへ送信するプログラムに入れ替えます。このプログラムは10分毎にAmbientへセンサーデータを送信します。
-受信データ問題ありません。
+<p>esp32プログラムを変更しました。センサーデータをIoTクラウドサービスAmbientへ送信するプログラムを書き込みます。このプログラムは10分毎にAmbientへセンサーデータを送信します。
+クラウド上の受信データ問題ありません。
 <div class=fancybox>
 <a data-fancybox=sb href=/images/etc//ambient_data.jpg data-caption="upload data"><img src=/images/etc//ambient_data.jpg width=300px></a>
 </div>
 </p>
 <h2 id=まとめ>まとめ</h2>
-<p>センサー基板へ引っ越し完了しました。クラウド上に問題なくセンサーデータは送信されていることを確認しました。箱もサイズ違いあったので、再度作り直したいと思います。</p>
+<p>設計した基板へセンサーを引っ越し完了しました。クラウド上に問題なくセンサーデータが送信されていることを確認しました。箱もサイズ違い等あったので、再度作り直したいと思います。</p>
 </div>
 <div id=disqus_thread></div>
 <script type=application/javascript>var disqus_config=function(){};(function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById('disqus_thread').innerHTML='Disqus comments not available by default when the website is previewed locally.';return}var b=document,a=b.createElement('script');a.async=!0,a.src='//https-hkaji-github-io.disqus.com/embed.js',a.setAttribute('data-timestamp',+new Date),(b.head||b.body).appendChild(a)})()</script>
