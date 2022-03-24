@@ -103,10 +103,10 @@
 その分小さくなった感じです。</p>
 <h3 id=開発環境vscodeの設定>開発環境VScodeの設定</h3>
 <p>VScode+plathomeio環境だとまだM5stampは、設定jsonファイルが更新されていません。
-参考リンクを見ながら手動追加[1^]します。M5Atom関連のファイルは入ってます。
+参考リンクを見ながら手動追加<sup id=fnref:1><a href=#fn:1 class=footnote-ref role=doc-noteref>1</a></sup>します。M5Atom関連のファイルは入ってます。
 M5Atomとピン配置が違うだけのようです。</p>
 <p>オンボードのLEDが3色タイプなのでFastLEDをライブラリーに追加する必要があります。
-これは公式GitHubページにも書いてあります。</p>
+これは公式GitHubページ<sup id=fnref:2><a href=#fn:2 class=footnote-ref role=doc-noteref>2</a></sup>にも書いてあります。</p>
 <h3 id=lチカしてみる>Lチカしてみる</h3>
 <p>基本のLチカですが、3色LEDなのでGPIOのオンオフでは点灯しません。
 FastLEDもしくはAdafruit_neopixelなどのライブラリーを追加する必要があります。
@@ -194,6 +194,17 @@ FastLEDもしくはAdafruit_neopixelなどのライブラリーを追加する�
 <h2 id=まとめ>まとめ</h2>
 <p>M5stamp picoを購入してLチカまで確認できました。その他の機能も引き続き確認していきたいと思います。</p>
 <h2 id=参考リンク>参考リンク</h2>
+<section class=footnotes role=doc-endnotes>
+<hr>
+<ol>
+<li id=fn:1 role=doc-endnote>
+<p><a href=https://qiita.com/WhiteGrouse/items/10c36e382efd2872d267>PlatformIOにM5Stamp Picoのボード定義を追加してみた</a>&#160;<a href=#fnref:1 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p>
+</li>
+<li id=fn:2 role=doc-endnote>
+<p><a href=https://github.com/m5stack/STAMP-PICO>GitHub m5stack/STAMP-PICO</a>&#160;<a href=#fnref:2 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
 </div>
 <div id=disqus_thread></div>
 <script type=application/javascript>var disqus_config=function(){};(function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById('disqus_thread').innerHTML='Disqus comments not available by default when the website is previewed locally.';return}var b=document,a=b.createElement('script');a.async=!0,a.src='//https-hkaji-github-io.disqus.com/embed.js',a.setAttribute('data-timestamp',+new Date),(b.head||b.body).appendChild(a)})()</script>
