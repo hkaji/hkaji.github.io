@@ -81,17 +81,17 @@
 <div class=row>
 <div class="col-lg-8 mx-auto">
 <a href=/categories/esp32 class=text-primary>Esp32</a>
-<h2>M5stamp pico serial.printの呪文</h2>
+<h2>M5stamp pico Serial.print()の呪文</h2>
 <div class="mb-3 post-meta">
 <span>By hkaji</span>
 <span class="border-bottom border-primary px-2 mx-1"></span>
 <span>12 April 2022</span>
 <span>Update 12 April 2022</span>
 </div>
-<img src=https://hkaji.github.io/images/esp32/rps20220413_194549.jpg class="img-fluid w-25 mb-4" alt="M5stamp pico serial.printの呪文">
+<img src=https://hkaji.github.io/images/esp32/rps20220413_194549.jpg class="img-fluid w-25 mb-4" alt="M5stamp pico Serial.print()の呪文">
 <div class="content mb-5">
-<h2 id=m5stamp-pico-serialprint出力されない問題>M5stamp pico serial.print出力されない問題</h2>
-<p>M5stamp picoの機能確認をしていたのですが、<code>setup</code>ルーチンの<code>serial.print()</code>が出力されない問題に悩んでいました。シリアルの速度などの設定問題であれば、<code>loop</code>ルーチンも出力されないので解決しやすいのですが。</p>
+<h2 id=m5stamp-pico-serialprint出力されない問題>M5stamp pico serial.print()出力されない問題</h2>
+<p>M5stamp picoの機能確認をしていたのですが、<code>setup</code>ルーチンの<code>Serial.print()</code>が出力されない問題に悩んでいました。シリアルの速度などの設定問題であれば、<code>loop</code>ルーチンも出力されないので解決しやすいのですが。</p>
 <p><code>setup</code>内は出力されないけれども<code>loop</code>内では出力されるという問題の解決です。</p>
 <h3 id=問題をコードで整理する>問題をコードで整理する</h3>
 <p>以下のコードをmakeして動かすと出力は以下のとおりです。</p>
@@ -189,7 +189,7 @@ Syntax的にも問題なく、バイナリーもちゃんと作成され書き�
 }
 </code></pre></td></tr></table>
 </div>
-</div><p>出力も期待とおりです。</p>
+</div><p>出力も期待とおりです。<code>setup</code>内の<code>Serial.print()</code>が出力されています。</p>
 <div class=highlight><div style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4>
 <table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0>
 <pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=1><a style=outline:none;text-decoration:none;color:inherit href=#1>1</a>
