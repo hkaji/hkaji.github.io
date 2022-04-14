@@ -95,7 +95,7 @@
 <p><code>setup</code>内は出力されないけれども<code>loop</code>内では出力されるという問題の解決です。</p>
 <h3 id=問題をコードで整理する>問題をコードで整理する</h3>
 <p>以下のコードをmakeして動かすと出力は以下のとおりです。</p>
-<pre tabindex=0><code class=language-cpp{linenos data-lang=cpp{linenos>#include &lt;M5Atom.h&gt;
+<pre tabindex=0><code class="language-cpp{linenos=true}" data-lang="cpp{linenos=true}">#include &lt;M5Atom.h&gt;
 
 void setup() {
   M5.begin();
@@ -136,7 +136,7 @@ Loop routine
 Syntax的にも問題なく、バイナリーもちゃんと作成され書き込みも問題ありません。</p>
 <h3 id=解決方法はちょっとした呪文でした>解決方法は、ちょっとした呪文でした</h3>
 <p>コードに以下の一行を追加すると解決しました。</p>
-<pre tabindex=0><code class=language-cpp{linenos data-lang=cpp{linenos>#include &lt;M5Atom.h&gt;
+<pre tabindex=0><code class="language-cpp{linenos=true," data-lang="cpp{linenos=true,">#include &lt;M5Atom.h&gt;
 
 void setup() {
   M5.begin();
