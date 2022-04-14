@@ -95,20 +95,39 @@
 <p><code>setup</code>内は出力されないけれども<code>loop</code>内では出力されるという問題の解決です。</p>
 <h3 id=問題をコードで整理する>問題をコードで整理する</h3>
 <p>以下のコードをmakeして動かすと出力は以下のとおりです。</p>
-<pre tabindex=0><code class="language-cpp{linenos=true}" data-lang="cpp{linenos=true}">#include &lt;M5Atom.h&gt;
-
-void setup() {
+<div class=highlight><div style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4>
+<table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0>
+<pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=1><a style=outline:none;text-decoration:none;color:inherit href=#1> 1</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=2><a style=outline:none;text-decoration:none;color:inherit href=#2> 2</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=3><a style=outline:none;text-decoration:none;color:inherit href=#3> 3</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=4><a style=outline:none;text-decoration:none;color:inherit href=#4> 4</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=5><a style=outline:none;text-decoration:none;color:inherit href=#5> 5</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=6><a style=outline:none;text-decoration:none;color:inherit href=#6> 6</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=7><a style=outline:none;text-decoration:none;color:inherit href=#7> 7</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=8><a style=outline:none;text-decoration:none;color:inherit href=#8> 8</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=9><a style=outline:none;text-decoration:none;color:inherit href=#9> 9</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=10><a style=outline:none;text-decoration:none;color:inherit href=#10>10</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=11><a style=outline:none;text-decoration:none;color:inherit href=#11>11</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=12><a style=outline:none;text-decoration:none;color:inherit href=#12>12</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=13><a style=outline:none;text-decoration:none;color:inherit href=#13>13</a>
+</span></code></pre></td>
+<td style=vertical-align:top;padding:0;margin:0;border:0;width:100%>
+<pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-cpp data-lang=cpp><span style=color:#099>#include</span> <span style=color:#099>&lt;M5Atom.h&gt;</span><span style=color:#099>
+</span><span style=color:#099></span>
+<span style=color:#078;font-weight:700>void</span> <span style=color:#c0f>setup</span>() {
   M5.begin();
 
-  Serial.begin(115200);
-  Serial.print(&quot;Setup routine\n&quot;);
+  Serial.begin(<span style=color:#f60>115200</span>);
+  Serial.print(<span style=color:#c30>&#34;Setup routine</span><span style=color:#c30;font-weight:700>\n</span><span style=color:#c30>&#34;</span>);
 }
 
-void loop() {
-  Serial.print(&quot;Loop routine\n&quot;);
-  delay(1000);
+<span style=color:#078;font-weight:700>void</span> <span style=color:#c0f>loop</span>() {
+  Serial.print(<span style=color:#c30>&#34;Loop routine</span><span style=color:#c30;font-weight:700>\n</span><span style=color:#c30>&#34;</span>);
+  delay(<span style=color:#f60>1000</span>);
 }
-</code></pre><div class=highlight><div style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4>
+</code></pre></td></tr></table>
+</div>
+</div><div class=highlight><div style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4>
 <table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0>
 <pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=1><a style=outline:none;text-decoration:none;color:inherit href=#1>1</a>
 </span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=2><a style=outline:none;text-decoration:none;color:inherit href=#2>2</a>
@@ -136,21 +155,41 @@ Loop routine
 Syntax的にも問題なく、バイナリーもちゃんと作成され書き込みも問題ありません。</p>
 <h3 id=解決方法はちょっとした呪文でした>解決方法は、ちょっとした呪文でした</h3>
 <p>コードに以下の一行を追加すると解決しました。</p>
-<pre tabindex=0><code class="language-cpp{linenos=true," data-lang="cpp{linenos=true,">#include &lt;M5Atom.h&gt;
-
-void setup() {
+<div class=highlight><div style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4>
+<table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0>
+<pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=1><a style=outline:none;text-decoration:none;color:inherit href=#1> 1</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=2><a style=outline:none;text-decoration:none;color:inherit href=#2> 2</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=3><a style=outline:none;text-decoration:none;color:inherit href=#3> 3</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=4><a style=outline:none;text-decoration:none;color:inherit href=#4> 4</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=5><a style=outline:none;text-decoration:none;color:inherit href=#5> 5</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=6><a style=outline:none;text-decoration:none;color:inherit href=#6> 6</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=7><a style=outline:none;text-decoration:none;color:inherit href=#7> 7</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=8><a style=outline:none;text-decoration:none;color:inherit href=#8> 8</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=9><a style=outline:none;text-decoration:none;color:inherit href=#9> 9</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=10><a style=outline:none;text-decoration:none;color:inherit href=#10>10</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=11><a style=outline:none;text-decoration:none;color:inherit href=#11>11</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=12><a style=outline:none;text-decoration:none;color:inherit href=#12>12</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=13><a style=outline:none;text-decoration:none;color:inherit href=#13>13</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=14><a style=outline:none;text-decoration:none;color:inherit href=#14>14</a>
+</span></code></pre></td>
+<td style=vertical-align:top;padding:0;margin:0;border:0;width:100%>
+<pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-cpp data-lang=cpp><span style=color:#099>#include</span> <span style=color:#099>&lt;M5Atom.h&gt;</span><span style=color:#099>
+</span><span style=color:#099></span>
+<span style=color:#078;font-weight:700>void</span> <span style=color:#c0f>setup</span>() {
   M5.begin();
 
-  Serial.begin(115200);
-  delay(8000);  # &lt;-----　この行を追加
-  Serial.print(&quot;Setup routine\n&quot;);
+  Serial.begin(<span style=color:#f60>115200</span>);
+  delay(<span style=color:#f60>8000</span>);  <span style=color:#a00;background-color:#faa>#</span> <span style=color:#555>&lt;-----</span>　<span style=color:#a00;background-color:#faa>この行を追加</span>
+  Serial.print(<span style=color:#c30>&#34;Setup routine</span><span style=color:#c30;font-weight:700>\n</span><span style=color:#c30>&#34;</span>);
 }
 
-void loop() {
-  Serial.print(&quot;Loop routine\n&quot;);
-  delay(1000);
+<span style=color:#078;font-weight:700>void</span> <span style=color:#c0f>loop</span>() {
+  Serial.print(<span style=color:#c30>&#34;Loop routine</span><span style=color:#c30;font-weight:700>\n</span><span style=color:#c30>&#34;</span>);
+  delay(<span style=color:#f60>1000</span>);
 }
-</code></pre><p>出力も期待とおりです。</p>
+</code></pre></td></tr></table>
+</div>
+</div><p>出力も期待とおりです。</p>
 <div class=highlight><div style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4>
 <table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0>
 <pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=1><a style=outline:none;text-decoration:none;color:inherit href=#1>1</a>
