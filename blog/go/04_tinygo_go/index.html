@@ -1,0 +1,293 @@
+<!doctype html><html lang=ja><head>
+<meta charset=utf-8>
+<title>一歩のはまりから/ipponohamari</title>
+<meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1">
+<meta name=description content="マイコンや倒立ロボでつまずいた人は、お立ち寄りください。きっと役に立てると思います">
+<meta name=author content="hkaji">
+<meta name=generator content="Hugo 0.92.1">
+<link rel=stylesheet href=https://hkaji.github.io/plugins/bootstrap/bootstrap.min.css>
+<link rel=stylesheet href=https://hkaji.github.io/plugins/slick/slick.css>
+<link rel=stylesheet href=https://hkaji.github.io/plugins/themify-icons/themify-icons.css>
+<link rel=stylesheet href=https://hkaji.github.io/plugins/venobox/venobox.css>
+<link rel=stylesheet href=https://hkaji.github.io/scss/style.min.css media=screen>
+<link rel="shortcut icon" href=https://hkaji.github.io/images/favicon.png type=image/x-icon>
+<link rel=icon href=https://hkaji.github.io/images/favicon.png type=image/x-icon>
+<script>(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)})(window,document,'script','//www.google-analytics.com/analytics.js','ga'),ga('create','UA-2831102754','auto'),ga('send','pageview')</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-V3DKLV7482"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-V3DKLV7482')</script>
+<meta name=google-site-verification content="eNklt_-Jdl-3xVGM2Lx-ybzzPso6QpwJqVnbR38n8zM">
+<link rel=stylesheet href=https://hkaji.github.io/css/custom_head.css>
+</head><head>
+<script type=text/javascript src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js></script>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css>
+<script type=text/javascript src=https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js></script>
+</head>
+<body>
+<div class=preloader>
+</div>
+<header class=navigation>
+<div class=container>
+<nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
+<a class="navbar-brand mobile-view" href=https://hkaji.github.io/><img class=img-fluid src=https://hkaji.github.io/images/logo.png alt=一歩のはまりから/ipponohamari></a>
+<button class="navbar-toggler border-0" type=button data-toggle=collapse data-target=#navigation>
+<i class=ti-menu></i>
+</button>
+<div class="collapse navbar-collapse text-center" id=navigation>
+<div class=desktop-view>
+<ul class="navbar-nav mr-auto">
+<li class=nav-item>
+<a class=nav-link href=#><i class=ti-facebook></i></a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=#><i class=ti-twitter-alt></i></a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=https://github.com/hkaji><i class=ti-github></i></a>
+</li>
+</ul>
+</div>
+<a class="navbar-brand mx-auto desktop-view" href=https://hkaji.github.io/><img class=img-fluid src=https://hkaji.github.io/images/logo.png alt=一歩のはまりから/ipponohamari></a>
+<ul class=navbar-nav>
+<li class=nav-item>
+<a class=nav-link href=https://hkaji.github.io/about>About</a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=https://hkaji.github.io/blog/news>Update</a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=https://hkaji.github.io/blog>Blog/Post</a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=https://hkaji.github.io/contact>Contact</a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=https://hkaji.github.io/privacypolicy>Privacy Policy</a>
+</li>
+</ul>
+<div class="search pl-lg-4">
+<button id=searchOpen class=search-btn><i class=ti-search></i></button>
+<div class=search-wrapper>
+<form action=https://hkaji.github.io//search class=h-100>
+<input class="search-box px-4" id=search-query name=s type=search placeholder="Type & Hit Enter...">
+</form>
+<button id=searchClose class=search-close><i class="ti-close text-dark"></i></button>
+</div>
+</div>
+</div>
+</nav>
+</div>
+</header>
+<section class=section-sm>
+<div class=container>
+<div class=row>
+<div class="col-lg-8 mx-auto">
+<a href=/categories/go class=text-primary>Go</a>
+<h2>TinyGoの開発環境について</h2>
+<div class="mb-3 post-meta">
+<span>By hkaji</span>
+<span class="border-bottom border-primary px-2 mx-1"></span>
+<span>24 September 2022</span>
+<span>Update 24 September 2022</span>
+</div>
+<img src=https://hkaji.github.io/images/go/20220806_114316.jpg class="img-fluid w-25 mb-4" alt=TinyGoの開発環境について>
+<div class="content mb-5">
+<h1 id=tinygo開発環境の構築>tinygo開発環境の構築</h1>
+<h2 id=落ち着いて一から再構築>落ち着いて一から再構築</h2>
+<p>Pi2bにdebianをインストールして、apt,dpkgでgoとtinygoをインストールしましたが、何かうまくいきません。よくわかってないのが大きいですが。</p>
+<p>それぞれ逐次バージョンアップされるので個人ユーザーならユーザー領域にインストールすると事後の管理が簡単なようです。</p>
+<h2 id=構築環境>構築環境</h2>
+<p>tinygo開発環境は、Pi2bに構築中します。</p>
+<div class=fancybox>
+<a data-fancybox=pi2b href=/images/go//20220806_114316.jpg data-caption=pi2b+debian><img src=/images/go//20220806_114316.jpg width=300px></a>
+</div>
+<h3 id=現在の設定など>現在の設定など</h3>
+<ul>
+<li>Pi2bにdebian bullseysの32bitをインストール</li>
+<li>golangをaptでインストール。tinygoをdpkgでインストール
+→/usr/localへインストールされます。</li>
+</ul>
+<h3 id=今後のことを考えると>今後のことを考えると</h3>
+<ul>
+<li>golangのtgzで取ってきて、/usr/local/go以下へインストールしてPATH追加</li>
+<li>tinygoもtgz持ってきて/home/pi/tinygo以下へインストールしてPATH追加</li>
+<li>環境変数GOLANG, TINGOLIBSをインストール先に合わせて<code>.bashrc</code>へ書く</li>
+</ul>
+<p>これで環境はうまくいきそうな感じです。aptでインストールしたのを消去しつつ、再構築してみます。</p>
+<h3 id=再設定状況>再設定状況</h3>
+<p>インストールしたバージョンは、以下のとおり。組合せの良しあしあるようです。</p>
+<div class=highlight><div style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4>
+<table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0>
+<pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=1><a style=outline:none;text-decoration:none;color:inherit href=#1>1</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=2><a style=outline:none;text-decoration:none;color:inherit href=#2>2</a>
+</span></code></pre></td>
+<td style=vertical-align:top;padding:0;margin:0;border:0;width:100%>
+<pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>-rw-r--r--  <span style=color:#f60>1</span> pi pi <span style=color:#f60>116690970</span> Sep  <span style=color:#f60>7</span> 01:18 go1.19.1.linux-armv6l.tar.gz
+-rw-r--r--  <span style=color:#f60>1</span> pi pi <span style=color:#f60>108289851</span> Sep <span style=color:#f60>20</span> 20:12 tinygo0.25.0.linux-arm.tar.gz
+</code></pre></td></tr></table>
+</div>
+</div><p>/home/pi以下に「go」「tinygo」のフォルダーを作成して展開。それぞれのbinにパスを通す。</p>
+<div class=highlight><div style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4>
+<table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0>
+<pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=1><a style=outline:none;text-decoration:none;color:inherit href=#1>1</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=2><a style=outline:none;text-decoration:none;color:inherit href=#2>2</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=3><a style=outline:none;text-decoration:none;color:inherit href=#3>3</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=4><a style=outline:none;text-decoration:none;color:inherit href=#4>4</a>
+</span></code></pre></td>
+<td style=vertical-align:top;padding:0;margin:0;border:0;width:100%>
+<pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>pi@pi2b:~/work/test $ go version
+go version go1.19.1 linux/arm
+pi@pi2b:~/work/test $ tinygo version
+tinygo version 0.25.0 linux/arm <span style=color:#555>(</span>using go version go1.19.1 and LLVM version 14.0.0<span style=color:#555>)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>それぞれコンパイラーは動く感じです。
+お試しなソースhello.goをビルドしてみます。</p>
+<div class=highlight><div style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4>
+<table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0>
+<pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=1><a style=outline:none;text-decoration:none;color:inherit href=#1>1</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=2><a style=outline:none;text-decoration:none;color:inherit href=#2>2</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=3><a style=outline:none;text-decoration:none;color:inherit href=#3>3</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=4><a style=outline:none;text-decoration:none;color:inherit href=#4>4</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=5><a style=outline:none;text-decoration:none;color:inherit href=#5>5</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=6><a style=outline:none;text-decoration:none;color:inherit href=#6>6</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=7><a style=outline:none;text-decoration:none;color:inherit href=#7>7</a>
+</span></code></pre></td>
+<td style=vertical-align:top;padding:0;margin:0;border:0;width:100%>
+<pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-go data-lang=go><span style=color:#069;font-weight:700>package</span> main
+
+<span style=color:#069;font-weight:700>import</span> <span style=color:#c30>&#34;fmt&#34;</span>
+
+<span style=color:#069;font-weight:700>func</span> <span style=color:#c0f>main</span>() {
+	fmt.<span style=color:#c0f>Println</span>(<span style=color:#c30>&#34;Hello world!&#34;</span>)
+}
+</code></pre></td></tr></table>
+</div>
+</div><p>それぞれでバイナリーを作成、動作も確認できました。tinygoは、確かにバイナリの大きさが1/10程度になりました。</p>
+<div class=highlight><div style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4>
+<table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0>
+<pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=1><a style=outline:none;text-decoration:none;color:inherit href=#1> 1</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=2><a style=outline:none;text-decoration:none;color:inherit href=#2> 2</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=3><a style=outline:none;text-decoration:none;color:inherit href=#3> 3</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=4><a style=outline:none;text-decoration:none;color:inherit href=#4> 4</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=5><a style=outline:none;text-decoration:none;color:inherit href=#5> 5</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=6><a style=outline:none;text-decoration:none;color:inherit href=#6> 6</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=7><a style=outline:none;text-decoration:none;color:inherit href=#7> 7</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=8><a style=outline:none;text-decoration:none;color:inherit href=#8> 8</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=9><a style=outline:none;text-decoration:none;color:inherit href=#9> 9</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=10><a style=outline:none;text-decoration:none;color:inherit href=#10>10</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=11><a style=outline:none;text-decoration:none;color:inherit href=#11>11</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=12><a style=outline:none;text-decoration:none;color:inherit href=#12>12</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=13><a style=outline:none;text-decoration:none;color:inherit href=#13>13</a>
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=14><a style=outline:none;text-decoration:none;color:inherit href=#14>14</a>
+</span></code></pre></td>
+<td style=vertical-align:top;padding:0;margin:0;border:0;width:100%>
+<pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>pi@pi2b:~/work/test $ ls
+hello.go
+pi@pi2b:~/work/test $ go build -o <span style=color:#366>test</span> ./hello.go 
+pi@pi2b:~/work/test $ tinygo build -o test_tiny ./hello.go 
+pi@pi2b:~/work/test $ ls -l 
+total <span style=color:#f60>1996</span>
+-rw-r--r-- <span style=color:#f60>1</span> pi pi      <span style=color:#f60>78</span> Sep <span style=color:#f60>20</span> 21:23 hello.go
+-rwxr-xr-x <span style=color:#f60>1</span> pi pi <span style=color:#f60>1864955</span> Sep <span style=color:#f60>20</span> 21:33 <span style=color:#366>test</span>
+-rwxr-xr-x <span style=color:#f60>1</span> pi pi  <span style=color:#f60>167172</span> Sep <span style=color:#f60>20</span> 21:34 test_tiny
+pi@pi2b:~/work/test $ ./test
+Hello world!
+pi@pi2b:~/work/test $ ./test_tiny 
+Hello world!
+pi@pi2b:~/work/test $
+</code></pre></td></tr></table>
+</div>
+</div><h2 id=今日のまとめ>今日のまとめ</h2>
+<p>Pi2b+debianにTinyGoの開発環境を構築します。
+再度一から開発環境を整えました。簡単なサンプルをコンパイルできることを隠しました。
+VScodeの拡張機能も調べつつ、マイコンへのビルドを進めていきたいと思います。</p>
+</div>
+<div id=disqus_thread></div>
+<script type=application/javascript>var disqus_config=function(){};(function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById('disqus_thread').innerHTML='Disqus comments not available by default when the website is previewed locally.';return}var b=document,a=b.createElement('script');a.async=!0,a.src='//https-hkaji-github-io.disqus.com/embed.js',a.setAttribute('data-timestamp',+new Date),(b.head||b.body).appendChild(a)})()</script>
+<noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript>
+<a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a>
+</div>
+</div>
+</div>
+</section>
+<footer class=text-capitalize>
+<div class=container>
+<div class="row justify-content-center">
+<div class="col-12 text-center mb-5">
+<a href=https://hkaji.github.io/><img src=https://hkaji.github.io/images/logo.png alt=一歩のはまりから/ipponohamari></a>
+</div>
+<div class="col-lg-3 col-sm-6 mb-5">
+<h6 class=mb-4>Contact Me</h6>
+<ul class=list-unstyled>
+<li class=mb-3><i class="ti-location-pin mr-3 text-primary"></i>Kanagawa, Japan</li>
+<li class=mb-3><a class=text-dark href=mailto:hkaji.blog@gmail.com><i class="ti-email mr-3 text-primary"></i>hkaji.blog@gmail.com</a>
+</li>
+</ul>
+</div>
+<div class="col-lg-3 col-sm-6 mb-5">
+<h6 class=mb-4>Social Contacts</h6>
+<ul class=list-unstyled>
+<li class=mb-3><a class=text-dark href=#>facebook</a></li>
+<li class=mb-3><a class=text-dark href=#>twitter</a></li>
+<li class=mb-3><a class=text-dark href=https://github.com/hkaji>github</a></li>
+</ul>
+</div>
+<div class="col-lg-3 col-sm-6 mb-5">
+<h6 class=mb-4>Categories</h6>
+<ul class=list-unstyled>
+<li class=mb-3><a class=text-dark href=/categories/3dprinter>3dprinter</a>
+</li>
+<li class=mb-3><a class=text-dark href=/categories/esp32>Esp32</a>
+</li>
+<li class=mb-3><a class=text-dark href=/categories/etc>Etc</a>
+</li>
+<li class=mb-3><a class=text-dark href=/categories/go>Go</a>
+</li>
+<li class=mb-3><a class=text-dark href=/categories/news>News</a>
+</li>
+<li class=mb-3><a class=text-dark href=/categories/python>Python</a>
+</li>
+<li class=mb-3><a class=text-dark href=/categories/raspi>Raspi</a>
+</li>
+<li class=mb-3><a class=text-dark href=/categories/robo>Robo</a>
+</li>
+<li class=mb-3><a class=text-dark href=/categories/tsdb>Tsdb</a>
+</li>
+<li class=mb-3><a class=text-dark href=/categories/www>WWW</a>
+</li>
+</ul>
+</div>
+<div class="col-lg-3 col-sm-6 mb-5">
+<h6 class=mb-4>Quick Links</h6>
+<ul class=list-unstyled>
+<li class=mb-3><a class=text-dark href=https://hkaji.github.io/about>About</a></li>
+<li class=mb-3><a class=text-dark href=https://hkaji.github.io/blog>Blog/Post</a></li>
+<li class=mb-3><a class=text-dark href=https://hkaji.github.io/contact>Contact</a></li>
+<li class=mb-3><a class=text-dark href=https://hkaji.github.io/privacypolicy>Privacy Policy</a></li>
+</ul>
+</div>
+<div class="col-12 border-top py-4 text-center">
+Powered by <a href=https://hugo.io>Hugo</a>
+Theme <a href=https://github.com/gethugothemes/liva-hugo>Liva Hugo</a>
+| copyright © 2015 <a href=https://hkaji.github.io>hkaji</a> All Rights Reserved |
+</div>
+</div>
+</div>
+</footer>
+<script>var indexURL="https://hkaji.github.io/index.json"</script>
+<script src=https://hkaji.github.io/plugins/jQuery/jquery.min.js></script>
+<script src=https://hkaji.github.io/plugins/bootstrap/bootstrap.min.js></script>
+<script src=https://hkaji.github.io/plugins/slick/slick.min.js></script>
+<script src=https://hkaji.github.io/plugins/venobox/venobox.min.js></script>
+<script src=https://hkaji.github.io/plugins/search/fuse.min.js></script>
+<script src=https://hkaji.github.io/plugins/search/mark.js></script>
+<script src=https://hkaji.github.io/plugins/search/search.js></script>
+<script src=https://hkaji.github.io/js/script.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js></script>
+<div id=js-cookie-box class="cookie-box cookie-box-hide">
+This site uses cookies. By continuing to use this website, you agree to their use. <span id=js-cookie-button class="btn btn-sm btn-primary ml-2">I Accept</span>
+</div>
+<script>(function(c){const a=document.getElementById('js-cookie-box'),b=document.getElementById('js-cookie-button');Cookies.get('cookie-box')||(a.classList.remove('cookie-box-hide'),b.onclick=function(){Cookies.set('cookie-box',!0,{expires:2}),a.classList.add('cookie-box-hide')})})(jQuery)</script>
+<style>.cookie-box{position:fixed;left:0;right:0;bottom:0;text-align:center;z-index:9999;padding:1rem 2rem;background:#474747;transition:all .75s cubic-bezier(.19,1,.22,1);color:#fdfdfd}.cookie-box-hide{display:none}</style>
+</body>
+</html>
