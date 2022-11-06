@@ -133,7 +133,7 @@ GND         GND
 <a data-fancybox=vl53 href=/images/esp32/20221106_171031.jpg data-caption=connection><img src=/images/esp32/20221106_171031.jpg width=300px></a>
 </div>
 <h3 id=ソフトウェア>ソフトウェア</h3>
-<p>先人が多数いるので、センサー読み出しは簡単にできます。M5stickCのLCDに読んだ値と値の横バーを表示します。ちらつかないようにsprite機能を使いました。
+<p>先人が多数<sup id=fnref:1><a href=#fn:1 class=footnote-ref role=doc-noteref>1</a></sup><sup id=fnref:2><a href=#fn:2 class=footnote-ref role=doc-noteref>2</a></sup><sup id=fnref:3><a href=#fn:3 class=footnote-ref role=doc-noteref>3</a></sup>いるので、センサー読み出しは簡単にできます。M5stickCのLCDに読んだ値と値の横バーを表示します。ちらつかないようにsprite機能を使いました。
 VScode+PlathomeIO環境にてarduinoを使って作成しました。ページ下部にソースを載せておきます。</p>
 <h2 id=動作確認>動作確認</h2>
 <p>USB経由でM5stickCにバイナリーを書き込むとちゃんと動きました。測定限界の値と横バー表示は、若干調整が必要です。
@@ -292,7 +292,20 @@ TFT_eSprite sprite <span style=color:#555>=</span> TFT_eSprite(<span style=color
 }
 </code></pre></td></tr></table>
 </div>
-</div>
+</div><section class=footnotes role=doc-endnotes>
+<hr>
+<ol>
+<li id=fn:1 role=doc-endnote>
+<p><a href=https://www.switch-science.com/products/6470>M5StickC Plus</a>&#160;<a href=#fnref:1 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p>
+</li>
+<li id=fn:2 role=doc-endnote>
+<p><a href=https://blog.hrendoh.com/how-to-use-vl53l0x-with-esp32-arduino/>距離センサー VL53L0Xの使い方 (Arduino、ESP32)</a>&#160;<a href=#fnref:2 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p>
+</li>
+<li id=fn:3 role=doc-endnote>
+<p><a href=https://github.com/pololu/vl53l0x-arduino>GitHub:VL53L0X library for Arduino</a>&#160;<a href=#fnref:3 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
 </div>
 <div id=disqus_thread></div>
 <script type=application/javascript>var disqus_config=function(){};(function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById('disqus_thread').innerHTML='Disqus comments not available by default when the website is previewed locally.';return}var b=document,a=b.createElement('script');a.async=!0,a.src='//https-hkaji-github-io.disqus.com/embed.js',a.setAttribute('data-timestamp',+new Date),(b.head||b.body).appendChild(a)})()</script>
