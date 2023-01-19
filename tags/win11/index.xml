@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>win11 on 一歩のはまりから/ipponohamari</title>
+    <link>https://hkaji.github.io/tags/win11/</link>
+    <description>Recent content in win11 on 一歩のはまりから/ipponohamari</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Tue, 20 Dec 2022 20:37:16 +0900</lastBuildDate><atom:link href="https://hkaji.github.io/tags/win11/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>18_win11_wsl</title>
+      <link>https://hkaji.github.io/blog/etc/18_win11_wsl/</link>
+      <pubDate>Tue, 20 Dec 2022 20:37:16 +0900</pubDate>
+      
+      <guid>https://hkaji.github.io/blog/etc/18_win11_wsl/</guid>
+      <description>インストール win11 terminal(admin) 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 PS C:\Users\hiro_&amp;gt; wsl --list --online インストールできる有効なディストリビューションの一覧を次に示します。 既定の分布は &amp;#39;</description>
+    </item>
+    
+  </channel>
+</rss>
