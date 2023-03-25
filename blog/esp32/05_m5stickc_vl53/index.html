@@ -1,386 +1,171 @@
-<!doctype html><html lang=ja><head>
-<meta charset=utf-8>
-<title>一歩のはまりから/ipponohamari</title>
-<meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1">
-<meta name=description content="マイコンや倒立ロボでつまずいた人は、お立ち寄りください。きっと役に立てると思います">
-<meta name=author content="hkaji">
-<meta name=generator content="Hugo 0.92.1">
-<link rel=stylesheet href=https://hkaji.github.io/plugins/bootstrap/bootstrap.min.css>
-<link rel=stylesheet href=https://hkaji.github.io/plugins/slick/slick.css>
-<link rel=stylesheet href=https://hkaji.github.io/plugins/themify-icons/themify-icons.css>
-<link rel=stylesheet href=https://hkaji.github.io/plugins/venobox/venobox.css>
-<link rel=stylesheet href=https://hkaji.github.io/scss/style.min.css media=screen>
-<link rel="shortcut icon" href=https://hkaji.github.io/images/favicon.png type=image/x-icon>
-<link rel=icon href=https://hkaji.github.io/images/favicon.png type=image/x-icon>
-<script>(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)})(window,document,'script','//www.google-analytics.com/analytics.js','ga'),ga('create','UA-2831102754','auto'),ga('send','pageview')</script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-V3DKLV7482"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-V3DKLV7482')</script>
-<meta name=google-site-verification content="eNklt_-Jdl-3xVGM2Lx-ybzzPso6QpwJqVnbR38n8zM">
-<link rel=stylesheet href=https://hkaji.github.io/css/custom_head.css>
-</head><head>
-<script type=text/javascript src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js></script>
-<link rel=stylesheet href=https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css>
-<script type=text/javascript src=https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js></script>
-</head>
-<body>
-<div class=preloader>
-</div>
-<header class=navigation>
-<div class=container>
-<nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
-<a class="navbar-brand mobile-view" href=https://hkaji.github.io/><img class=img-fluid src=https://hkaji.github.io/images/logo.png alt=一歩のはまりから/ipponohamari></a>
+<!doctype html><html lang=ja><head><meta charset=utf-8><title>一歩のはまりから/ipponohamari</title><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1"><meta name=description content="マイコンや倒立ロボでつまずいた人は、お立ち寄りください。きっと役に立てると思います"><meta name=author content="hkaji"><meta name=generator content="Hugo 0.111.3"><link rel=stylesheet href=https://hkaji.github.io/plugins/bootstrap/bootstrap.min.css><link rel=stylesheet href=https://hkaji.github.io/plugins/slick/slick.css><link rel=stylesheet href=https://hkaji.github.io/plugins/themify-icons/themify-icons.css><link rel=stylesheet href=https://hkaji.github.io/plugins/venobox/venobox.css><link rel=stylesheet href=https://hkaji.github.io/scss/style.min.css media=screen><link rel="shortcut icon" href=https://hkaji.github.io/images/favicon.png type=image/x-icon><link rel=icon href=https://hkaji.github.io/images/favicon.png type=image/x-icon><script>(function(e,t,n,s,o,i,a){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,i=t.createElement(n),a=t.getElementsByTagName(n)[0],i.async=1,i.src=s,a.parentNode.insertBefore(i,a)})(window,document,"script","//www.google-analytics.com/analytics.js","ga"),ga("create","UA-2831102754","auto"),ga("send","pageview")</script><script async src="https://www.googletagmanager.com/gtag/js?id=G-V3DKLV7482"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-V3DKLV7482")</script><meta name=google-site-verification content="eNklt_-Jdl-3xVGM2Lx-ybzzPso6QpwJqVnbR38n8zM"><link rel=stylesheet href=https://hkaji.github.io/css/custom_head.css></head><head><script type=text/javascript src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js></script>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css><script type=text/javascript src=https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js></script></head><body><div class=preloader></div><header class=navigation><div class=container><nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0"><a class="navbar-brand mobile-view" href=https://hkaji.github.io/><img class=img-fluid src=https://hkaji.github.io/images/logo.png alt=一歩のはまりから/ipponohamari></a>
 <button class="navbar-toggler border-0" type=button data-toggle=collapse data-target=#navigation>
-<i class=ti-menu></i>
-</button>
-<div class="collapse navbar-collapse text-center" id=navigation>
-<div class=desktop-view>
-<ul class="navbar-nav mr-auto">
-<li class=nav-item>
-<a class=nav-link href=#><i class=ti-facebook></i></a>
-</li>
-<li class=nav-item>
-<a class=nav-link href=#><i class=ti-twitter-alt></i></a>
-</li>
-<li class=nav-item>
-<a class=nav-link href=https://github.com/hkaji><i class=ti-github></i></a>
-</li>
-</ul>
-</div>
-<a class="navbar-brand mx-auto desktop-view" href=https://hkaji.github.io/><img class=img-fluid src=https://hkaji.github.io/images/logo.png alt=一歩のはまりから/ipponohamari></a>
-<ul class=navbar-nav>
-<li class=nav-item>
-<a class=nav-link href=https://hkaji.github.io/about>About</a>
-</li>
-<li class=nav-item>
-<a class=nav-link href=https://hkaji.github.io/blog/news>Update</a>
-</li>
-<li class=nav-item>
-<a class=nav-link href=https://hkaji.github.io/blog>Blog/Post</a>
-</li>
-<li class=nav-item>
-<a class=nav-link href=https://hkaji.github.io/contact>Contact</a>
-</li>
-<li class=nav-item>
-<a class=nav-link href=https://hkaji.github.io/privacypolicy>Privacy Policy</a>
-</li>
-</ul>
-<div class="search pl-lg-4">
-<button id=searchOpen class=search-btn><i class=ti-search></i></button>
-<div class=search-wrapper>
-<form action=https://hkaji.github.io//search class=h-100>
-<input class="search-box px-4" id=search-query name=s type=search placeholder="Type & Hit Enter...">
-</form>
-<button id=searchClose class=search-close><i class="ti-close text-dark"></i></button>
-</div>
-</div>
-</div>
-</nav>
-</div>
-</header>
-<section class=section-sm>
-<div class=container>
-<div class=row>
-<div class="col-lg-8 mx-auto">
-<a href=/categories/esp32 class=text-primary>Esp32</a>
-<h2>レーザー距離センサーを動かしてみる</h2>
-<div class="mb-3 post-meta">
-<span>By hkaji</span>
+<i class=ti-menu></i></button><div class="collapse navbar-collapse text-center" id=navigation><div class=desktop-view><ul class="navbar-nav mr-auto"><li class=nav-item><a class=nav-link href=#><i class=ti-facebook></i></a></li><li class=nav-item><a class=nav-link href=#><i class=ti-twitter-alt></i></a></li><li class=nav-item><a class=nav-link href=https://github.com/hkaji><i class=ti-github></i></a></li></ul></div><a class="navbar-brand mx-auto desktop-view" href=https://hkaji.github.io/><img class=img-fluid src=https://hkaji.github.io/images/logo.png alt=一歩のはまりから/ipponohamari></a><ul class=navbar-nav><li class=nav-item><a class=nav-link href=https://hkaji.github.io/about>About</a></li><li class=nav-item><a class=nav-link href=https://hkaji.github.io/blog/news>Update</a></li><li class=nav-item><a class=nav-link href=https://hkaji.github.io/blog>Blog/Post</a></li><li class=nav-item><a class=nav-link href=https://hkaji.github.io/contact>Contact</a></li><li class=nav-item><a class=nav-link href=https://hkaji.github.io/privacypolicy>Privacy Policy</a></li></ul><div class="search pl-lg-4"><button id=searchOpen class=search-btn><i class=ti-search></i></button><div class=search-wrapper><form action=https://hkaji.github.io//search class=h-100><input class="search-box px-4" id=search-query name=s type=search placeholder="Type & Hit Enter..."></form><button id=searchClose class=search-close><i class="ti-close text-dark"></i></button></div></div></div></nav></div></header><section class=section-sm><div class=container><div class=row><div class="col-lg-8 mx-auto"><a href=/categories/esp32 class=text-primary>Esp32</a><h2>レーザー距離センサーを動かしてみる</h2><div class="mb-3 post-meta"><span>By hkaji</span>
 <span class="border-bottom border-primary px-2 mx-1"></span>
 <span>30 October 2022</span>
-<span>Update 30 October 2022</span>
-</div>
-<img src=https://hkaji.github.io/images/esp32/20221106_190814.jpg class="img-fluid w-25 mb-4" alt=レーザー距離センサーを動かしてみる>
-<div class="content mb-5">
-<h1 id=m5stickc-plusでレーザー距離センサーvl53l0xを動かしてみる>M5stickC plusでレーザー距離センサーVL53L0Xを動かしてみる</h1>
-<p>大型バイクのデーターロガーを作ってみようの第1段で、距離センサーを動かします。
+<span>Update 30 October 2022</span></div><img src=https://hkaji.github.io/images/esp32/20221106_190814.jpg class="img-fluid w-25 mb-4" alt=レーザー距離センサーを動かしてみる><div class="content mb-5"><h1 id=m5stickc-plusでレーザー距離センサーvl53l0xを動かしてみる>M5stickC plusでレーザー距離センサーVL53L0Xを動かしてみる</h1><p>大型バイクのデーターロガーを作ってみようの第1段で、距離センサーを動かします。
 レーザーを使った非接触センサーを使います。
-データーロガーの全体像は、追々まとめていきたいと思います。</p>
-<h2 id=はじめに>はじめに</h2>
-<p>STマイクロ社製のVL53シリーズレーザー距離センサーを使います。値はI2Cに出力されるので、
+データーロガーの全体像は、追々まとめていきたいと思います。</p><h2 id=はじめに>はじめに</h2><p>STマイクロ社製のVL53シリーズレーザー距離センサーを使います。値はI2Cに出力されるので、
 マイコン、ラズパイいずれでもOKです。今回は空いていたM5sticCplusを使います。
-レーザー距離センサーは、こちら。
-<div class=fancybox>
-<a data-fancybox=vl53 href=/images/esp32/20221106_190814.jpg data-caption=VL53><img src=/images/esp32/20221106_190814.jpg width=300px></a>
-</div>
-</p>
-<p>M5stickCplusはこちら。
-<div class=fancybox>
-<a data-fancybox=vl53 href=/images/esp32/20221106_190746.jpg data-caption=M5stickCplus><img src=/images/esp32/20221106_190746.jpg width=300px></a>
-</div>
-</p>
-<h2 id=各種仕込み>各種仕込み</h2>
-<h3 id=配線>配線</h3>
-<p>センサー出力は6線出ていますが、Vcc,GND,I2C(SDA,SCL)の4線のみ接続すればいいようです。
-M5stickCplusのGROVEコネクターにブレッドボードを介して接続します。</p>
-<div class=highlight><div style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4>
-<table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0>
-<pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=1><a style=outline:none;text-decoration:none;color:inherit href=#1>1</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=2><a style=outline:none;text-decoration:none;color:inherit href=#2>2</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=3><a style=outline:none;text-decoration:none;color:inherit href=#3>3</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=4><a style=outline:none;text-decoration:none;color:inherit href=#4>4</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=5><a style=outline:none;text-decoration:none;color:inherit href=#5>5</a>
-</span></code></pre></td>
-<td style=vertical-align:top;padding:0;margin:0;border:0;width:100%>
-<pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-txt data-lang=txt>M5stickC    VL53
-G32         SDA
-G33         SCL
-Vcc         V+
-GND         GND
-</code></pre></td></tr></table>
-</div>
-</div>
-<div class=fancybox>
-<a data-fancybox=vl53 href=/images/esp32/20221106_171031.jpg data-caption=connection><img src=/images/esp32/20221106_171031.jpg width=300px></a>
-</div>
-<h3 id=ソフトウェア>ソフトウェア</h3>
-<p>先人が多数<sup id=fnref:1><a href=#fn:1 class=footnote-ref role=doc-noteref>1</a></sup><sup id=fnref:2><a href=#fn:2 class=footnote-ref role=doc-noteref>2</a></sup><sup id=fnref:3><a href=#fn:3 class=footnote-ref role=doc-noteref>3</a></sup>いるので、センサー読み出しは簡単にできます。M5stickCのLCDに読んだ値と値の横バーを表示します。ちらつかないようにsprite機能を使いました。
-VScode+PlathomeIO環境にてarduinoを使って作成しました。ページ下部にソースを載せておきます。</p>
-<h2 id=動作確認>動作確認</h2>
-<p>USB経由でM5stickCにバイナリーを書き込むとちゃんと動きました。測定限界の値と横バー表示は、若干調整が必要です。
-動画は、右側に距離センサーを左側に向けて固定し左側の手を動かして距離を測定している状況です。</p>
-<div style=position:relative;padding-bottom:56.25%;height:0;overflow:hidden>
-<iframe src=https://www.youtube.com/embed/fGSYjFnjsmk style=position:absolute;top:0;left:0;width:100%;height:100%;border:0 allowfullscreen title="YouTube Video"></iframe>
-</div>
-<h2 id=まとめ>まとめ</h2>
-<p>STマイクロ社製のVL53シリーズレーザー距離センサーを使って、M5stickCplusにセンサー値を表示させました。ざっと測った感じでは1mm単位で正確に計測されている感じです。
-今後は、BlueToothでデーターロガー本体に値を転送して、各種データーの収集や表示を少しづつ進めていきたいと思います。</p>
-<h2 id=参考リンク>参考リンク</h2>
-<h3 id=arduinoソースコード>arduinoソースコード</h3>
-<div class=highlight><div style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4>
-<table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0>
-<pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=1><a style=outline:none;text-decoration:none;color:inherit href=#1> 1</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=2><a style=outline:none;text-decoration:none;color:inherit href=#2> 2</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=3><a style=outline:none;text-decoration:none;color:inherit href=#3> 3</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=4><a style=outline:none;text-decoration:none;color:inherit href=#4> 4</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=5><a style=outline:none;text-decoration:none;color:inherit href=#5> 5</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=6><a style=outline:none;text-decoration:none;color:inherit href=#6> 6</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=7><a style=outline:none;text-decoration:none;color:inherit href=#7> 7</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=8><a style=outline:none;text-decoration:none;color:inherit href=#8> 8</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=9><a style=outline:none;text-decoration:none;color:inherit href=#9> 9</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=10><a style=outline:none;text-decoration:none;color:inherit href=#10>10</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=11><a style=outline:none;text-decoration:none;color:inherit href=#11>11</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=12><a style=outline:none;text-decoration:none;color:inherit href=#12>12</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=13><a style=outline:none;text-decoration:none;color:inherit href=#13>13</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=14><a style=outline:none;text-decoration:none;color:inherit href=#14>14</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=15><a style=outline:none;text-decoration:none;color:inherit href=#15>15</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=16><a style=outline:none;text-decoration:none;color:inherit href=#16>16</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=17><a style=outline:none;text-decoration:none;color:inherit href=#17>17</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=18><a style=outline:none;text-decoration:none;color:inherit href=#18>18</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=19><a style=outline:none;text-decoration:none;color:inherit href=#19>19</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=20><a style=outline:none;text-decoration:none;color:inherit href=#20>20</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=21><a style=outline:none;text-decoration:none;color:inherit href=#21>21</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=22><a style=outline:none;text-decoration:none;color:inherit href=#22>22</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=23><a style=outline:none;text-decoration:none;color:inherit href=#23>23</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=24><a style=outline:none;text-decoration:none;color:inherit href=#24>24</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=25><a style=outline:none;text-decoration:none;color:inherit href=#25>25</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=26><a style=outline:none;text-decoration:none;color:inherit href=#26>26</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=27><a style=outline:none;text-decoration:none;color:inherit href=#27>27</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=28><a style=outline:none;text-decoration:none;color:inherit href=#28>28</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=29><a style=outline:none;text-decoration:none;color:inherit href=#29>29</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=30><a style=outline:none;text-decoration:none;color:inherit href=#30>30</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=31><a style=outline:none;text-decoration:none;color:inherit href=#31>31</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=32><a style=outline:none;text-decoration:none;color:inherit href=#32>32</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=33><a style=outline:none;text-decoration:none;color:inherit href=#33>33</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=34><a style=outline:none;text-decoration:none;color:inherit href=#34>34</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=35><a style=outline:none;text-decoration:none;color:inherit href=#35>35</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=36><a style=outline:none;text-decoration:none;color:inherit href=#36>36</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=37><a style=outline:none;text-decoration:none;color:inherit href=#37>37</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=38><a style=outline:none;text-decoration:none;color:inherit href=#38>38</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=39><a style=outline:none;text-decoration:none;color:inherit href=#39>39</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=40><a style=outline:none;text-decoration:none;color:inherit href=#40>40</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=41><a style=outline:none;text-decoration:none;color:inherit href=#41>41</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=42><a style=outline:none;text-decoration:none;color:inherit href=#42>42</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=43><a style=outline:none;text-decoration:none;color:inherit href=#43>43</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=44><a style=outline:none;text-decoration:none;color:inherit href=#44>44</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=45><a style=outline:none;text-decoration:none;color:inherit href=#45>45</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=46><a style=outline:none;text-decoration:none;color:inherit href=#46>46</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=47><a style=outline:none;text-decoration:none;color:inherit href=#47>47</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=48><a style=outline:none;text-decoration:none;color:inherit href=#48>48</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=49><a style=outline:none;text-decoration:none;color:inherit href=#49>49</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=50><a style=outline:none;text-decoration:none;color:inherit href=#50>50</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=51><a style=outline:none;text-decoration:none;color:inherit href=#51>51</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=52><a style=outline:none;text-decoration:none;color:inherit href=#52>52</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=53><a style=outline:none;text-decoration:none;color:inherit href=#53>53</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=54><a style=outline:none;text-decoration:none;color:inherit href=#54>54</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=55><a style=outline:none;text-decoration:none;color:inherit href=#55>55</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=56><a style=outline:none;text-decoration:none;color:inherit href=#56>56</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=57><a style=outline:none;text-decoration:none;color:inherit href=#57>57</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=58><a style=outline:none;text-decoration:none;color:inherit href=#58>58</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=59><a style=outline:none;text-decoration:none;color:inherit href=#59>59</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=60><a style=outline:none;text-decoration:none;color:inherit href=#60>60</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=61><a style=outline:none;text-decoration:none;color:inherit href=#61>61</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=62><a style=outline:none;text-decoration:none;color:inherit href=#62>62</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=63><a style=outline:none;text-decoration:none;color:inherit href=#63>63</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=64><a style=outline:none;text-decoration:none;color:inherit href=#64>64</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=65><a style=outline:none;text-decoration:none;color:inherit href=#65>65</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=66><a style=outline:none;text-decoration:none;color:inherit href=#66>66</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=67><a style=outline:none;text-decoration:none;color:inherit href=#67>67</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=68><a style=outline:none;text-decoration:none;color:inherit href=#68>68</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=69><a style=outline:none;text-decoration:none;color:inherit href=#69>69</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=70><a style=outline:none;text-decoration:none;color:inherit href=#70>70</a>
-</span></code></pre></td>
-<td style=vertical-align:top;padding:0;margin:0;border:0;width:100%>
-<pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-cpp:m5stickC_vl32_arduino.cpp data-lang=cpp:m5stickC_vl32_arduino.cpp><span style=color:#099>#include</span> <span style=color:#099>&lt;M5StickCPlus.h&gt;</span><span style=color:#099>
-</span><span style=color:#099>#include</span> <span style=color:#099>&lt;Wire.h&gt;</span><span style=color:#099>
-</span><span style=color:#099>#include</span> <span style=color:#099>&lt;VL53L0X.h&gt;</span><span style=color:#099>
-</span><span style=color:#099></span>
-VL53L0X sensor;
-TFT_eSprite sprite <span style=color:#555>=</span> TFT_eSprite(<span style=color:#555>&amp;</span>M5.Lcd);
-
-<span style=color:#09f;font-style:italic>// 距離mm
-</span><span style=color:#09f;font-style:italic></span><span style=color:#078;font-weight:700>int</span> dist <span style=color:#555>=</span> <span style=color:#f60>0</span>;
-
-<span style=color:#078;font-weight:700>void</span> <span style=color:#c0f>Distance_screen_display</span>(<span style=color:#078;font-weight:700>int</span> dist){
-  <span style=color:#09f;font-style:italic>//画面を黒でクリアー
-</span><span style=color:#09f;font-style:italic></span>  sprite.fillRect(<span style=color:#f60>0</span>, <span style=color:#f60>0</span>, M5.Lcd.width(), M5.Lcd.height(), BLACK);
-  <span style=color:#09f;font-style:italic>// text 表示
-</span><span style=color:#09f;font-style:italic></span>  sprite.setCursor(<span style=color:#f60>0</span>,<span style=color:#f60>5</span>,<span style=color:#f60>2</span>);
-  sprite.setTextSize(<span style=color:#f60>2</span>);
-  sprite.printf(<span style=color:#c30>&#34;dist:%d</span><span style=color:#c30;font-weight:700>\n</span><span style=color:#c30>&#34;</span>, dist);
-  <span style=color:#09f;font-style:italic>// bar 表示
-</span><span style=color:#09f;font-style:italic></span>  sprite.fillRect(<span style=color:#f60>0</span>, <span style=color:#f60>60</span>, (<span style=color:#078;font-weight:700>int</span>)dist<span style=color:#555>*</span>M5.Lcd.width()<span style=color:#555>/</span><span style=color:#f60>1000</span>, <span style=color:#f60>10</span>, YELLOW);
-
-  <span style=color:#09f;font-style:italic>// スプライトを表示画面に転送する
-</span><span style=color:#09f;font-style:italic></span>  sprite.pushSprite(<span style=color:#f60>0</span>, <span style=color:#f60>0</span>);
-  delay(<span style=color:#f60>50</span>);
-}
-
-<span style=color:#078;font-weight:700>void</span> <span style=color:#c0f>setup</span>() {
-  M5.begin();
-  Serial.begin(<span style=color:#f60>115200</span>);
-  M5.Lcd.setRotation(<span style=color:#f60>3</span>);
-
-<span style=color:#09f;font-style:italic>// スプライトの作成
-</span><span style=color:#09f;font-style:italic></span>  sprite.setRotation(<span style=color:#f60>3</span>);
-  sprite.createSprite(M5.Lcd.width(), M5.Lcd.height());
-  
-<span style=color:#09f;font-style:italic>//
-</span><span style=color:#09f;font-style:italic>// I2C and Sensor start
-</span><span style=color:#09f;font-style:italic>// 32 SDA, 33 SCL
-</span><span style=color:#09f;font-style:italic>//
-</span><span style=color:#09f;font-style:italic></span>  Wire.begin(GPIO_NUM_32, GPIO_NUM_33); <span style=color:#09f;font-style:italic>//Inialize I2C Hardware
-</span><span style=color:#09f;font-style:italic></span>
-<span style=color:#09f;font-style:italic>//タイムアウトまでの時間をセット
-</span><span style=color:#09f;font-style:italic></span>  sensor.setTimeout(<span style=color:#f60>500</span>);
-  <span style=color:#09f;font-style:italic>//距離センサ(VL53L0X)の初期化
-</span><span style=color:#09f;font-style:italic></span>  <span style=color:#069;font-weight:700>if</span> (<span style=color:#555>!</span>sensor.init())
-  {
-    Serial.println(<span style=color:#c30>&#34;Failed to detect and initialize sensor!&#34;</span>);
-    <span style=color:#069;font-weight:700>while</span> (<span style=color:#f60>1</span>) {}
-  }
-
-  <span style=color:#09f;font-style:italic>// Start continuous back-to-back mode (take readings as
-</span><span style=color:#09f;font-style:italic></span>  <span style=color:#09f;font-style:italic>// fast as possible).  To use continuous timed mode
-</span><span style=color:#09f;font-style:italic></span>  <span style=color:#09f;font-style:italic>// instead, provide a desired inter-measurement period in
-</span><span style=color:#09f;font-style:italic></span>  <span style=color:#09f;font-style:italic>// ms (e.g. sensor.startContinuous(100)).
-</span><span style=color:#09f;font-style:italic></span>  sensor.startContinuous();
-
-}
-
-<span style=color:#078;font-weight:700>void</span> <span style=color:#c0f>loop</span>() {
-  <span style=color:#09f;font-style:italic>// sensor値読み
-</span><span style=color:#09f;font-style:italic></span>  dist <span style=color:#555>=</span> sensor.readRangeContinuousMillimeters();
-  <span style=color:#09f;font-style:italic>// タイムアウトが起きた場合はタイムアウトが起きたことを出力
-</span><span style=color:#09f;font-style:italic></span>  <span style=color:#069;font-weight:700>if</span> (sensor.timeoutOccurred()) {
-    Serial.print(<span style=color:#c30>&#34; TIMEOUT&#34;</span>);
-  }
-  <span style=color:#09f;font-style:italic>// シリアルにsensor値出力
-</span><span style=color:#09f;font-style:italic></span>  Serial.println(dist);
-
-  <span style=color:#09f;font-style:italic>// Lcd出力
-</span><span style=color:#09f;font-style:italic></span>  Distance_screen_display(dist);
-}
-</code></pre></td></tr></table>
-</div>
-</div><section class=footnotes role=doc-endnotes>
-<hr>
-<ol>
-<li id=fn:1 role=doc-endnote>
-<p><a href=https://www.switch-science.com/products/6470>M5StickC Plus</a>&#160;<a href=#fnref:1 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p>
-</li>
-<li id=fn:2 role=doc-endnote>
-<p><a href=https://blog.hrendoh.com/how-to-use-vl53l0x-with-esp32-arduino/>距離センサー VL53L0Xの使い方 (Arduino、ESP32)</a>&#160;<a href=#fnref:2 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p>
-</li>
-<li id=fn:3 role=doc-endnote>
-<p><a href=https://github.com/pololu/vl53l0x-arduino>GitHub:VL53L0X library for Arduino</a>&#160;<a href=#fnref:3 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p>
-</li>
-</ol>
-</section>
-</div>
-<div id=disqus_thread></div>
-<script type=application/javascript>var disqus_config=function(){};(function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById('disqus_thread').innerHTML='Disqus comments not available by default when the website is previewed locally.';return}var b=document,a=b.createElement('script');a.async=!0,a.src='//https-hkaji-github-io.disqus.com/embed.js',a.setAttribute('data-timestamp',+new Date),(b.head||b.body).appendChild(a)})()</script>
-<noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript>
-<a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a>
-</div>
-</div>
-</div>
-</section>
-<footer class=text-capitalize>
-<div class=container>
-<div class="row justify-content-center">
-<div class="col-12 text-center mb-5">
-<a href=https://hkaji.github.io/><img src=https://hkaji.github.io/images/logo.png alt=一歩のはまりから/ipponohamari></a>
-</div>
-<div class="col-lg-3 col-sm-6 mb-5">
-<h6 class=mb-4>Contact Me</h6>
-<ul class=list-unstyled>
-<li class=mb-3><i class="ti-location-pin mr-3 text-primary"></i>Kanagawa, Japan</li>
-<li class=mb-3><a class=text-dark href=mailto:hkaji.blog@gmail.com><i class="ti-email mr-3 text-primary"></i>hkaji.blog@gmail.com</a>
-</li>
-</ul>
-</div>
-<div class="col-lg-3 col-sm-6 mb-5">
-<h6 class=mb-4>Social Contacts</h6>
-<ul class=list-unstyled>
-<li class=mb-3><a class=text-dark href=#>facebook</a></li>
-<li class=mb-3><a class=text-dark href=#>twitter</a></li>
-<li class=mb-3><a class=text-dark href=https://github.com/hkaji>github</a></li>
-</ul>
-</div>
-<div class="col-lg-3 col-sm-6 mb-5">
-<h6 class=mb-4>Categories</h6>
-<ul class=list-unstyled>
-<li class=mb-3><a class=text-dark href=/categories/3dprinter>3dprinter</a>
-</li>
-<li class=mb-3><a class=text-dark href=/categories/esp32>Esp32</a>
-</li>
-<li class=mb-3><a class=text-dark href=/categories/etc>Etc</a>
-</li>
-<li class=mb-3><a class=text-dark href=/categories/go>Go</a>
-</li>
-<li class=mb-3><a class=text-dark href=/categories/news>News</a>
-</li>
-<li class=mb-3><a class=text-dark href=/categories/python>Python</a>
-</li>
-<li class=mb-3><a class=text-dark href=/categories/raspi>Raspi</a>
-</li>
-<li class=mb-3><a class=text-dark href=/categories/robo>Robo</a>
-</li>
-<li class=mb-3><a class=text-dark href=/categories/tsdb>Tsdb</a>
-</li>
-<li class=mb-3><a class=text-dark href=/categories/www>WWW</a>
-</li>
-</ul>
-</div>
-<div class="col-lg-3 col-sm-6 mb-5">
-<h6 class=mb-4>Quick Links</h6>
-<ul class=list-unstyled>
-<li class=mb-3><a class=text-dark href=https://hkaji.github.io/about>About</a></li>
-<li class=mb-3><a class=text-dark href=https://hkaji.github.io/blog>Blog/Post</a></li>
-<li class=mb-3><a class=text-dark href=https://hkaji.github.io/contact>Contact</a></li>
-<li class=mb-3><a class=text-dark href=https://hkaji.github.io/privacypolicy>Privacy Policy</a></li>
-</ul>
-</div>
-<div class="col-12 border-top py-4 text-center">
-Powered by <a href=https://hugo.io>Hugo</a>
+レーザー距離センサーは、こちら。<div class=fancybox><a data-fancybox=vl53 href=/images/esp32/20221106_190814.jpg data-caption=VL53><img src=/images/esp32/20221106_190814.jpg width=300px></a></div></p><p>M5stickCplusはこちら。<div class=fancybox><a data-fancybox=vl53 href=/images/esp32/20221106_190746.jpg data-caption=M5stickCplus><img src=/images/esp32/20221106_190746.jpg width=300px></a></div></p><h2 id=各種仕込み>各種仕込み</h2><h3 id=配線>配線</h3><p>センサー出力は6線出ていますが、Vcc,GND,I2C(SDA,SCL)の4線のみ接続すればいいようです。
+M5stickCplusのGROVEコネクターにブレッドボードを介して接続します。</p><div class=highlight><div style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-0-1><a style=outline:none;text-decoration:none;color:inherit href=#hl-0-1>1</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-0-2><a style=outline:none;text-decoration:none;color:inherit href=#hl-0-2>2</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-0-3><a style=outline:none;text-decoration:none;color:inherit href=#hl-0-3>3</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-0-4><a style=outline:none;text-decoration:none;color:inherit href=#hl-0-4>4</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-0-5><a style=outline:none;text-decoration:none;color:inherit href=#hl-0-5>5</a>
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-txt data-lang=txt><span style=display:flex><span>M5stickC    VL53
+</span></span><span style=display:flex><span>G32         SDA
+</span></span><span style=display:flex><span>G33         SCL
+</span></span><span style=display:flex><span>Vcc         V+
+</span></span><span style=display:flex><span>GND         GND
+</span></span></code></pre></td></tr></table></div></div><div class=fancybox><a data-fancybox=vl53 href=/images/esp32/20221106_171031.jpg data-caption=connection><img src=/images/esp32/20221106_171031.jpg width=300px></a></div><h3 id=ソフトウェア>ソフトウェア</h3><p>先人が多数<sup id=fnref:1><a href=#fn:1 class=footnote-ref role=doc-noteref>1</a></sup><sup id=fnref:2><a href=#fn:2 class=footnote-ref role=doc-noteref>2</a></sup><sup id=fnref:3><a href=#fn:3 class=footnote-ref role=doc-noteref>3</a></sup>いるので、センサー読み出しは簡単にできます。M5stickCのLCDに読んだ値と値の横バーを表示します。ちらつかないようにsprite機能を使いました。
+VScode+PlathomeIO環境にてarduinoを使って作成しました。ページ下部にソースを載せておきます。</p><h2 id=動作確認>動作確認</h2><p>USB経由でM5stickCにバイナリーを書き込むとちゃんと動きました。測定限界の値と横バー表示は、若干調整が必要です。
+動画は、右側に距離センサーを左側に向けて固定し左側の手を動かして距離を測定している状況です。</p><div style=position:relative;padding-bottom:56.25%;height:0;overflow:hidden><iframe src=https://www.youtube.com/embed/fGSYjFnjsmk style=position:absolute;top:0;left:0;width:100%;height:100%;border:0 allowfullscreen title="YouTube Video"></iframe></div><h2 id=まとめ>まとめ</h2><p>STマイクロ社製のVL53シリーズレーザー距離センサーを使って、M5stickCplusにセンサー値を表示させました。ざっと測った感じでは1mm単位で正確に計測されている感じです。
+今後は、BlueToothでデーターロガー本体に値を転送して、各種データーの収集や表示を少しづつ進めていきたいと思います。</p><h2 id=参考リンク>参考リンク</h2><h3 id=arduinoソースコード>arduinoソースコード</h3><div class=highlight><div style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-1><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-1> 1</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-2><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-2> 2</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-3><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-3> 3</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-4><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-4> 4</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-5><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-5> 5</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-6><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-6> 6</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-7><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-7> 7</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-8><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-8> 8</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-9><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-9> 9</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-10><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-10>10</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-11><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-11>11</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-12><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-12>12</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-13><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-13>13</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-14><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-14>14</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-15><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-15>15</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-16><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-16>16</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-17><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-17>17</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-18><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-18>18</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-19><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-19>19</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-20><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-20>20</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-21><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-21>21</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-22><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-22>22</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-23><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-23>23</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-24><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-24>24</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-25><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-25>25</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-26><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-26>26</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-27><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-27>27</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-28><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-28>28</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-29><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-29>29</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-30><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-30>30</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-31><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-31>31</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-32><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-32>32</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-33><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-33>33</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-34><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-34>34</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-35><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-35>35</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-36><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-36>36</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-37><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-37>37</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-38><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-38>38</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-39><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-39>39</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-40><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-40>40</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-41><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-41>41</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-42><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-42>42</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-43><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-43>43</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-44><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-44>44</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-45><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-45>45</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-46><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-46>46</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-47><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-47>47</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-48><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-48>48</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-49><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-49>49</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-50><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-50>50</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-51><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-51>51</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-52><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-52>52</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-53><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-53>53</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-54><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-54>54</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-55><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-55>55</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-56><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-56>56</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-57><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-57>57</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-58><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-58>58</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-59><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-59>59</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-60><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-60>60</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-61><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-61>61</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-62><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-62>62</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-63><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-63>63</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-64><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-64>64</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-65><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-65>65</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-66><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-66>66</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-67><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-67>67</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-68><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-68>68</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-69><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-69>69</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-70><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-70>70</a>
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-cpp:m5stickC_vl32_arduino.cpp data-lang=cpp:m5stickC_vl32_arduino.cpp><span style=display:flex><span><span style=color:#099>#include</span> <span style=color:#099>&lt;M5StickCPlus.h&gt;</span><span style=color:#099>
+</span></span></span><span style=display:flex><span><span style=color:#099>#include</span> <span style=color:#099>&lt;Wire.h&gt;</span><span style=color:#099>
+</span></span></span><span style=display:flex><span><span style=color:#099>#include</span> <span style=color:#099>&lt;VL53L0X.h&gt;</span><span style=color:#099>
+</span></span></span><span style=display:flex><span><span style=color:#099></span>
+</span></span><span style=display:flex><span>VL53L0X sensor;
+</span></span><span style=display:flex><span>TFT_eSprite sprite <span style=color:#555>=</span> TFT_eSprite(<span style=color:#555>&amp;</span>M5.Lcd);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#09f;font-style:italic>// 距離mm
+</span></span></span><span style=display:flex><span><span style=color:#09f;font-style:italic></span><span style=color:#078;font-weight:700>int</span> dist <span style=color:#555>=</span> <span style=color:#f60>0</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#078;font-weight:700>void</span> <span style=color:#c0f>Distance_screen_display</span>(<span style=color:#078;font-weight:700>int</span> dist){
+</span></span><span style=display:flex><span>  <span style=color:#09f;font-style:italic>//画面を黒でクリアー
+</span></span></span><span style=display:flex><span><span style=color:#09f;font-style:italic></span>  sprite.fillRect(<span style=color:#f60>0</span>, <span style=color:#f60>0</span>, M5.Lcd.width(), M5.Lcd.height(), BLACK);
+</span></span><span style=display:flex><span>  <span style=color:#09f;font-style:italic>// text 表示
+</span></span></span><span style=display:flex><span><span style=color:#09f;font-style:italic></span>  sprite.setCursor(<span style=color:#f60>0</span>,<span style=color:#f60>5</span>,<span style=color:#f60>2</span>);
+</span></span><span style=display:flex><span>  sprite.setTextSize(<span style=color:#f60>2</span>);
+</span></span><span style=display:flex><span>  sprite.printf(<span style=color:#c30>&#34;dist:%d</span><span style=color:#c30;font-weight:700>\n</span><span style=color:#c30>&#34;</span>, dist);
+</span></span><span style=display:flex><span>  <span style=color:#09f;font-style:italic>// bar 表示
+</span></span></span><span style=display:flex><span><span style=color:#09f;font-style:italic></span>  sprite.fillRect(<span style=color:#f60>0</span>, <span style=color:#f60>60</span>, (<span style=color:#078;font-weight:700>int</span>)dist<span style=color:#555>*</span>M5.Lcd.width()<span style=color:#555>/</span><span style=color:#f60>1000</span>, <span style=color:#f60>10</span>, YELLOW);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#09f;font-style:italic>// スプライトを表示画面に転送する
+</span></span></span><span style=display:flex><span><span style=color:#09f;font-style:italic></span>  sprite.pushSprite(<span style=color:#f60>0</span>, <span style=color:#f60>0</span>);
+</span></span><span style=display:flex><span>  delay(<span style=color:#f60>50</span>);
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#078;font-weight:700>void</span> <span style=color:#c0f>setup</span>() {
+</span></span><span style=display:flex><span>  M5.begin();
+</span></span><span style=display:flex><span>  Serial.begin(<span style=color:#f60>115200</span>);
+</span></span><span style=display:flex><span>  M5.Lcd.setRotation(<span style=color:#f60>3</span>);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#09f;font-style:italic>// スプライトの作成
+</span></span></span><span style=display:flex><span><span style=color:#09f;font-style:italic></span>  sprite.setRotation(<span style=color:#f60>3</span>);
+</span></span><span style=display:flex><span>  sprite.createSprite(M5.Lcd.width(), M5.Lcd.height());
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span><span style=color:#09f;font-style:italic>//
+</span></span></span><span style=display:flex><span><span style=color:#09f;font-style:italic>// I2C and Sensor start
+</span></span></span><span style=display:flex><span><span style=color:#09f;font-style:italic>// 32 SDA, 33 SCL
+</span></span></span><span style=display:flex><span><span style=color:#09f;font-style:italic>//
+</span></span></span><span style=display:flex><span><span style=color:#09f;font-style:italic></span>  Wire.begin(GPIO_NUM_32, GPIO_NUM_33); <span style=color:#09f;font-style:italic>//Inialize I2C Hardware
+</span></span></span><span style=display:flex><span><span style=color:#09f;font-style:italic></span>
+</span></span><span style=display:flex><span><span style=color:#09f;font-style:italic>//タイムアウトまでの時間をセット
+</span></span></span><span style=display:flex><span><span style=color:#09f;font-style:italic></span>  sensor.setTimeout(<span style=color:#f60>500</span>);
+</span></span><span style=display:flex><span>  <span style=color:#09f;font-style:italic>//距離センサ(VL53L0X)の初期化
+</span></span></span><span style=display:flex><span><span style=color:#09f;font-style:italic></span>  <span style=color:#069;font-weight:700>if</span> (<span style=color:#555>!</span>sensor.init())
+</span></span><span style=display:flex><span>  {
+</span></span><span style=display:flex><span>    Serial.println(<span style=color:#c30>&#34;Failed to detect and initialize sensor!&#34;</span>);
+</span></span><span style=display:flex><span>    <span style=color:#069;font-weight:700>while</span> (<span style=color:#f60>1</span>) {}
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#09f;font-style:italic>// Start continuous back-to-back mode (take readings as
+</span></span></span><span style=display:flex><span><span style=color:#09f;font-style:italic></span>  <span style=color:#09f;font-style:italic>// fast as possible).  To use continuous timed mode
+</span></span></span><span style=display:flex><span><span style=color:#09f;font-style:italic></span>  <span style=color:#09f;font-style:italic>// instead, provide a desired inter-measurement period in
+</span></span></span><span style=display:flex><span><span style=color:#09f;font-style:italic></span>  <span style=color:#09f;font-style:italic>// ms (e.g. sensor.startContinuous(100)).
+</span></span></span><span style=display:flex><span><span style=color:#09f;font-style:italic></span>  sensor.startContinuous();
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#078;font-weight:700>void</span> <span style=color:#c0f>loop</span>() {
+</span></span><span style=display:flex><span>  <span style=color:#09f;font-style:italic>// sensor値読み
+</span></span></span><span style=display:flex><span><span style=color:#09f;font-style:italic></span>  dist <span style=color:#555>=</span> sensor.readRangeContinuousMillimeters();
+</span></span><span style=display:flex><span>  <span style=color:#09f;font-style:italic>// タイムアウトが起きた場合はタイムアウトが起きたことを出力
+</span></span></span><span style=display:flex><span><span style=color:#09f;font-style:italic></span>  <span style=color:#069;font-weight:700>if</span> (sensor.timeoutOccurred()) {
+</span></span><span style=display:flex><span>    Serial.print(<span style=color:#c30>&#34; TIMEOUT&#34;</span>);
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>  <span style=color:#09f;font-style:italic>// シリアルにsensor値出力
+</span></span></span><span style=display:flex><span><span style=color:#09f;font-style:italic></span>  Serial.println(dist);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#09f;font-style:italic>// Lcd出力
+</span></span></span><span style=display:flex><span><span style=color:#09f;font-style:italic></span>  Distance_screen_display(dist);
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></td></tr></table></div></div><div class=footnotes role=doc-endnotes><hr><ol><li id=fn:1><p><a href=https://www.switch-science.com/products/6470>M5StickC Plus</a>&#160;<a href=#fnref:1 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p></li><li id=fn:2><p><a href=https://blog.hrendoh.com/how-to-use-vl53l0x-with-esp32-arduino/>距離センサー VL53L0Xの使い方 (Arduino、ESP32)</a>&#160;<a href=#fnref:2 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p></li><li id=fn:3><p><a href=https://github.com/pololu/vl53l0x-arduino>GitHub:VL53L0X library for Arduino</a>&#160;<a href=#fnref:3 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p></li></ol></div></div><div id=disqus_thread></div><script type=application/javascript>window.disqus_config=function(){},function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById("disqus_thread").innerHTML="Disqus comments not available by default when the website is previewed locally.";return}var t=document,e=t.createElement("script");e.async=!0,e.src="//https-hkaji-github-io.disqus.com/embed.js",e.setAttribute("data-timestamp",+new Date),(t.head||t.body).appendChild(e)}()</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a></div></div></div></section><footer class=text-capitalize><div class=container><div class="row justify-content-center"><div class="col-12 text-center mb-5"><a href=https://hkaji.github.io/><img src=https://hkaji.github.io/images/logo.png alt=一歩のはまりから/ipponohamari></a></div><div class="col-lg-3 col-sm-6 mb-5"><h6 class=mb-4>Contact Me</h6><ul class=list-unstyled><li class=mb-3><i class="ti-location-pin mr-3 text-primary"></i>Kanagawa, Japan</li><li class=mb-3><a class=text-dark href=mailto:hkaji.blog@gmail.com><i class="ti-email mr-3 text-primary"></i>hkaji.blog@gmail.com</a></li></ul></div><div class="col-lg-3 col-sm-6 mb-5"><h6 class=mb-4>Social Contacts</h6><ul class=list-unstyled><li class=mb-3><a class=text-dark href=#>facebook</a></li><li class=mb-3><a class=text-dark href=#>twitter</a></li><li class=mb-3><a class=text-dark href=https://github.com/hkaji>github</a></li></ul></div><div class="col-lg-3 col-sm-6 mb-5"><h6 class=mb-4>Categories</h6><ul class=list-unstyled><li class=mb-3><a class=text-dark href=/categories/3dprinter>3dprinter</a></li><li class=mb-3><a class=text-dark href=/categories/esp32>Esp32</a></li><li class=mb-3><a class=text-dark href=/categories/etc>Etc</a></li><li class=mb-3><a class=text-dark href=/categories/go>Go</a></li><li class=mb-3><a class=text-dark href=/categories/news>News</a></li><li class=mb-3><a class=text-dark href=/categories/python>Python</a></li><li class=mb-3><a class=text-dark href=/categories/raspi>Raspi</a></li><li class=mb-3><a class=text-dark href=/categories/robo>Robo</a></li><li class=mb-3><a class=text-dark href=/categories/tsdb>Tsdb</a></li><li class=mb-3><a class=text-dark href=/categories/www>WWW</a></li></ul></div><div class="col-lg-3 col-sm-6 mb-5"><h6 class=mb-4>Quick Links</h6><ul class=list-unstyled><li class=mb-3><a class=text-dark href=https://hkaji.github.io/about>About</a></li><li class=mb-3><a class=text-dark href=https://hkaji.github.io/blog>Blog/Post</a></li><li class=mb-3><a class=text-dark href=https://hkaji.github.io/contact>Contact</a></li><li class=mb-3><a class=text-dark href=https://hkaji.github.io/privacypolicy>Privacy Policy</a></li></ul></div><div class="col-12 border-top py-4 text-center">Powered by <a href=https://hugo.io>Hugo</a>
 Theme <a href=https://github.com/gethugothemes/liva-hugo>Liva Hugo</a>
-| copyright © 2015 <a href=https://hkaji.github.io>hkaji</a> All Rights Reserved |
-</div>
-</div>
-</div>
-</footer>
-<script>var indexURL="https://hkaji.github.io/index.json"</script>
-<script src=https://hkaji.github.io/plugins/jQuery/jquery.min.js></script>
+| copyright © 2015 <a href=https://hkaji.github.io>hkaji</a> All Rights Reserved |</div></div></div></footer><script>var indexURL="https://hkaji.github.io/index.json"</script><script src=https://hkaji.github.io/plugins/jQuery/jquery.min.js></script>
 <script src=https://hkaji.github.io/plugins/bootstrap/bootstrap.min.js></script>
 <script src=https://hkaji.github.io/plugins/slick/slick.min.js></script>
 <script src=https://hkaji.github.io/plugins/venobox/venobox.min.js></script>
@@ -388,11 +173,4 @@ Theme <a href=https://github.com/gethugothemes/liva-hugo>Liva Hugo</a>
 <script src=https://hkaji.github.io/plugins/search/mark.js></script>
 <script src=https://hkaji.github.io/plugins/search/search.js></script>
 <script src=https://hkaji.github.io/js/script.min.js></script>
-<script src=https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js></script>
-<div id=js-cookie-box class="cookie-box cookie-box-hide">
-This site uses cookies. By continuing to use this website, you agree to their use. <span id=js-cookie-button class="btn btn-sm btn-primary ml-2">I Accept</span>
-</div>
-<script>(function(c){const a=document.getElementById('js-cookie-box'),b=document.getElementById('js-cookie-button');Cookies.get('cookie-box')||(a.classList.remove('cookie-box-hide'),b.onclick=function(){Cookies.set('cookie-box',!0,{expires:2}),a.classList.add('cookie-box-hide')})})(jQuery)</script>
-<style>.cookie-box{position:fixed;left:0;right:0;bottom:0;text-align:center;z-index:9999;padding:1rem 2rem;background:#474747;transition:all .75s cubic-bezier(.19,1,.22,1);color:#fdfdfd}.cookie-box-hide{display:none}</style>
-</body>
-</html>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js></script><div id=js-cookie-box class="cookie-box cookie-box-hide">This site uses cookies. By continuing to use this website, you agree to their use. <span id=js-cookie-button class="btn btn-sm btn-primary ml-2">I Accept</span></div><script>(function(){const t=document.getElementById("js-cookie-box"),n=document.getElementById("js-cookie-button");Cookies.get("cookie-box")||(t.classList.remove("cookie-box-hide"),n.onclick=function(){Cookies.set("cookie-box",!0,{expires:2}),t.classList.add("cookie-box-hide")})})(jQuery)</script><style>.cookie-box{position:fixed;left:0;right:0;bottom:0;text-align:center;z-index:9999;padding:1rem 2rem;background:#474747;transition:all .75s cubic-bezier(.19,1,.22,1);color:#fdfdfd}.cookie-box-hide{display:none}</style></body></html>

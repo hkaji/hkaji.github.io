@@ -1,368 +1,133 @@
-<!doctype html><html lang=ja><head>
-<meta charset=utf-8>
-<title>一歩のはまりから/ipponohamari</title>
-<meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1">
-<meta name=description content="マイコンや倒立ロボでつまずいた人は、お立ち寄りください。きっと役に立てると思います">
-<meta name=author content="hkaji">
-<meta name=generator content="Hugo 0.92.1">
-<link rel=stylesheet href=https://hkaji.github.io/plugins/bootstrap/bootstrap.min.css>
-<link rel=stylesheet href=https://hkaji.github.io/plugins/slick/slick.css>
-<link rel=stylesheet href=https://hkaji.github.io/plugins/themify-icons/themify-icons.css>
-<link rel=stylesheet href=https://hkaji.github.io/plugins/venobox/venobox.css>
-<link rel=stylesheet href=https://hkaji.github.io/scss/style.min.css media=screen>
-<link rel="shortcut icon" href=https://hkaji.github.io/images/favicon.png type=image/x-icon>
-<link rel=icon href=https://hkaji.github.io/images/favicon.png type=image/x-icon>
-<script>(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)})(window,document,'script','//www.google-analytics.com/analytics.js','ga'),ga('create','UA-2831102754','auto'),ga('send','pageview')</script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-V3DKLV7482"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-V3DKLV7482')</script>
-<meta name=google-site-verification content="eNklt_-Jdl-3xVGM2Lx-ybzzPso6QpwJqVnbR38n8zM">
-<link rel=stylesheet href=https://hkaji.github.io/css/custom_head.css>
-</head><head>
-<script type=text/javascript src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js></script>
-<link rel=stylesheet href=https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css>
-<script type=text/javascript src=https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js></script>
-</head>
-<body>
-<div class=preloader>
-</div>
-<header class=navigation>
-<div class=container>
-<nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
-<a class="navbar-brand mobile-view" href=https://hkaji.github.io/><img class=img-fluid src=https://hkaji.github.io/images/logo.png alt=一歩のはまりから/ipponohamari></a>
+<!doctype html><html lang=ja><head><meta charset=utf-8><title>一歩のはまりから/ipponohamari</title><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1"><meta name=description content="マイコンや倒立ロボでつまずいた人は、お立ち寄りください。きっと役に立てると思います"><meta name=author content="hkaji"><meta name=generator content="Hugo 0.111.3"><link rel=stylesheet href=https://hkaji.github.io/plugins/bootstrap/bootstrap.min.css><link rel=stylesheet href=https://hkaji.github.io/plugins/slick/slick.css><link rel=stylesheet href=https://hkaji.github.io/plugins/themify-icons/themify-icons.css><link rel=stylesheet href=https://hkaji.github.io/plugins/venobox/venobox.css><link rel=stylesheet href=https://hkaji.github.io/scss/style.min.css media=screen><link rel="shortcut icon" href=https://hkaji.github.io/images/favicon.png type=image/x-icon><link rel=icon href=https://hkaji.github.io/images/favicon.png type=image/x-icon><script>(function(e,t,n,s,o,i,a){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,i=t.createElement(n),a=t.getElementsByTagName(n)[0],i.async=1,i.src=s,a.parentNode.insertBefore(i,a)})(window,document,"script","//www.google-analytics.com/analytics.js","ga"),ga("create","UA-2831102754","auto"),ga("send","pageview")</script><script async src="https://www.googletagmanager.com/gtag/js?id=G-V3DKLV7482"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-V3DKLV7482")</script><meta name=google-site-verification content="eNklt_-Jdl-3xVGM2Lx-ybzzPso6QpwJqVnbR38n8zM"><link rel=stylesheet href=https://hkaji.github.io/css/custom_head.css></head><head><script type=text/javascript src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js></script>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css><script type=text/javascript src=https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js></script></head><body><div class=preloader></div><header class=navigation><div class=container><nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0"><a class="navbar-brand mobile-view" href=https://hkaji.github.io/><img class=img-fluid src=https://hkaji.github.io/images/logo.png alt=一歩のはまりから/ipponohamari></a>
 <button class="navbar-toggler border-0" type=button data-toggle=collapse data-target=#navigation>
-<i class=ti-menu></i>
-</button>
-<div class="collapse navbar-collapse text-center" id=navigation>
-<div class=desktop-view>
-<ul class="navbar-nav mr-auto">
-<li class=nav-item>
-<a class=nav-link href=#><i class=ti-facebook></i></a>
-</li>
-<li class=nav-item>
-<a class=nav-link href=#><i class=ti-twitter-alt></i></a>
-</li>
-<li class=nav-item>
-<a class=nav-link href=https://github.com/hkaji><i class=ti-github></i></a>
-</li>
-</ul>
-</div>
-<a class="navbar-brand mx-auto desktop-view" href=https://hkaji.github.io/><img class=img-fluid src=https://hkaji.github.io/images/logo.png alt=一歩のはまりから/ipponohamari></a>
-<ul class=navbar-nav>
-<li class=nav-item>
-<a class=nav-link href=https://hkaji.github.io/about>About</a>
-</li>
-<li class=nav-item>
-<a class=nav-link href=https://hkaji.github.io/blog/news>Update</a>
-</li>
-<li class=nav-item>
-<a class=nav-link href=https://hkaji.github.io/blog>Blog/Post</a>
-</li>
-<li class=nav-item>
-<a class=nav-link href=https://hkaji.github.io/contact>Contact</a>
-</li>
-<li class=nav-item>
-<a class=nav-link href=https://hkaji.github.io/privacypolicy>Privacy Policy</a>
-</li>
-</ul>
-<div class="search pl-lg-4">
-<button id=searchOpen class=search-btn><i class=ti-search></i></button>
-<div class=search-wrapper>
-<form action=https://hkaji.github.io//search class=h-100>
-<input class="search-box px-4" id=search-query name=s type=search placeholder="Type & Hit Enter...">
-</form>
-<button id=searchClose class=search-close><i class="ti-close text-dark"></i></button>
-</div>
-</div>
-</div>
-</nav>
-</div>
-</header>
-<section class=section-sm>
-<div class=container>
-<div class=row>
-<div class="col-lg-8 mx-auto">
-<a href=/categories/python class=text-primary>Python</a>
-<h2>python3 seleniumを試す</h2>
-<div class="mb-3 post-meta">
-<span>By hkaji</span>
+<i class=ti-menu></i></button><div class="collapse navbar-collapse text-center" id=navigation><div class=desktop-view><ul class="navbar-nav mr-auto"><li class=nav-item><a class=nav-link href=#><i class=ti-facebook></i></a></li><li class=nav-item><a class=nav-link href=#><i class=ti-twitter-alt></i></a></li><li class=nav-item><a class=nav-link href=https://github.com/hkaji><i class=ti-github></i></a></li></ul></div><a class="navbar-brand mx-auto desktop-view" href=https://hkaji.github.io/><img class=img-fluid src=https://hkaji.github.io/images/logo.png alt=一歩のはまりから/ipponohamari></a><ul class=navbar-nav><li class=nav-item><a class=nav-link href=https://hkaji.github.io/about>About</a></li><li class=nav-item><a class=nav-link href=https://hkaji.github.io/blog/news>Update</a></li><li class=nav-item><a class=nav-link href=https://hkaji.github.io/blog>Blog/Post</a></li><li class=nav-item><a class=nav-link href=https://hkaji.github.io/contact>Contact</a></li><li class=nav-item><a class=nav-link href=https://hkaji.github.io/privacypolicy>Privacy Policy</a></li></ul><div class="search pl-lg-4"><button id=searchOpen class=search-btn><i class=ti-search></i></button><div class=search-wrapper><form action=https://hkaji.github.io//search class=h-100><input class="search-box px-4" id=search-query name=s type=search placeholder="Type & Hit Enter..."></form><button id=searchClose class=search-close><i class="ti-close text-dark"></i></button></div></div></div></nav></div></header><section class=section-sm><div class=container><div class=row><div class="col-lg-8 mx-auto"><a href=/categories/python class=text-primary>Python</a><h2>python3 seleniumを試す</h2><div class="mb-3 post-meta"><span>By hkaji</span>
 <span class="border-bottom border-primary px-2 mx-1"></span>
 <span>20 January 2022</span>
-<span>Update 20 January 2022</span>
-</div>
-<img src=https://hkaji.github.io/images/python/search_results.png class="img-fluid w-25 mb-4" alt="python3 seleniumを試す">
-<div class="content mb-5">
-<h2 id=python3でseleniumを試してみる>python3でseleniumを試してみる</h2>
-<p>python3のライブラリーseleniumを試してみます。seleniumは、WWWコンテンツのフロント周りを自動的に試験するために作られたようです。スクレーピングのライブラリーと書かれているページもあるようです。参考リンク<sup id=fnref:1><a href=#fn:1 class=footnote-ref role=doc-noteref>1</a></sup><sup id=fnref:2><a href=#fn:2 class=footnote-ref role=doc-noteref>2</a></sup><sup id=fnref:3><a href=#fn:3 class=footnote-ref role=doc-noteref>3</a></sup>を見ながら試しました。</p>
-<h2 id=準備>準備</h2>
-<h3 id=環境>環境</h3>
-<p>Win10+WSL2+debianな環境です。python3のバージョン等は以下のとおりです。</p>
-<div class=highlight><div style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4>
-<table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0>
-<pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=1><a style=outline:none;text-decoration:none;color:inherit href=#1>1</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=2><a style=outline:none;text-decoration:none;color:inherit href=#2>2</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=3><a style=outline:none;text-decoration:none;color:inherit href=#3>3</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=4><a style=outline:none;text-decoration:none;color:inherit href=#4>4</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=5><a style=outline:none;text-decoration:none;color:inherit href=#5>5</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=6><a style=outline:none;text-decoration:none;color:inherit href=#6>6</a>
-</span></code></pre></td>
-<td style=vertical-align:top;padding:0;margin:0;border:0;width:100%>
-<pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>$:~/python/selenium$ python3 --version
-Python 3.5.3
-$:~/python/selenium$
-$:~/python/selenium$ pip3 list | grep selenium
-selenium <span style=color:#555>(</span>3.141.0<span style=color:#555>)</span>
-$:~/python/selenium$  
-</code></pre></td></tr></table>
-</div>
-</div><h3 id=google-chromのインストール>google chromのインストール</h3>
-<p>まずはダウンロードします。</p>
-<div class=highlight><div style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4>
-<table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0>
-<pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=1><a style=outline:none;text-decoration:none;color:inherit href=#1> 1</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=2><a style=outline:none;text-decoration:none;color:inherit href=#2> 2</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=3><a style=outline:none;text-decoration:none;color:inherit href=#3> 3</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=4><a style=outline:none;text-decoration:none;color:inherit href=#4> 4</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=5><a style=outline:none;text-decoration:none;color:inherit href=#5> 5</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=6><a style=outline:none;text-decoration:none;color:inherit href=#6> 6</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=7><a style=outline:none;text-decoration:none;color:inherit href=#7> 7</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=8><a style=outline:none;text-decoration:none;color:inherit href=#8> 8</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=9><a style=outline:none;text-decoration:none;color:inherit href=#9> 9</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=10><a style=outline:none;text-decoration:none;color:inherit href=#10>10</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=11><a style=outline:none;text-decoration:none;color:inherit href=#11>11</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=12><a style=outline:none;text-decoration:none;color:inherit href=#12>12</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=13><a style=outline:none;text-decoration:none;color:inherit href=#13>13</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=14><a style=outline:none;text-decoration:none;color:inherit href=#14>14</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=15><a style=outline:none;text-decoration:none;color:inherit href=#15>15</a>
-</span></code></pre></td>
-<td style=vertical-align:top;padding:0;margin:0;border:0;width:100%>
-<pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>$:~/python/selenium$ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-Will not apply HSTS. The HSTS database must be a regular and non-world-writable file.
-ERROR: could not open HSTS store at <span style=color:#c30>&#39;/home/kaji/.wget-hsts&#39;</span>. HSTS will be disabled.
---2022-01-20 09:19:11--  https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-dl.google.com <span style=color:#555>(</span>dl.google.com<span style=color:#555>)</span> をDNSに問いあわせています... 172.217.31.142, 216.239.32.10, 216.239.34.10, ...
-dl.google.com <span style=color:#555>(</span>dl.google.com<span style=color:#555>)</span>|172.217.31.142|:443 に接続しています... 接続しました。
-HTTP による接続要求を送信しました、応答を待っています... <span style=color:#f60>200</span> OK
-長さ: <span style=color:#f60>90862320</span> <span style=color:#555>(</span>87M<span style=color:#555>)</span> <span style=color:#555>[</span>application/x-debian-package<span style=color:#555>]</span>
-<span style=color:#c30>`</span>google-chrome-stable_current_amd64.deb<span style=color:#c30>&#39; に保存中
-</span><span style=color:#c30>
-</span><span style=color:#c30>google-chrome-stable_c 100%[=========================&gt;]  86.65M  10.8MB/s    in 7.9s    
-</span><span style=color:#c30>
-</span><span style=color:#c30>2022-01-20 09:19:19 (11.0 MB/s) - `google-chrome-stable_current_amd64.deb&#39;</span> へ保存完了 <span style=color:#555>[</span>90862320/90862320<span style=color:#555>]</span>
-
-$:~/python/selenium$ 
-</code></pre></td></tr></table>
-</div>
-</div><p>インストールします。</p>
-<div class=highlight><div style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4>
-<table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0>
-<pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=1><a style=outline:none;text-decoration:none;color:inherit href=#1>1</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=2><a style=outline:none;text-decoration:none;color:inherit href=#2>2</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=3><a style=outline:none;text-decoration:none;color:inherit href=#3>3</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=4><a style=outline:none;text-decoration:none;color:inherit href=#4>4</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=5><a style=outline:none;text-decoration:none;color:inherit href=#5>5</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=6><a style=outline:none;text-decoration:none;color:inherit href=#6>6</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=7><a style=outline:none;text-decoration:none;color:inherit href=#7>7</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=8><a style=outline:none;text-decoration:none;color:inherit href=#8>8</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=9><a style=outline:none;text-decoration:none;color:inherit href=#9>9</a>
-</span></code></pre></td>
-<td style=vertical-align:top;padding:0;margin:0;border:0;width:100%>
-<pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>$:~/python/selenium$ sudo dpkg -i google-chrome-stable_current_amd64.deb 
-<span style=color:#555>(</span>データベースを読み込んでいます ... 現在 <span style=color:#f60>106172</span> 個のファイルとディレクトリがインストールされています。<span style=color:#555>)</span>
-google-chrome-stable_current_amd64.deb を展開する準備をしています ...
-google-chrome-stable <span style=color:#555>(</span>97.0.4692.99-1<span style=color:#555>)</span> で <span style=color:#555>(</span>97.0.4692.99-1 に<span style=color:#555>)</span> 上書き展開しています ...
-google-chrome-stable <span style=color:#555>(</span>97.0.4692.99-1<span style=color:#555>)</span> を設定しています ...
-desktop-file-utils <span style=color:#555>(</span>0.23-1<span style=color:#555>)</span> のトリガを処理しています ...
-mime-support <span style=color:#555>(</span>3.60<span style=color:#555>)</span> のトリガを処理しています ...
-man-db <span style=color:#555>(</span>2.7.6.1-2<span style=color:#555>)</span> のトリガを処理しています ...
-$:~/python/selenium$ 
-</code></pre></td></tr></table>
-</div>
-</div><p>バージョンの確認です。</p>
-<div class=highlight><div style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4>
-<table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0>
-<pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=1><a style=outline:none;text-decoration:none;color:inherit href=#1>1</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=2><a style=outline:none;text-decoration:none;color:inherit href=#2>2</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=3><a style=outline:none;text-decoration:none;color:inherit href=#3>3</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=4><a style=outline:none;text-decoration:none;color:inherit href=#4>4</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=5><a style=outline:none;text-decoration:none;color:inherit href=#5>5</a>
-</span></code></pre></td>
-<td style=vertical-align:top;padding:0;margin:0;border:0;width:100%>
-<pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>$:~/python/selenium$ which google-chrome
-/usr/bin/google-chrome
-$:~/python/selenium$ google-chrome --version
-Google Chrome 97.0.4692.99 
-$:~/python/selenium$ 
-</code></pre></td></tr></table>
-</div>
-</div><h3 id=webdriverchromdriverのインストール>WebDriver(chromdriver)のインストール</h3>
-<div class=highlight><div style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4>
-<table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0>
-<pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=1><a style=outline:none;text-decoration:none;color:inherit href=#1> 1</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=2><a style=outline:none;text-decoration:none;color:inherit href=#2> 2</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=3><a style=outline:none;text-decoration:none;color:inherit href=#3> 3</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=4><a style=outline:none;text-decoration:none;color:inherit href=#4> 4</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=5><a style=outline:none;text-decoration:none;color:inherit href=#5> 5</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=6><a style=outline:none;text-decoration:none;color:inherit href=#6> 6</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=7><a style=outline:none;text-decoration:none;color:inherit href=#7> 7</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=8><a style=outline:none;text-decoration:none;color:inherit href=#8> 8</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=9><a style=outline:none;text-decoration:none;color:inherit href=#9> 9</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=10><a style=outline:none;text-decoration:none;color:inherit href=#10>10</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=11><a style=outline:none;text-decoration:none;color:inherit href=#11>11</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=12><a style=outline:none;text-decoration:none;color:inherit href=#12>12</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=13><a style=outline:none;text-decoration:none;color:inherit href=#13>13</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=14><a style=outline:none;text-decoration:none;color:inherit href=#14>14</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=15><a style=outline:none;text-decoration:none;color:inherit href=#15>15</a>
-</span></code></pre></td>
-<td style=vertical-align:top;padding:0;margin:0;border:0;width:100%>
-<pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>$:~/python/selenium$ wget https://chromedriver.storage.googleapis.com/97.0.4692.71/chromedriver_linux64.zip
-Will not apply HSTS. The HSTS database must be a regular and non-world-writable file.
-ERROR: could not open HSTS store at <span style=color:#c30>&#39;/home/kaji/.wget-hsts&#39;</span>. HSTS will be disabled.
---2022-01-20 09:48:55--  https://chromedriver.storage.googleapis.com/97.0.4692.71/chromedriver_linux64.zip
-chromedriver.storage.googleapis.com <span style=color:#555>(</span>chromedriver.storage.googleapis.com<span style=color:#555>)</span> をDNSに問いあわせています... 142.251.42.144, 216.239.32.10, 216.239.34.10, ...
-chromedriver.storage.googleapis.com <span style=color:#555>(</span>chromedriver.storage.googleapis.com<span style=color:#555>)</span>|142.251.42.144|:443 に接続しています... 接続しました。
-HTTP による接続要求を送信しました、応答を待っています... <span style=color:#f60>200</span> OK
-長さ: <span style=color:#f60>9982326</span> <span style=color:#555>(</span>9.5M<span style=color:#555>)</span> <span style=color:#555>[</span>application/zip<span style=color:#555>]</span>
-<span style=color:#c30>`</span>chromedriver_linux64.zip<span style=color:#c30>&#39; に保存中
-</span><span style=color:#c30>
-</span><span style=color:#c30>chromedriver_linux64.z 100%[=========================&gt;]   9.52M  11.0MB/s    in 0.9s    
-</span><span style=color:#c30>
-</span><span style=color:#c30>2022-01-20 09:48:57 (11.0 MB/s) - `chromedriver_linux64.zip&#39;</span> へ保存完了 <span style=color:#555>[</span>9982326/9982326<span style=color:#555>]</span>
-
-$:~/python/selenium$ 
-</code></pre></td></tr></table>
-</div>
-</div><p>解凍してインストール</p>
-<div class=highlight><div style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4>
-<table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0>
-<pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=1><a style=outline:none;text-decoration:none;color:inherit href=#1>1</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=2><a style=outline:none;text-decoration:none;color:inherit href=#2>2</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=3><a style=outline:none;text-decoration:none;color:inherit href=#3>3</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=4><a style=outline:none;text-decoration:none;color:inherit href=#4>4</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=5><a style=outline:none;text-decoration:none;color:inherit href=#5>5</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=6><a style=outline:none;text-decoration:none;color:inherit href=#6>6</a>
-</span></code></pre></td>
-<td style=vertical-align:top;padding:0;margin:0;border:0;width:100%>
-<pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>$:~/python/selenium$ unzip chromedriver_linux64.zip 
-Archive:  chromedriver_linux64.zip
-  inflating: chromedriver            
-$:~/python/selenium$ 
-$:~/python/selenium$ sudo mv chromedriver /usr/bin   
-$:~/python/selenium$ 
-</code></pre></td></tr></table>
-</div>
-</div><h2 id=test-codeを試す>test codeを試す</h2>
-<p>リンクにあるテストコードで動作確認します。</p>
-<div class=highlight><div style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4>
-<table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0>
-<pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=1><a style=outline:none;text-decoration:none;color:inherit href=#1>1</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=2><a style=outline:none;text-decoration:none;color:inherit href=#2>2</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=3><a style=outline:none;text-decoration:none;color:inherit href=#3>3</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=4><a style=outline:none;text-decoration:none;color:inherit href=#4>4</a>
-</span></code></pre></td>
-<td style=vertical-align:top;padding:0;margin:0;border:0;width:100%>
-<pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>$:~/python/selenium$ python3 test_selenium.py
-Google
-ChromeDriver - Google 検索
-$:~/python/selenium$
-</code></pre></td></tr></table>
-</div>
-</div><p>動作結果は、画像として保存されます。画面表示なしのヘッドレスで、ちゃんとブラウザーが動いています。
-<div class=fancybox>
-<a data-fancybox=sl href=/images/python//search_results.png data-caption="resulut of search"><img src=/images/python//search_results.png width=300px></a>
-</div>
-</p>
-<h2 id=まとめ>まとめ</h2>
-<p>python3 seleniumライブラリーの動作を確認しました。画面表示なしでも動作することを確認できました。さらにページのクリック等の記述方法を確認して深いところまで掘っていけることを確認したいと思います。</p>
-<h2 id=参考リンク>参考リンク</h2>
-<section class=footnotes role=doc-endnotes>
-<hr>
-<ol>
-<li id=fn:1 role=doc-endnote>
-<p><a href="https://ararabo.com/2021-04-24/?p=12161">あららぼ:WSL2でSeleniumを使う</a>&#160;<a href=#fnref:1 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p>
-</li>
-<li id=fn:2 role=doc-endnote>
-<p><a href=https://qiita.com/query1000/items/747b1b34a197a55e7fec>Qiita:【これも】WSL2＋Chrome＋Selenium＋Python【検索してなぞっただけ】</a>&#160;<a href=#fnref:2 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p>
-</li>
-<li id=fn:3 role=doc-endnote>
-<p><a href=https://ai-inter1.com/python-selenium/>AI-interのPython3入門:図解！PythonでSeleniumを使ったスクレイピングを徹底解説！(インストール・使い方・Chrome)</a>&#160;<a href=#fnref:3 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p>
-</li>
-</ol>
-</section>
-</div>
-<div id=disqus_thread></div>
-<script type=application/javascript>var disqus_config=function(){};(function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById('disqus_thread').innerHTML='Disqus comments not available by default when the website is previewed locally.';return}var b=document,a=b.createElement('script');a.async=!0,a.src='//https-hkaji-github-io.disqus.com/embed.js',a.setAttribute('data-timestamp',+new Date),(b.head||b.body).appendChild(a)})()</script>
-<noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript>
-<a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a>
-</div>
-</div>
-</div>
-</section>
-<footer class=text-capitalize>
-<div class=container>
-<div class="row justify-content-center">
-<div class="col-12 text-center mb-5">
-<a href=https://hkaji.github.io/><img src=https://hkaji.github.io/images/logo.png alt=一歩のはまりから/ipponohamari></a>
-</div>
-<div class="col-lg-3 col-sm-6 mb-5">
-<h6 class=mb-4>Contact Me</h6>
-<ul class=list-unstyled>
-<li class=mb-3><i class="ti-location-pin mr-3 text-primary"></i>Kanagawa, Japan</li>
-<li class=mb-3><a class=text-dark href=mailto:hkaji.blog@gmail.com><i class="ti-email mr-3 text-primary"></i>hkaji.blog@gmail.com</a>
-</li>
-</ul>
-</div>
-<div class="col-lg-3 col-sm-6 mb-5">
-<h6 class=mb-4>Social Contacts</h6>
-<ul class=list-unstyled>
-<li class=mb-3><a class=text-dark href=#>facebook</a></li>
-<li class=mb-3><a class=text-dark href=#>twitter</a></li>
-<li class=mb-3><a class=text-dark href=https://github.com/hkaji>github</a></li>
-</ul>
-</div>
-<div class="col-lg-3 col-sm-6 mb-5">
-<h6 class=mb-4>Categories</h6>
-<ul class=list-unstyled>
-<li class=mb-3><a class=text-dark href=/categories/3dprinter>3dprinter</a>
-</li>
-<li class=mb-3><a class=text-dark href=/categories/esp32>Esp32</a>
-</li>
-<li class=mb-3><a class=text-dark href=/categories/etc>Etc</a>
-</li>
-<li class=mb-3><a class=text-dark href=/categories/go>Go</a>
-</li>
-<li class=mb-3><a class=text-dark href=/categories/news>News</a>
-</li>
-<li class=mb-3><a class=text-dark href=/categories/python>Python</a>
-</li>
-<li class=mb-3><a class=text-dark href=/categories/raspi>Raspi</a>
-</li>
-<li class=mb-3><a class=text-dark href=/categories/robo>Robo</a>
-</li>
-<li class=mb-3><a class=text-dark href=/categories/tsdb>Tsdb</a>
-</li>
-<li class=mb-3><a class=text-dark href=/categories/www>WWW</a>
-</li>
-</ul>
-</div>
-<div class="col-lg-3 col-sm-6 mb-5">
-<h6 class=mb-4>Quick Links</h6>
-<ul class=list-unstyled>
-<li class=mb-3><a class=text-dark href=https://hkaji.github.io/about>About</a></li>
-<li class=mb-3><a class=text-dark href=https://hkaji.github.io/blog>Blog/Post</a></li>
-<li class=mb-3><a class=text-dark href=https://hkaji.github.io/contact>Contact</a></li>
-<li class=mb-3><a class=text-dark href=https://hkaji.github.io/privacypolicy>Privacy Policy</a></li>
-</ul>
-</div>
-<div class="col-12 border-top py-4 text-center">
-Powered by <a href=https://hugo.io>Hugo</a>
+<span>Update 20 January 2022</span></div><img src=https://hkaji.github.io/images/python/search_results.png class="img-fluid w-25 mb-4" alt="python3 seleniumを試す"><div class="content mb-5"><h2 id=python3でseleniumを試してみる>python3でseleniumを試してみる</h2><p>python3のライブラリーseleniumを試してみます。seleniumは、WWWコンテンツのフロント周りを自動的に試験するために作られたようです。スクレーピングのライブラリーと書かれているページもあるようです。参考リンク<sup id=fnref:1><a href=#fn:1 class=footnote-ref role=doc-noteref>1</a></sup><sup id=fnref:2><a href=#fn:2 class=footnote-ref role=doc-noteref>2</a></sup><sup id=fnref:3><a href=#fn:3 class=footnote-ref role=doc-noteref>3</a></sup>を見ながら試しました。</p><h2 id=準備>準備</h2><h3 id=環境>環境</h3><p>Win10+WSL2+debianな環境です。python3のバージョン等は以下のとおりです。</p><div class=highlight><div style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-0-1><a style=outline:none;text-decoration:none;color:inherit href=#hl-0-1>1</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-0-2><a style=outline:none;text-decoration:none;color:inherit href=#hl-0-2>2</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-0-3><a style=outline:none;text-decoration:none;color:inherit href=#hl-0-3>3</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-0-4><a style=outline:none;text-decoration:none;color:inherit href=#hl-0-4>4</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-0-5><a style=outline:none;text-decoration:none;color:inherit href=#hl-0-5>5</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-0-6><a style=outline:none;text-decoration:none;color:inherit href=#hl-0-6>6</a>
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>$:~/python/selenium$ python3 --version
+</span></span><span style=display:flex><span>Python 3.5.3
+</span></span><span style=display:flex><span>$:~/python/selenium$
+</span></span><span style=display:flex><span>$:~/python/selenium$ pip3 list | grep selenium
+</span></span><span style=display:flex><span>selenium <span style=color:#555>(</span>3.141.0<span style=color:#555>)</span>
+</span></span><span style=display:flex><span>$:~/python/selenium$  
+</span></span></code></pre></td></tr></table></div></div><h3 id=google-chromのインストール>google chromのインストール</h3><p>まずはダウンロードします。</p><div class=highlight><div style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-1><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-1> 1</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-2><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-2> 2</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-3><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-3> 3</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-4><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-4> 4</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-5><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-5> 5</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-6><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-6> 6</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-7><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-7> 7</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-8><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-8> 8</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-9><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-9> 9</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-10><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-10>10</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-11><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-11>11</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-12><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-12>12</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-13><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-13>13</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-14><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-14>14</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-1-15><a style=outline:none;text-decoration:none;color:inherit href=#hl-1-15>15</a>
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>$:~/python/selenium$ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+</span></span><span style=display:flex><span>Will not apply HSTS. The HSTS database must be a regular and non-world-writable file.
+</span></span><span style=display:flex><span>ERROR: could not open HSTS store at <span style=color:#c30>&#39;/home/kaji/.wget-hsts&#39;</span>. HSTS will be disabled.
+</span></span><span style=display:flex><span>--2022-01-20 09:19:11--  https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+</span></span><span style=display:flex><span>dl.google.com <span style=color:#555>(</span>dl.google.com<span style=color:#555>)</span> をDNSに問いあわせています... 172.217.31.142, 216.239.32.10, 216.239.34.10, ...
+</span></span><span style=display:flex><span>dl.google.com <span style=color:#555>(</span>dl.google.com<span style=color:#555>)</span>|172.217.31.142|:443 に接続しています... 接続しました。
+</span></span><span style=display:flex><span>HTTP による接続要求を送信しました、応答を待っています... <span style=color:#f60>200</span> OK
+</span></span><span style=display:flex><span>長さ: <span style=color:#f60>90862320</span> <span style=color:#555>(</span>87M<span style=color:#555>)</span> <span style=color:#555>[</span>application/x-debian-package<span style=color:#555>]</span>
+</span></span><span style=display:flex><span><span style=color:#c30>`</span>google-chrome-stable_current_amd64.deb<span style=color:#c30>&#39; に保存中
+</span></span></span><span style=display:flex><span><span style=color:#c30>
+</span></span></span><span style=display:flex><span><span style=color:#c30>google-chrome-stable_c 100%[=========================&gt;]  86.65M  10.8MB/s    in 7.9s    
+</span></span></span><span style=display:flex><span><span style=color:#c30>
+</span></span></span><span style=display:flex><span><span style=color:#c30>2022-01-20 09:19:19 (11.0 MB/s) - `google-chrome-stable_current_amd64.deb&#39;</span> へ保存完了 <span style=color:#555>[</span>90862320/90862320<span style=color:#555>]</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>$:~/python/selenium$ 
+</span></span></code></pre></td></tr></table></div></div><p>インストールします。</p><div class=highlight><div style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-2-1><a style=outline:none;text-decoration:none;color:inherit href=#hl-2-1>1</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-2-2><a style=outline:none;text-decoration:none;color:inherit href=#hl-2-2>2</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-2-3><a style=outline:none;text-decoration:none;color:inherit href=#hl-2-3>3</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-2-4><a style=outline:none;text-decoration:none;color:inherit href=#hl-2-4>4</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-2-5><a style=outline:none;text-decoration:none;color:inherit href=#hl-2-5>5</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-2-6><a style=outline:none;text-decoration:none;color:inherit href=#hl-2-6>6</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-2-7><a style=outline:none;text-decoration:none;color:inherit href=#hl-2-7>7</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-2-8><a style=outline:none;text-decoration:none;color:inherit href=#hl-2-8>8</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-2-9><a style=outline:none;text-decoration:none;color:inherit href=#hl-2-9>9</a>
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>$:~/python/selenium$ sudo dpkg -i google-chrome-stable_current_amd64.deb 
+</span></span><span style=display:flex><span><span style=color:#555>(</span>データベースを読み込んでいます ... 現在 <span style=color:#f60>106172</span> 個のファイルとディレクトリがインストールされています。<span style=color:#555>)</span>
+</span></span><span style=display:flex><span>google-chrome-stable_current_amd64.deb を展開する準備をしています ...
+</span></span><span style=display:flex><span>google-chrome-stable <span style=color:#555>(</span>97.0.4692.99-1<span style=color:#555>)</span> で <span style=color:#555>(</span>97.0.4692.99-1 に<span style=color:#555>)</span> 上書き展開しています ...
+</span></span><span style=display:flex><span>google-chrome-stable <span style=color:#555>(</span>97.0.4692.99-1<span style=color:#555>)</span> を設定しています ...
+</span></span><span style=display:flex><span>desktop-file-utils <span style=color:#555>(</span>0.23-1<span style=color:#555>)</span> のトリガを処理しています ...
+</span></span><span style=display:flex><span>mime-support <span style=color:#555>(</span>3.60<span style=color:#555>)</span> のトリガを処理しています ...
+</span></span><span style=display:flex><span>man-db <span style=color:#555>(</span>2.7.6.1-2<span style=color:#555>)</span> のトリガを処理しています ...
+</span></span><span style=display:flex><span>$:~/python/selenium$ 
+</span></span></code></pre></td></tr></table></div></div><p>バージョンの確認です。</p><div class=highlight><div style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-3-1><a style=outline:none;text-decoration:none;color:inherit href=#hl-3-1>1</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-3-2><a style=outline:none;text-decoration:none;color:inherit href=#hl-3-2>2</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-3-3><a style=outline:none;text-decoration:none;color:inherit href=#hl-3-3>3</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-3-4><a style=outline:none;text-decoration:none;color:inherit href=#hl-3-4>4</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-3-5><a style=outline:none;text-decoration:none;color:inherit href=#hl-3-5>5</a>
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>$:~/python/selenium$ which google-chrome
+</span></span><span style=display:flex><span>/usr/bin/google-chrome
+</span></span><span style=display:flex><span>$:~/python/selenium$ google-chrome --version
+</span></span><span style=display:flex><span>Google Chrome 97.0.4692.99 
+</span></span><span style=display:flex><span>$:~/python/selenium$ 
+</span></span></code></pre></td></tr></table></div></div><h3 id=webdriverchromdriverのインストール>WebDriver(chromdriver)のインストール</h3><div class=highlight><div style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-4-1><a style=outline:none;text-decoration:none;color:inherit href=#hl-4-1> 1</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-4-2><a style=outline:none;text-decoration:none;color:inherit href=#hl-4-2> 2</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-4-3><a style=outline:none;text-decoration:none;color:inherit href=#hl-4-3> 3</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-4-4><a style=outline:none;text-decoration:none;color:inherit href=#hl-4-4> 4</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-4-5><a style=outline:none;text-decoration:none;color:inherit href=#hl-4-5> 5</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-4-6><a style=outline:none;text-decoration:none;color:inherit href=#hl-4-6> 6</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-4-7><a style=outline:none;text-decoration:none;color:inherit href=#hl-4-7> 7</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-4-8><a style=outline:none;text-decoration:none;color:inherit href=#hl-4-8> 8</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-4-9><a style=outline:none;text-decoration:none;color:inherit href=#hl-4-9> 9</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-4-10><a style=outline:none;text-decoration:none;color:inherit href=#hl-4-10>10</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-4-11><a style=outline:none;text-decoration:none;color:inherit href=#hl-4-11>11</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-4-12><a style=outline:none;text-decoration:none;color:inherit href=#hl-4-12>12</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-4-13><a style=outline:none;text-decoration:none;color:inherit href=#hl-4-13>13</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-4-14><a style=outline:none;text-decoration:none;color:inherit href=#hl-4-14>14</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-4-15><a style=outline:none;text-decoration:none;color:inherit href=#hl-4-15>15</a>
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>$:~/python/selenium$ wget https://chromedriver.storage.googleapis.com/97.0.4692.71/chromedriver_linux64.zip
+</span></span><span style=display:flex><span>Will not apply HSTS. The HSTS database must be a regular and non-world-writable file.
+</span></span><span style=display:flex><span>ERROR: could not open HSTS store at <span style=color:#c30>&#39;/home/kaji/.wget-hsts&#39;</span>. HSTS will be disabled.
+</span></span><span style=display:flex><span>--2022-01-20 09:48:55--  https://chromedriver.storage.googleapis.com/97.0.4692.71/chromedriver_linux64.zip
+</span></span><span style=display:flex><span>chromedriver.storage.googleapis.com <span style=color:#555>(</span>chromedriver.storage.googleapis.com<span style=color:#555>)</span> をDNSに問いあわせています... 142.251.42.144, 216.239.32.10, 216.239.34.10, ...
+</span></span><span style=display:flex><span>chromedriver.storage.googleapis.com <span style=color:#555>(</span>chromedriver.storage.googleapis.com<span style=color:#555>)</span>|142.251.42.144|:443 に接続しています... 接続しました。
+</span></span><span style=display:flex><span>HTTP による接続要求を送信しました、応答を待っています... <span style=color:#f60>200</span> OK
+</span></span><span style=display:flex><span>長さ: <span style=color:#f60>9982326</span> <span style=color:#555>(</span>9.5M<span style=color:#555>)</span> <span style=color:#555>[</span>application/zip<span style=color:#555>]</span>
+</span></span><span style=display:flex><span><span style=color:#c30>`</span>chromedriver_linux64.zip<span style=color:#c30>&#39; に保存中
+</span></span></span><span style=display:flex><span><span style=color:#c30>
+</span></span></span><span style=display:flex><span><span style=color:#c30>chromedriver_linux64.z 100%[=========================&gt;]   9.52M  11.0MB/s    in 0.9s    
+</span></span></span><span style=display:flex><span><span style=color:#c30>
+</span></span></span><span style=display:flex><span><span style=color:#c30>2022-01-20 09:48:57 (11.0 MB/s) - `chromedriver_linux64.zip&#39;</span> へ保存完了 <span style=color:#555>[</span>9982326/9982326<span style=color:#555>]</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>$:~/python/selenium$ 
+</span></span></code></pre></td></tr></table></div></div><p>解凍してインストール</p><div class=highlight><div style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-5-1><a style=outline:none;text-decoration:none;color:inherit href=#hl-5-1>1</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-5-2><a style=outline:none;text-decoration:none;color:inherit href=#hl-5-2>2</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-5-3><a style=outline:none;text-decoration:none;color:inherit href=#hl-5-3>3</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-5-4><a style=outline:none;text-decoration:none;color:inherit href=#hl-5-4>4</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-5-5><a style=outline:none;text-decoration:none;color:inherit href=#hl-5-5>5</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-5-6><a style=outline:none;text-decoration:none;color:inherit href=#hl-5-6>6</a>
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>$:~/python/selenium$ unzip chromedriver_linux64.zip 
+</span></span><span style=display:flex><span>Archive:  chromedriver_linux64.zip
+</span></span><span style=display:flex><span>  inflating: chromedriver            
+</span></span><span style=display:flex><span>$:~/python/selenium$ 
+</span></span><span style=display:flex><span>$:~/python/selenium$ sudo mv chromedriver /usr/bin   
+</span></span><span style=display:flex><span>$:~/python/selenium$ 
+</span></span></code></pre></td></tr></table></div></div><h2 id=test-codeを試す>test codeを試す</h2><p>リンクにあるテストコードで動作確認します。</p><div class=highlight><div style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-6-1><a style=outline:none;text-decoration:none;color:inherit href=#hl-6-1>1</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-6-2><a style=outline:none;text-decoration:none;color:inherit href=#hl-6-2>2</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-6-3><a style=outline:none;text-decoration:none;color:inherit href=#hl-6-3>3</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=hl-6-4><a style=outline:none;text-decoration:none;color:inherit href=#hl-6-4>4</a>
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>$:~/python/selenium$ python3 test_selenium.py
+</span></span><span style=display:flex><span>Google
+</span></span><span style=display:flex><span>ChromeDriver - Google 検索
+</span></span><span style=display:flex><span>$:~/python/selenium$
+</span></span></code></pre></td></tr></table></div></div><p>動作結果は、画像として保存されます。画面表示なしのヘッドレスで、ちゃんとブラウザーが動いています。<div class=fancybox><a data-fancybox=sl href=/images/python//search_results.png data-caption="resulut of search"><img src=/images/python//search_results.png width=300px></a></div></p><h2 id=まとめ>まとめ</h2><p>python3 seleniumライブラリーの動作を確認しました。画面表示なしでも動作することを確認できました。さらにページのクリック等の記述方法を確認して深いところまで掘っていけることを確認したいと思います。</p><h2 id=参考リンク>参考リンク</h2><div class=footnotes role=doc-endnotes><hr><ol><li id=fn:1><p><a href="https://ararabo.com/2021-04-24/?p=12161">あららぼ:WSL2でSeleniumを使う</a>&#160;<a href=#fnref:1 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p></li><li id=fn:2><p><a href=https://qiita.com/query1000/items/747b1b34a197a55e7fec>Qiita:【これも】WSL2＋Chrome＋Selenium＋Python【検索してなぞっただけ】</a>&#160;<a href=#fnref:2 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p></li><li id=fn:3><p><a href=https://ai-inter1.com/python-selenium/>AI-interのPython3入門:図解！PythonでSeleniumを使ったスクレイピングを徹底解説！(インストール・使い方・Chrome)</a>&#160;<a href=#fnref:3 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p></li></ol></div></div><div id=disqus_thread></div><script type=application/javascript>window.disqus_config=function(){},function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById("disqus_thread").innerHTML="Disqus comments not available by default when the website is previewed locally.";return}var t=document,e=t.createElement("script");e.async=!0,e.src="//https-hkaji-github-io.disqus.com/embed.js",e.setAttribute("data-timestamp",+new Date),(t.head||t.body).appendChild(e)}()</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a></div></div></div></section><footer class=text-capitalize><div class=container><div class="row justify-content-center"><div class="col-12 text-center mb-5"><a href=https://hkaji.github.io/><img src=https://hkaji.github.io/images/logo.png alt=一歩のはまりから/ipponohamari></a></div><div class="col-lg-3 col-sm-6 mb-5"><h6 class=mb-4>Contact Me</h6><ul class=list-unstyled><li class=mb-3><i class="ti-location-pin mr-3 text-primary"></i>Kanagawa, Japan</li><li class=mb-3><a class=text-dark href=mailto:hkaji.blog@gmail.com><i class="ti-email mr-3 text-primary"></i>hkaji.blog@gmail.com</a></li></ul></div><div class="col-lg-3 col-sm-6 mb-5"><h6 class=mb-4>Social Contacts</h6><ul class=list-unstyled><li class=mb-3><a class=text-dark href=#>facebook</a></li><li class=mb-3><a class=text-dark href=#>twitter</a></li><li class=mb-3><a class=text-dark href=https://github.com/hkaji>github</a></li></ul></div><div class="col-lg-3 col-sm-6 mb-5"><h6 class=mb-4>Categories</h6><ul class=list-unstyled><li class=mb-3><a class=text-dark href=/categories/3dprinter>3dprinter</a></li><li class=mb-3><a class=text-dark href=/categories/esp32>Esp32</a></li><li class=mb-3><a class=text-dark href=/categories/etc>Etc</a></li><li class=mb-3><a class=text-dark href=/categories/go>Go</a></li><li class=mb-3><a class=text-dark href=/categories/news>News</a></li><li class=mb-3><a class=text-dark href=/categories/python>Python</a></li><li class=mb-3><a class=text-dark href=/categories/raspi>Raspi</a></li><li class=mb-3><a class=text-dark href=/categories/robo>Robo</a></li><li class=mb-3><a class=text-dark href=/categories/tsdb>Tsdb</a></li><li class=mb-3><a class=text-dark href=/categories/www>WWW</a></li></ul></div><div class="col-lg-3 col-sm-6 mb-5"><h6 class=mb-4>Quick Links</h6><ul class=list-unstyled><li class=mb-3><a class=text-dark href=https://hkaji.github.io/about>About</a></li><li class=mb-3><a class=text-dark href=https://hkaji.github.io/blog>Blog/Post</a></li><li class=mb-3><a class=text-dark href=https://hkaji.github.io/contact>Contact</a></li><li class=mb-3><a class=text-dark href=https://hkaji.github.io/privacypolicy>Privacy Policy</a></li></ul></div><div class="col-12 border-top py-4 text-center">Powered by <a href=https://hugo.io>Hugo</a>
 Theme <a href=https://github.com/gethugothemes/liva-hugo>Liva Hugo</a>
-| copyright © 2015 <a href=https://hkaji.github.io>hkaji</a> All Rights Reserved |
-</div>
-</div>
-</div>
-</footer>
-<script>var indexURL="https://hkaji.github.io/index.json"</script>
-<script src=https://hkaji.github.io/plugins/jQuery/jquery.min.js></script>
+| copyright © 2015 <a href=https://hkaji.github.io>hkaji</a> All Rights Reserved |</div></div></div></footer><script>var indexURL="https://hkaji.github.io/index.json"</script><script src=https://hkaji.github.io/plugins/jQuery/jquery.min.js></script>
 <script src=https://hkaji.github.io/plugins/bootstrap/bootstrap.min.js></script>
 <script src=https://hkaji.github.io/plugins/slick/slick.min.js></script>
 <script src=https://hkaji.github.io/plugins/venobox/venobox.min.js></script>
@@ -370,11 +135,4 @@ Theme <a href=https://github.com/gethugothemes/liva-hugo>Liva Hugo</a>
 <script src=https://hkaji.github.io/plugins/search/mark.js></script>
 <script src=https://hkaji.github.io/plugins/search/search.js></script>
 <script src=https://hkaji.github.io/js/script.min.js></script>
-<script src=https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js></script>
-<div id=js-cookie-box class="cookie-box cookie-box-hide">
-This site uses cookies. By continuing to use this website, you agree to their use. <span id=js-cookie-button class="btn btn-sm btn-primary ml-2">I Accept</span>
-</div>
-<script>(function(c){const a=document.getElementById('js-cookie-box'),b=document.getElementById('js-cookie-button');Cookies.get('cookie-box')||(a.classList.remove('cookie-box-hide'),b.onclick=function(){Cookies.set('cookie-box',!0,{expires:2}),a.classList.add('cookie-box-hide')})})(jQuery)</script>
-<style>.cookie-box{position:fixed;left:0;right:0;bottom:0;text-align:center;z-index:9999;padding:1rem 2rem;background:#474747;transition:all .75s cubic-bezier(.19,1,.22,1);color:#fdfdfd}.cookie-box-hide{display:none}</style>
-</body>
-</html>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js></script><div id=js-cookie-box class="cookie-box cookie-box-hide">This site uses cookies. By continuing to use this website, you agree to their use. <span id=js-cookie-button class="btn btn-sm btn-primary ml-2">I Accept</span></div><script>(function(){const t=document.getElementById("js-cookie-box"),n=document.getElementById("js-cookie-button");Cookies.get("cookie-box")||(t.classList.remove("cookie-box-hide"),n.onclick=function(){Cookies.set("cookie-box",!0,{expires:2}),t.classList.add("cookie-box-hide")})})(jQuery)</script><style>.cookie-box{position:fixed;left:0;right:0;bottom:0;text-align:center;z-index:9999;padding:1rem 2rem;background:#474747;transition:all .75s cubic-bezier(.19,1,.22,1);color:#fdfdfd}.cookie-box-hide{display:none}</style></body></html>
